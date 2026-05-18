@@ -1,0 +1,279 @@
+SGDP_ID,Sequencing_Panel,Illumina_ID,Sample_ID,Sample_ID_Aliases,Population_ID,Region,Country,Town,Contributor,Gender,Latitude,Longitude,DNA_Source,Embargo,SGDP_lite
+B_Australian-3,B,SS6004478,IHW9118,IHW9118,Australian,Oceania,Australia,Cell_line_repository_sampling_location_unknown,ECCAC,U,-13.0,143.0,Genomic_from_cell_lines,FullyPublic,X
+B_Australian-4,B,SS6004477,IHW9193,IHW9193,Australian,Oceania,Australia,Cell_line_repository_sampling_location_unknown,ECCAC,M,-13.0,143.0,Genomic_from_cell_lines,FullyPublic,X
+B_Crete-1,B,LP6007069-DNA_A01,AV-21,AV-21,Crete,WestEurasia,Greece,"Preveliana, Irakleioy",George Stamatoyannopoulos,F,35.166668,25.166666,Genomic_from_blood,FullyPublic,X
+B_Crete-2,B,LP6007068-DNA_A01,TZ-11,TZ-11,Crete,WestEurasia,Greece,"Psychro ,Lassithi",George Stamatoyannopoulos,M,35.163,25.445,Genomic_from_blood,FullyPublic,X
+B_Dai-4,B,SS6004467,HGDP01308,HGDP01308,Dai,EastAsia,China,?,Howard Cann,M,21.0,100.0,Genomic_from_cell_lines,FullyPublic,X
+B_Dinka-3,B,SS6004480,DNK07,DNK07,Dinka,Africa,Sudan,Aweil,Michael Hammer,M,8.783333333,27.4,Genomic_from_saliva,FullyPublic,X
+B_French-3,B,SS6004468,HGDP00533,HGDP00533,French,WestEurasia,France,?,Howard Cann,M,46.0,2.0,Genomic_from_cell_lines,FullyPublic,X
+B_Han-3,B,SS6004469,HGDP00775,HGDP00775,Han,EastAsia,China,?,Howard Cann,M,32.26566812,114.0,Genomic_from_cell_lines,FullyPublic,X
+B_Ju_hoan_North-4,B,SS6004473,HGDP01036,HGDP01036,Ju_hoan_North,Africa,Namibia,?,Howard Cann,M,-18.93725689,21.45244764,Genomic_from_cell_lines,FullyPublic,X
+B_Karitiana-3,B,SS6004476,HGDP01015,HGDP01015,Karitiana,America,Brazil,?,Howard Cann,M,-10.0,-63.0,Genomic_from_cell_lines,FullyPublic,X
+B_Mandenka-3,B,SS6004470,HGDP01286,HGDP01286,Mandenka,Africa,Senegal,?,Howard Cann,M,12.0,-12.0,Genomic_from_cell_lines,FullyPublic,X
+B_Mbuti-4,B,SS6004471,HGDP00982,HGDP00982,Mbuti,Africa,Congo,?,Howard Cann,M,1.0,29.0,Genomic_from_cell_lines,FullyPublic,X
+B_Mixe-1,B,SS6004479,mixe0007,mixe0007,Mixe,America,Mexico,"Tmazulapan, Mixe",William Klitz / Cheryl Winkler,F,16.95,-96.58,Genomic_from_cell_lines,FullyPublic,X
+B_Papuan-15,B,SS6004472,HGDP00546,HGDP00546,Papuan,Oceania,PapuaNewGuinea,?,Howard Cann,M,-4.0,143.0,Genomic_from_cell_lines,FullyPublic,X
+B_Sardinian-3,B,SS6004474,HGDP01076,HGDP01076,Sardinian,WestEurasia,Italy,?,Howard Cann,M,40.0,9.0,Genomic_from_cell_lines,FullyPublic,X
+B_Yoruba-3,B,SS6004475,HGDP00936,HGDP00936,Yoruba,Africa,Nigeria,?,Howard Cann,M,7.4,3.9,Genomic_from_cell_lines,FullyPublic,X
+S_Abkhasian-1,C,LP6005442-DNA_C02,abh107,abh107,Abkhasian,WestEurasia,Abkhazia,Sukhum,Mait Metspalu / Elza Khusnutdinova / Rita Khusainova,M,43.003,41.015,Genomic_from_blood,FullyPublic,X
+S_Abkhasian-2,C,LP6005442-DNA_D02,abh100,abh100,Abkhasian,WestEurasia,Russia,Sukhum,Mait Metspalu / Elza Khusnutdinova / Rita Khusainova,M,43.003,41.015,Genomic_from_blood,FullyPublic,X
+S_Adygei-1,C,LP6005441-DNA_A01,HGDP01402,HGDP01402,Adygei,WestEurasia,Russia(Caucasus),Krasnodar,Howard Cann,M,44.0,39.0,Genomic_from_cell_lines,FullyPublic,X
+S_Adygei-2,C,LP6005441-DNA_B01,HGDP01401,HGDP01401,Adygei,WestEurasia,Russia(Caucasus),Krasnodar,Howard Cann,F,44.0,39.0,Genomic_from_cell_lines,FullyPublic,X
+S_Albanian-1,C,LP6005677-DNA_B01,ALB212,ALB212,Albanian,WestEurasia,Albania,Tirana,David Comas,F,41.3,19.8,Genomic_from_blood,FullyPublic,X
+S_Aleut-1,C,LP6005443-DNA_A03,Ale22,Ale22,Aleut,CentralAsiaSiberia,Russia,"Nikolskoye, Commander Islands",Rem Sukernik / Stanislav Dryomov,M,55.18,166.0,Genomic_from_blood,FullyPublic,X
+S_Aleut-2,C,LP6005443-DNA_H02,Ale20,Ale20,Aleut,CentralAsiaSiberia,Russia,"Nikolskoye, Commander Islands",Rem Sukernik / Stanislav Dryomov,F,55.18,166.0,Genomic_from_blood,FullyPublic,X
+S_Altaian-1,C,LP6005442-DNA_F02,altai363p,altai363p,Altaian,CentralAsiaSiberia,Russia,"Tenga, Ongudaisky district, Altai Republic",Mait Metspalu / Olga Posukh,M,50.84,85.654,Genomic_from_blood,FullyPublic,X
+S_Ami-1,C,LP6005442-DNA_C07,NA13607,NA13607,Ami,EastAsia,Taiwan,Cell_line_repository_sampling_location_unknown,Coriell,M,22.843145,121.185356,Genomic_from_cell_lines,FullyPublic,X
+S_Ami-2,C,LP6005443-DNA_G05,NA13616,NA13616,Ami,EastAsia,Taiwan,Cell_line_repository_sampling_location_unknown,Coriell,M,22.843145,121.185356,Genomic_from_cell_lines,FullyPublic,X
+S_Armenian-1,C,LP6005442-DNA_G02,armenia293,armenia293,Armenian,WestEurasia,Armenia,Yerevan but all 4 ancestorscome from Nagorno Kharabakh,Mait Metspalu/ Levon Yepiskoposyan / Hovhannes Sahakyan,M,39.815,46.752,Genomic_from_blood,FullyPublic,X
+S_Armenian-2,C,LP6005519-DNA_F03,Armenian222,Armenian222,Armenian,WestEurasia,Armenia,born in Akhuzyan but all 4 ancestors come from Kars - now Turkey,Mait Metspalu/ Levon Yepiskoposyan / Hovhannes Sahakyan,M,40.605,43.101,Genomic_from_blood,FullyPublic,X
+S_Atayal-1,C,LP6005442-DNA_E07,NA13604,NA13604,Atayal,EastAsia,Taiwan,Cell_line_repository_sampling_location_unknown,Coriell,M,24.611712,121.296444,Genomic_from_cell_lines,FullyPublic,X
+S_Balochi-1,C,LP6005441-DNA_D01,HGDP00090,HGDP00090,Balochi,SouthAsia,Pakistan,?,Howard Cann,M,30.5,66.5,Genomic_from_cell_lines,FullyPublic,X
+S_Balochi-2,C,LP6005441-DNA_C01,HGDP00058,HGDP00058,Balochi,SouthAsia,Pakistan,?,Howard Cann,M,30.49871492,66.5,Genomic_from_cell_lines,FullyPublic,X
+S_BantuHerero-1,C,LP6005443-DNA_E02,HGDP01028,HGDP01028,BantuHerero,Africa,BotswanaOrNamibia,?,Howard Cann,M,-22.0,19.0,Genomic_from_cell_lines,FullyPublic,X
+S_BantuHerero-2,C,LP6005441-DNA_F01,HGDP01035,HGDP01035,BantuHerero,Africa,BotswanaOrNamibia,?,Howard Cann,M,-22.0,19.0,Genomic_from_cell_lines,FullyPublic,X
+S_BantuKenya-1,C,LP6005443-DNA_A01,HGDP01417,HGDP01417,BantuKenya,Africa,Kenya,?,Howard Cann,M,-3.0,37.0,Genomic_from_cell_lines,FullyPublic,X
+S_BantuKenya-2,C,LP6005441-DNA_B02,HGDP01414,HGDP01414,BantuKenya,Africa,Kenya,?,Howard Cann,F,-3.0,37.0,Genomic_from_cell_lines,FullyPublic,X
+S_BantuTswana-1,C,LP6005443-DNA_G02,HGDP01030,HGDP01030,BantuTswana,Africa,BotswanaOrNamibia,?,Howard Cann,M,-28.0,24.0,Genomic_from_cell_lines,FullyPublic,X
+S_BantuTswana-2,C,LP6005443-DNA_F02,HGDP01034,HGDP01034,BantuTswana,Africa,BotswanaOrNamibia,?,Howard Cann,M,-28.0,24.0,Genomic_from_cell_lines,FullyPublic,X
+S_Basque-1,C,LP6005441-DNA_C02,HGDP01364,HGDP01364,Basque,WestEurasia,France,?,Howard Cann,M,43.0,0.0,Genomic_from_cell_lines,FullyPublic,X
+S_Basque-2,C,LP6005441-DNA_D02,HGDP01365,HGDP01365,Basque,WestEurasia,France,?,Howard Cann,F,43.0,0.0,Genomic_from_cell_lines,FullyPublic,X
+S_BedouinB-1,C,LP6005441-DNA_E02,HGDP00616,HGDP00616,BedouinB,WestEurasia,Israel(Negev),?,Howard Cann,M,31.0,35.0,Genomic_from_cell_lines,FullyPublic,X
+S_BedouinB-2,C,LP6005441-DNA_F02,HGDP00650,HGDP00650,BedouinB,WestEurasia,Israel(Negev),?,Howard Cann,F,31.0,35.0,Genomic_from_cell_lines,FullyPublic,X
+S_Bengali-1,C,LP6005442-DNA_G09,HG03006,HG03006,Bengali,SouthAsia,Bangladesh,?,1KG,M,23.7,90.4,Genomic_from_cell_lines,FullyPublic,X
+S_Bengali-2,C,LP6005442-DNA_H09,HG03007,HG03007,Bengali,SouthAsia,Bangladesh,?,1KG,F,23.7,90.4,Genomic_from_cell_lines,FullyPublic,X
+S_Bergamo-1,C,LP6005441-DNA_A06,HGDP01153,HGDP01153,Bergamo,WestEurasia,Italy(Bergamo),?,Howard Cann,M,46.0,10.0,Genomic_from_cell_lines,FullyPublic,X
+S_Bergamo-2,C,LP6005441-DNA_B06,HGDP01172,HGDP01172,Bergamo,WestEurasia,Italy(Bergamo),?,Howard Cann,F,46.0,10.0,Genomic_from_cell_lines,FullyPublic,X
+S_Biaka-1,C,LP6005441-DNA_G02,HGDP00457,HGDP00457,Biaka,Africa,Central African Republic,?,Howard Cann,M,4.0,17.0,Genomic_from_cell_lines,FullyPublic,X
+S_Biaka-2,C,LP6005441-DNA_H02,HGDP00461,HGDP00461,Biaka,Africa,Central African Republic,?,Howard Cann,M,4.0,17.0,Genomic_from_cell_lines,FullyPublic,X
+S_Bougainville-1,C,LP6005441-DNA_B03,HGDP00660,HGDP00660,Bougainville,Oceania,PapuaNewGuinea,Bougainville_Island,Howard Cann,F,-6.0,155.0,Genomic_from_cell_lines,FullyPublic,X
+S_Bougainville-2,C,LP6005441-DNA_A03,HGDP00656,HGDP00656,Bougainville,Oceania,PapuaNewGuinea,Bougainville_Island,Howard Cann,F,-6.0,155.0,Genomic_from_cell_lines,FullyPublic,X
+S_Brahmin-1,C,LP6005519-DNA_G03,B11,B11,Brahmin,SouthAsia,India,Visakhapatnam,Lynn Jorde / Mike Bamshad / Scott Watkins,M,17.7,83.3,Genomic_from_blood,FullyPublic,X
+S_Brahmin-2,C,LP6005519-DNA_H03,B17,B17,Brahmin,SouthAsia,India,Visakhapatnam,Lynn Jorde / Mike Bamshad / Scott Watkins,M,17.7,83.3,Genomic_from_blood,FullyPublic,X
+S_Brahui-1,C,LP6005441-DNA_D03,HGDP00027,HGDP00027,Brahui,SouthAsia,Pakistan,?,Howard Cann,M,30.5,66.5,Genomic_from_cell_lines,FullyPublic,X
+S_Brahui-2,C,LP6005441-DNA_C03,HGDP00019,HGDP00019,Brahui,SouthAsia,Pakistan,?,Howard Cann,M,30.5,66.5,Genomic_from_cell_lines,FullyPublic,X
+S_Bulgarian-1,C,LP6005442-DNA_A03,BulgarianB4,BulgarianB4,Bulgarian,WestEurasia,Bulgaria,Plovdiv,Mait Metspalu / Draga Toncheva / Sena Karachanak-Yankova,M,42.163,24.741,Genomic_from_blood,FullyPublic,X
+S_Bulgarian-2,C,LP6005442-DNA_B03,BulgarianC1,BulgarianC1,Bulgarian,WestEurasia,Bulgaria,Plovdiv,Mait Metspalu / Draga Toncheva / Sena Karachanak-Yankova,M,42.163,24.741,Genomic_from_blood,FullyPublic,X
+S_Burmese-1,C,LP6005519-DNA_B06,Bu16,Bu16,Burmese,EastAsia,Myanmar,Mandalay (sampled in Singapore),Toomas Kivisild / Joseph Wee Tien Seng,M,17.0,96.7,Genomic_from_saliva,FullyPublic,X
+S_Burmese-2,C,LP6005519-DNA_A06,Bu5,Bu5,Burmese,EastAsia,Myanmar,Yangon (sampled in Singapore),Toomas Kivisild / Joseph Wee Tien Seng,M,17.0,96.7,Genomic_from_saliva,FullyPublic,X
+S_Burusho-1,C,LP6005441-DNA_E03,HGDP00428,HGDP00428,Burusho,SouthAsia,Pakistan,?,Howard Cann,M,36.5,74.0,Genomic_from_cell_lines,FullyPublic,X
+S_Burusho-2,C,LP6005441-DNA_F03,HGDP00338,HGDP00338,Burusho,SouthAsia,Pakistan,?,Howard Cann,F,36.5,74.0,Genomic_from_cell_lines,FullyPublic,X
+S_Cambodian-1,C,LP6005441-DNA_G03,HGDP00717,HGDP00717,Cambodian,EastAsia,Cambodia,?,Howard Cann,M,12.0,105.0,Genomic_from_cell_lines,FullyPublic,X
+S_Cambodian-2,C,LP6005441-DNA_H03,HGDP00713,HGDP00713,Cambodian,EastAsia,Cambodia,?,Howard Cann,F,12.0,105.0,Genomic_from_cell_lines,FullyPublic,X
+S_Chane-1,C,LP6005519-DNA_D01,TGBS21,TGBS21,Chane,America,Argentina,"Salta (province), Tartagal (city) ",Andres Ruiz-Linares / Claudio M. Bravi,M,-22.53,-63.82,Genomic_from_blood,FullyPublic,X
+S_Chechen-1,C,LP6005442-DNA_D03,ch113,ch113,Chechen,WestEurasia,Russia,Grozny_in_Chechen_Republic,Mait Metspalu / Elza Khusnutdinova / Rita Khusainova,M,43.333,45.65,Genomic_from_blood,FullyPublic,X
+S_Chukchi-1,C,LP6005443-DNA_C03,Sir19,Sir19,Chukchi,CentralAsiaSiberia,Russia,"Sireniki, Chukchi Peninsula",Rem Sukernik / Stanislav Dryomov,M,69.0,169.0,Genomic_from_blood,FullyPublic,X
+S_Czech-2,C,LP6005443-DNA_H05,NA15728,NA15728,Czech,WestEurasia,Czechoslovia(pre1989),Cell_line_repository_sampling_location_unknown,Coriell,M,50.1,14.4,Genomic_from_cell_lines,FullyPublic,X
+S_Dai-1,C,LP6005592-DNA_D03,HGDP01314,HGDP01314,Dai,EastAsia,China,?,Howard Cann,F,21.0,100.0,Genomic_from_cell_lines,FullyPublic,X
+S_Dai-2,C,LP6005443-DNA_B01,HGDP01312,HGDP01312,Dai,EastAsia,China,?,Howard Cann,M,21.0,100.0,Genomic_from_cell_lines,FullyPublic,X
+S_Dai-3,C,LP6005441-DNA_D04,HGDP01315,HGDP01315,Dai,EastAsia,China,?,Howard Cann,F,21.0,100.0,Genomic_from_cell_lines,FullyPublic,X
+S_Daur-2,C,LP6005441-DNA_F04,HGDP01215,HGDP01215,Daur,EastAsia,China,?,Howard Cann,F,48.5,124.0,Genomic_from_cell_lines,FullyPublic,X
+S_Dinka-1,C,LP6005443-DNA_H08,DNK05,DNK5,Dinka,Africa,Sudan,Aweil,Michael Hammer,M,8.8,27.4,Genomic_from_saliva,FullyPublic,X
+S_Dinka-2,C,LP6005443-DNA_B09,DNK11,DNK11,Dinka,Africa,Sudan,Aweil,Michael Hammer,M,8.8,27.4,Genomic_from_saliva,FullyPublic,X
+S_Druze-1,C,LP6005443-DNA_D01,HGDP00569,HGDP00569,Druze,WestEurasia,Israel(Carmel),?,Howard Cann,F,32.0,35.0,Genomic_from_cell_lines,FullyPublic,X
+S_Druze-2,C,LP6005441-DNA_G04,HGDP00597,HGDP00597,Druze,WestEurasia,Israel(Carmel),?,Howard Cann,M,32.0,35.0,Genomic_from_cell_lines,FullyPublic,X
+S_Dusun-1,C,LP6005519-DNA_F06,Dus22,Dus22,Dusun,Oceania,Brunei,Tutong District,Toomas Kivisild / M. Syafiq Abdullah,F,4.7,114.7,Genomic_from_saliva,FullyPublic,X
+S_Dusun-2,C,LP6005519-DNA_E06,Dus16,Dus16,Dusun,Oceania,Brunei,"Lamunin, Tutong District",Toomas Kivisild / M. Syafiq Abdullah,F,4.7,114.7,Genomic_from_saliva,FullyPublic,X
+S_English-1,C,LP6005442-DNA_E10,HG00126,HG00126,English,WestEurasia,England,Kent,1KG,M,51.2,0.7,Genomic_from_cell_lines,FullyPublic,X
+S_English-2,C,LP6005442-DNA_F10,HG00128,HG00128,English,WestEurasia,England,Kent,1KG,F,51.2,0.7,Genomic_from_cell_lines,FullyPublic,X
+S_Esan-1,C,LP6005442-DNA_A10,HG03100,HG03100,Esan,Africa,Nigeria,?,1KG,M,6.5,6.0,Genomic_from_cell_lines,FullyPublic,X
+S_Esan-2,C,LP6005442-DNA_B10,HG02943,HG02943,Esan,Africa,Nigeria,?,1KG,F,6.5,6.0,Genomic_from_cell_lines,FullyPublic,X
+S_Eskimo_Chaplin-1,C,LP6005443-DNA_D03,Esk29,Esk29,Eskimo_Chaplin,CentralAsiaSiberia,Russia,"New Chaplino, Chukchi Peninsula",Rem Sukernik / Stanislav Dryomov,M,64.48,172.86,Genomic_from_blood,FullyPublic,X
+S_Eskimo_Naukan-1,C,LP6005443-DNA_F03,Nesk_22,Nesk_22,Eskimo_Naukan,CentralAsiaSiberia,Russia,"Naukan, Chukchi Peninsula",Rem Sukernik / Stanislav Dryomov,F,66.02,169.71,Genomic_from_blood,FullyPublic,X
+S_Eskimo_Naukan-2,C,LP6005443-DNA_G03,Nesk_25,Nesk_25,Eskimo_Naukan,CentralAsiaSiberia,Russia,"Big Diomide Island, Chukchi Peninsula",Rem Sukernik / Stanislav Dryomov,F,66.02,169.71,Genomic_from_blood,FullyPublic,X
+S_Eskimo_Sireniki-1,C,LP6005443-DNA_B03,Sir26,Sir26,Eskimo_Sireniki,CentralAsiaSiberia,Russia,"Sireniki, Chukchi Peninsula",Rem Sukernik / Stanislav Dryomov,M,64.4,173.9,Genomic_from_blood,FullyPublic,X
+S_Eskimo_Sireniki-2,C,LP6005443-DNA_H03,Sir40,Sir40,Eskimo_Sireniki,CentralAsiaSiberia,Russia,"Sireniki, Chukchi Peninsula",Rem Sukernik / Stanislav Dryomov,F,64.4,173.9,Genomic_from_blood,FullyPublic,X
+S_Estonian-1,C,LP6005442-DNA_H03,Est375,Est375,Estonian,WestEurasia,Estonia,Parnu,Mait Metspalu / Ene Metspalu / Richard Villems / Jri Parik,M,58.386,24.502,Genomic_from_blood,FullyPublic,X
+S_Estonian-2,C,LP6005442-DNA_G03,Est400,Est400,Estonian,WestEurasia,Estonia,Avinurme,Mait Metspalu / Ene Metspalu / Richard Villems / Jri Parik,M,58.985,26.864,Genomic_from_blood,FullyPublic,X
+S_Even-1,C,LP6005592-DNA_F03,Nlk1,Nlk1,Even,CentralAsiaSiberia,Russia,"Djigda, Eastern Siberia",Rem Sukernik / Stanislav Dryomov / Elena Starikovskaya,F,57.53,135.88,Genomic_from_blood,FullyPublic,X
+S_Even-2,C,LP6005443-DNA_C04,Nlk18,Nlk18,Even,CentralAsiaSiberia,Russia,"Djigda, Eastern Siberia",Rem Sukernik / Stanislav Dryomov / Elena Starikovskaya,M,57.53,135.88,Genomic_from_blood,FullyPublic,X
+S_Even-3,C,LP6005443-DNA_B04,Nlk3,Nlk3,Even,CentralAsiaSiberia,Russia,"Djigda, Eastern Siberia",Rem Sukernik / Stanislav Dryomov / Elena Starikovskaya,F,57.53,135.88,Genomic_from_blood,FullyPublic,X
+S_Finnish-1,C,LP6005442-DNA_D10,HG00174,HG00174,Finnish,WestEurasia,Finland,?,1KG,F,60.2,24.9,Genomic_from_cell_lines,FullyPublic,X
+S_Finnish-2,C,LP6005442-DNA_C10,HG00190,HG00190,Finnish,WestEurasia,Finland,?,1KG,M,60.2,24.9,Genomic_from_cell_lines,FullyPublic,X
+S_Finnish-3,C,LP6005592-DNA_A02,HG00360,HG00360,Finnish,WestEurasia,Finland,?,1KG,M,60.2,24.9,Genomic_from_cell_lines,FullyPublic,X
+S_French-1,C,LP6005441-DNA_A05,HGDP00530,HGDP00530,French,WestEurasia,France,?,Howard Cann,M,46.0,2.0,Genomic_from_cell_lines,FullyPublic,X
+S_French-2,C,LP6005441-DNA_B05,HGDP00526,HGDP00526,French,WestEurasia,France,?,Howard Cann,F,46.0,2.0,Genomic_from_cell_lines,FullyPublic,X
+S_Gambian-1,C,LP6005442-DNA_G10,HG02464,HG02464,Gambian,Africa,Gambia,Western District,1KG,M,13.4,-16.7,Genomic_from_cell_lines,FullyPublic,X
+S_Gambian-2,C,LP6005442-DNA_H10,HG02574,HG02574,Gambian,Africa,Gambia,Western District,1KG,F,13.4,-16.7,Genomic_from_cell_lines,FullyPublic,X
+S_Georgian-1,C,LP6005442-DNA_B04,mg27,mg27,Georgian,WestEurasia,Georgia,Zugdidi_in_Megrelia,Mait Metspalu / Elza Khusnutdinova / Rita Khusainova,M,42.5,41.85,Genomic_from_blood,FullyPublic,X
+S_Georgian-2,C,LP6005442-DNA_A04,mg31,mg31,Georgian,WestEurasia,Georgia,Zugdidi_in_Megrelia,Mait Metspalu / Elza Khusnutdinova / Rita Khusainova,M,42.5,41.85,Genomic_from_blood,FullyPublic,X
+S_Greek-1,C,LP6005442-DNA_G07,NA17377,NA17377,Greek,WestEurasia,Greece,Cell_line_repository_sampling_location_unknown,Coriell,M,38.0,23.7,Genomic_from_cell_lines,FullyPublic,X
+S_Greek-2,C,LP6005443-DNA_A06,NA17374,NA17374,Greek,WestEurasia,Greece,Cell_line_repository_sampling_location_unknown,Coriell,M,38.0,23.7,Genomic_from_cell_lines,FullyPublic,X
+S_Han-1,C,LP6005441-DNA_D05,HGDP00783,HGDP00783,Han,EastAsia,China,?,Howard Cann,F,32.3,114.0,Genomic_from_cell_lines,FullyPublic,X
+S_Han-2,C,LP6005441-DNA_C05,HGDP00785,HGDP00785,Han,EastAsia,China,?,Howard Cann,M,32.3,114.0,Genomic_from_cell_lines,FullyPublic,X
+S_Hawaiian-1,C,LP6005592-DNA_H03,NA17385,NA17385,Hawaiian,Oceania,USA,Cell_line_repository_sampling_location_unknown,Coriell,M,21.3,-157.8,Genomic_from_cell_lines,FullyPublic,X
+S_Hazara-1,C,LP6005441-DNA_F05,HGDP00124,HGDP00124,Hazara,SouthAsia,Pakistan,?,Howard Cann,M,33.5,70.0,Genomic_from_cell_lines,FullyPublic,X
+S_Hazara-2,C,LP6005441-DNA_E05,HGDP00125,HGDP00125,Hazara,SouthAsia,Pakistan,?,Howard Cann,M,33.5,70.0,Genomic_from_cell_lines,FullyPublic,X
+S_Hezhen-1,C,LP6005441-DNA_G05,HGDP01240,HGDP01240,Hezhen,EastAsia,China,?,Howard Cann,M,47.5,133.5,Genomic_from_cell_lines,FullyPublic,X
+S_Hezhen-2,C,LP6005441-DNA_H05,HGDP01242,HGDP01242,Hezhen,EastAsia,China,?,Howard Cann,F,47.5,133.5,Genomic_from_cell_lines,FullyPublic,X
+S_Hungarian-1,C,LP6005442-DNA_B08,NA15203,NA15203,Hungarian,WestEurasia,Hungary,Cell_line_repository_sampling_location_unknown,Coriell,F,47.5,19.1,Genomic_from_cell_lines,FullyPublic,X
+S_Hungarian-2,C,LP6005442-DNA_A08,NA15202,NA15202,Hungarian,WestEurasia,Hungary,Cell_line_repository_sampling_location_unknown,Coriell,M,47.5,19.1,Genomic_from_cell_lines,FullyPublic,X
+S_Icelandic-1,C,LP6005442-DNA_D08,NA15761,NA15761,Icelandic,WestEurasia,Iceland,Cell_line_repository_sampling_location_unknown,Coriell,F,64.1,-21.9,Genomic_from_cell_lines,FullyPublic,X
+S_Icelandic-2,C,LP6005443-DNA_B06,NA15763,NA15763,Icelandic,WestEurasia,Iceland,Cell_line_repository_sampling_location_unknown,Coriell,F,64.1,-21.9,Genomic_from_cell_lines,FullyPublic,X
+S_Igorot-1,C,LP6005519-DNA_C06,Igor20,Igor20,Igorot,Oceania,Philippines,"Mountain Province, Luzon Island (sampled in Singapore)",Toomas Kivisild / Joseph Wee Tien Seng,F,17.1,121.0,Genomic_from_saliva,FullyPublic,X
+S_Igorot-2,C,LP6005519-DNA_D06,Igor21,Igor21,Igorot,Oceania,Philippines,"Mountain Province, Luzon Island (sampled in Singapore)",Toomas Kivisild / Joseph Wee Tien Seng,M,17.1,121.0,Genomic_from_saliva,FullyPublic,X
+S_Iranian-1,C,LP6005442-DNA_C04,iran17,iran17,Iranian,WestEurasia,Iran,migrants_collected_in_Kuwait,Mait Metspalu / Ene Metspalu / Richard Villems / Jri Parik,M,35.586,51.46,Genomic_from_blood,FullyPublic,X
+S_Iranian-2,C,LP6005443-DNA_B10,iran11,iran11,Iranian,WestEurasia,Iran,migrants_collected_in_Kuwait,Mait Metspalu / Ene Metspalu / Richard Villems / Jri Parik,M,35.586,51.46,Genomic_from_blood,FullyPublic,X
+S_Iraqi_Jew-1,C,LP6005592-DNA_F01,IraqiJew1771,IraqiJew1771,Iraqi_Jew,WestEurasia,Iraq,Cell_line_repository,Tel-Aviv University,F,33.3,44.4,Genomic_from_cell_lines,FullyPublic,X
+S_Iraqi_Jew-2,C,LP6005592-DNA_E01,IraqiJew4291,IraqiJew4291,Iraqi_Jew,WestEurasia,Iraq,Cell_line_repository,Tel-Aviv University,M,33.3,44.4,Genomic_from_cell_lines,FullyPublic,X
+S_Irula-1,C,LP6005519-DNA_C05,I1,I1,Irula,SouthAsia,India,?,Lynn Jorde / Mike Bamshad / Scott Watkins,M,13.5,80.0,Genomic_from_blood,FullyPublic,X
+S_Irula-2,C,LP6005519-DNA_D05,I3,I3,Irula,SouthAsia,India,?,Lynn Jorde / Mike Bamshad / Scott Watkins,M,13.5,80.0,Genomic_from_blood,FullyPublic,X
+S_Itelman-1,C,LP6005443-DNA_D04,Kor82,Kor82,Itelman,CentralAsiaSiberia,Russia,"Kovran, Kamchatka",Rem Sukernik / Stanislav Dryomov,F,57.0,157.0,Genomic_from_blood,FullyPublic,X
+S_Japanese-1,C,LP6005441-DNA_C06,HGDP00749,HGDP00749,Japanese,EastAsia,Japan,?,Howard Cann,M,37.85,139.0,Genomic_from_cell_lines,FullyPublic,X
+S_Japanese-2,C,LP6005441-DNA_D06,HGDP00773,HGDP00773,Japanese,EastAsia,Japan,?,Howard Cann,F,37.85,139.0,Genomic_from_cell_lines,FullyPublic,X
+S_Japanese-3,C,LP6005592-DNA_C02,NA18940,NA18940,Japanese,EastAsia,Japan,Tokyo,Coriell,M,37.85,139.0,Genomic_from_cell_lines,FullyPublic,X
+S_Jordanian-1,C,LP6005592-DNA_G03,Jordan445,Jordan445,Jordanian,WestEurasia,Jordan,migrants_collected_in_Kuwait,Mait Metspalu / Ene Metspalu / Richard Villems / Jri Parik,M,32.055,35.914,Genomic_from_blood,FullyPublic,X
+S_Jordanian-2,C,LP6005442-DNA_F04,Jordan603,Jordan603,Jordanian,WestEurasia,Jordan,migrants_collected_in_Kuwait,Mait Metspalu / Ene Metspalu / Richard Villems / Jri Parik,M,32.055,35.914,Genomic_from_blood,FullyPublic,X
+S_Jordanian-3,C,LP6005442-DNA_E04,Jordan214,Jordan214,Jordanian,WestEurasia,Jordan,migrants_collected_in_Kuwait,Mait Metspalu / Ene Metspalu / Richard Villems / Jri Parik,M,32.055,35.914,Genomic_from_blood,FullyPublic,X
+S_Ju_hoan_North-1,C,LP6005443-DNA_G08,HGDP00991,HGDP00991,Ju_hoan_North,Africa,Namibia,?,Howard Cann,M,-18.9,21.5,Genomic_from_cell_lines,FullyPublic,X
+S_Ju_hoan_North-2,C,LP6005441-DNA_B11,HGDP00987,HGDP00987,Ju_hoan_North,Africa,Namibia,?,Howard Cann,M,-18.9,21.5,Genomic_from_cell_lines,FullyPublic,X
+S_Ju_hoan_North-3,C,LP6005441-DNA_A11,HGDP01032,HGDP01032,Ju_hoan_North,Africa,Namibia,?,Howard Cann,M,-18.9,21.5,Genomic_from_cell_lines,FullyPublic,X
+S_Kalash-1,C,LP6005441-DNA_E06,HGDP00328,HGDP00328,Kalash,SouthAsia,Pakistan,?,Howard Cann,M,36.0,71.5,Genomic_from_cell_lines,FullyPublic,X
+S_Kalash-2,C,LP6005441-DNA_F06,HGDP00286,HGDP00286,Kalash,SouthAsia,Pakistan,?,Howard Cann,F,36.0,71.5,Genomic_from_cell_lines,FullyPublic,X
+S_Kapu-1,C,LP6005519-DNA_A04,K1,K1,Kapu,SouthAsia,India,Visakhapatnam,Lynn Jorde / Mike Bamshad / Scott Watkins,M,17.7,83.3,Genomic_from_blood,FullyPublic,X
+S_Kapu-2,C,LP6005519-DNA_B04,K4,K4,Kapu,SouthAsia,India,Visakhapatnam,Lynn Jorde / Mike Bamshad / Scott Watkins,M,17.7,83.3,Genomic_from_blood,FullyPublic,X
+S_Karitiana-1,C,LP6005441-DNA_G06,HGDP01012,HGDP01012,Karitiana,America,Brazil,?,Howard Cann,M,-10.0,-63.0,Genomic_from_cell_lines,FullyPublic,X
+S_Karitiana-2,C,LP6005441-DNA_H06,HGDP01018,HGDP01018,Karitiana,America,Brazil,?,Howard Cann,F,-10.0,-63.0,Genomic_from_cell_lines,FullyPublic,X
+S_Khomani_San-1,C,LP6005677-DNA_D03,SA0342,SA0342,Khomani_San,Africa,SouthAfrica,"Andriesvale Northern Cape, South Africa",Brenna Henn,F,-27.0,20.8,Genomic_from_saliva,FullyPublic,X
+S_Khomani_San-2,C,LP6005592-DNA_C05,SA0722,SA0722,Khomani_San,Africa,SouthAfrica,"Andriesvale, Northern Cape, South Africa",Brenna Henn,F,-27.0,20.8,Genomic_from_saliva,FullyPublic,X
+S_Khonda_Dora-1,C,LP6005519-DNA_E05,KD4,KD4,Khonda_Dora,SouthAsia,India,?,Lynn Jorde / Mike Bamshad / Scott Watkins,M,18.3,82.9,Genomic_from_blood,FullyPublic,X
+S_Kinh-1,C,LP6005442-DNA_D11,HG01600,HG01600,Kinh,EastAsia,Vietnam,Ho Chi Minh City,1KG,F,21.0,105.9,Genomic_from_cell_lines,FullyPublic,X
+S_Kinh-2,C,LP6005442-DNA_C11,HG01846,HG01846,Kinh,EastAsia,Vietnam,Ho Chi Minh City,1KG,M,21.0,105.9,Genomic_from_cell_lines,FullyPublic,X
+S_Korean-1,C,LP6005443-DNA_D06,ND19394,ND19394,Korean,EastAsia,Korea,Cell_line_repository_sampling_location_unknown,Coriell,M,37.6,127.0,Genomic_from_cell_lines,FullyPublic,X
+S_Korean-2,C,LP6005443-DNA_C06,NA00726,NA00726,Korean,EastAsia,Korea,Cell_line_repository_sampling_location_unknown,Coriell,F,37.6,127.0,Genomic_from_cell_lines,FullyPublic,X
+S_Kusunda-1,C,LP6005443-DNA_C09,Kusunda02,K-2,Kusunda,SouthAsia,Nepal,"Ghorahi, Dang",Aashish R. Jha / George van Driem / Irene Gallego Romero,M,28.07245287,82.48778,Genomic_from_saliva,FullyPublic,X
+S_Kusunda-2,C,LP6005443-DNA_D09,Kusunda15,K-15,Kusunda,SouthAsia,Nepal,"Damauli, Tanahu",Aashish R. Jha / George van Driem / Irene Gallego Romero,M,28.07245287,84.259486,Genomic_from_saliva,FullyPublic,X
+S_Kyrgyz-1,C,LP6005677-DNA_B02,Bishkek28440,Bishkek28440,Kyrgyz,CentralAsiaSiberia,Kyrgyzystan,Bishkek,Robert Mahley / Ugur Hodoglugil,M,42.9,74.6,Genomic_from_blood,FullyPublic,X
+S_Kyrgyz-2,C,LP6005677-DNA_A02,Bishkek28439,Bishkek28439,Kyrgyz,CentralAsiaSiberia,Kyrgyzystan,Bishkek,Robert Mahley / Ugur Hodoglugil,F,42.9,74.6,Genomic_from_blood,FullyPublic,X
+S_Lahu-1,C,LP6005441-DNA_B07,HGDP01323,HGDP01323,Lahu,EastAsia,China,?,Howard Cann,F,22.0,100.0,Genomic_from_cell_lines,FullyPublic,X
+S_Lahu-2,C,LP6005443-DNA_E01,HGDP01320,HGDP01320,Lahu,EastAsia,China,?,Howard Cann,M,22.0,100.0,Genomic_from_cell_lines,FullyPublic,X
+S_Lezgin-1,C,LP6005442-DNA_H04,lez49,lez49,Lezgin,WestEurasia,Russia,Dagestanskiye_Ogni_in_Dagestan,Mait Metspalu / Elza Khusnutdinova / Rita Khusainova,M,42.117,48.183,Genomic_from_blood,FullyPublic,X
+S_Lezgin-2,C,LP6005442-DNA_G04,lez42,lez42,Lezgin,WestEurasia,Russia,Dagestanskiye_Ogni_in_Dagestan,Mait Metspalu / Elza Khusnutdinova / Rita Khusainova,M,42.117,48.183,Genomic_from_blood,FullyPublic,X
+S_Luhya-1,C,LP6005442-DNA_F11,NA19023,NA19023,Luhya,Africa,Kenya,Webuye,Coriell,F,1.3,36.8,Genomic_from_cell_lines,FullyPublic,X
+S_Luhya-2,C,LP6005442-DNA_E11,NA19044,NA19044,Luhya,Africa,Kenya,Webuye,Coriell,M,1.3,36.8,Genomic_from_cell_lines,FullyPublic,X
+S_Luo-1,C,LP6005677-DNA_G01,Ayodo_430C,Ayodo_430C,Luo,Africa,Kenya,BondoDistrict,Geoge Ayodo,M,-0.1,34.3,Genomic_from_blood,FullyPublic,X
+S_Luo-2,C,LP6005442-DNA_F09,Ayodo_502C,Ayodo_502C,Luo,Africa,Kenya,BondoDistrict,Geoge Ayodo,F,-0.1,34.3,Genomic_from_blood,FullyPublic,X
+S_Madiga-1,C,LP6005519-DNA_G04,M4,M4,Madiga,SouthAsia,India,Visakhapatnam,Lynn Jorde / Mike Bamshad / Scott Watkins,M,17.7,83.3,Genomic_from_blood,FullyPublic,X
+S_Madiga-2,C,LP6005519-DNA_H04,M13,M13,Madiga,SouthAsia,India,Visakhapatnam,Lynn Jorde / Mike Bamshad / Scott Watkins,M,17.7,83.3,Genomic_from_blood,FullyPublic,X
+S_Makrani-1,C,LP6005441-DNA_C07,HGDP00160,HGDP00160,Makrani,SouthAsia,Pakistan,?,Howard Cann,M,26.0,64.0,Genomic_from_cell_lines,FullyPublic,X
+S_Makrani-2,C,LP6005441-DNA_D07,HGDP00157,HGDP00157,Makrani,SouthAsia,Pakistan,?,Howard Cann,F,26.0,64.0,Genomic_from_cell_lines,FullyPublic,X
+S_Mala-2,C,LP6005519-DNA_E04,ML2,ML2,Mala,SouthAsia,India,Visakhapatnam,Lynn Jorde / Mike Bamshad / Scott Watkins,M,17.7,83.3,Genomic_from_blood,FullyPublic,X
+S_Mala-3,C,LP6005519-DNA_F04,ML3,ML3,Mala,SouthAsia,India,Visakhapatnam,Lynn Jorde / Mike Bamshad / Scott Watkins,M,17.7,83.3,Genomic_from_blood,FullyPublic,X
+S_Mandenka-1,C,LP6005441-DNA_E07,HGDP01199,HGDP01199,Mandenka,Africa,Senegal,?,Howard Cann,M,12.0,-12.0,Genomic_from_cell_lines,FullyPublic,X
+S_Mandenka-2,C,LP6005441-DNA_F07,HGDP00915,HGDP00915,Mandenka,Africa,Senegal,?,Howard Cann,F,12.0,-12.0,Genomic_from_cell_lines,FullyPublic,X
+S_Mansi-1,C,LP6005443-DNA_F04,Mansi79,Mansi79,Mansi,CentralAsiaSiberia,Russia,"Sos'va river, Western Siberia",Rem Sukernik / Stanislav Dryomov / Elena Starikovskaya,M,63.8,61.45,Genomic_from_blood,FullyPublic,X
+S_Mansi-2,C,LP6005443-DNA_G04,Mansi41,Mansi41,Mansi,CentralAsiaSiberia,Russia,"Shugur, Western Siberia",Rem Sukernik / Stanislav Dryomov / Elena Starikovskaya,F,63.65,62.1,Genomic_from_blood,FullyPublic,X
+S_Maori-1,C,LP6005592-DNA_B02,NA17386,NA17386,Maori,Oceania,New Zealand,Cell_line_repository_sampling_location_unknown,Coriell,M,-41.3,174.5,Genomic_from_cell_lines,FullyPublic,X
+S_Masai-1,C,LP6005443-DNA_F06,NA21490,NA21490,Masai,Africa,Kenya,Kinyawa,Coriell,M,-1.5,35.2,Genomic_from_cell_lines,FullyPublic,X
+S_Masai-2,C,LP6005443-DNA_E06,NA21581,NA21581,Masai,Africa,Kenya,Kinyawa,Coriell,M,-1.5,35.2,Genomic_from_cell_lines,FullyPublic,X
+S_Mayan-1,C,LP6005441-DNA_G07,HGDP00855,HGDP00855,Mayan,America,Mexico,?,Howard Cann,F,19.0,-91.0,Genomic_from_cell_lines,FullyPublic,X
+S_Mayan-2,C,LP6005441-DNA_H07,HGDP00857,HGDP00857,Mayan,America,Mexico,?,Howard Cann,F,19.0,-91.0,Genomic_from_cell_lines,FullyPublic,X
+S_Mbuti-1,C,LP6005592-DNA_C03,HGDP00474,HGDP00474,Mbuti,Africa,Congo,?,Howard Cann,M,1.0,29.0,Genomic_from_cell_lines,FullyPublic,X
+S_Mbuti-2,C,LP6005441-DNA_B08,HGDP00476,HGDP00476,Mbuti,Africa,Congo,?,Howard Cann,F,1.0,29.0,Genomic_from_cell_lines,FullyPublic,X
+S_Mbuti-3,C,LP6005441-DNA_A08,HGDP00449,HGDP00449,Mbuti,Africa,Congo,?,Howard Cann,M,1.0,29.0,Genomic_from_cell_lines,FullyPublic,X
+S_Mende-1,C,LP6005442-DNA_G11,HG03078,HG03078,Mende,Africa,SierraLeone,?,1KG,M,8.5,-13.2,Genomic_from_cell_lines,FullyPublic,X
+S_Mende-2,C,LP6005442-DNA_H11,HG03085,HG03085,Mende,Africa,SierraLeone,?,1KG,F,8.5,-13.2,Genomic_from_cell_lines,FullyPublic,X
+S_Miao-1,C,LP6005441-DNA_C08,HGDP01191,HGDP01191,Miao,EastAsia,China,?,Howard Cann,M,28.0,109.0,Genomic_from_cell_lines,FullyPublic,X
+S_Miao-2,C,LP6005441-DNA_D08,HGDP01198,HGDP01198,Miao,EastAsia,China,?,Howard Cann,F,28.0,109.0,Genomic_from_cell_lines,FullyPublic,X
+S_Mixe-2,C,LP6005443-DNA_E11,mixe0002,mixe0002,Mixe,America,Mexico,"Tmazulapan, Mixe",William Klitz / Cheryl Winkler,F,16.95,-96.58,Genomic_from_cell_lines,FullyPublic,X
+S_Mixe-3,C,LP6005443-DNA_F11,mixe0042,mixe0042,Mixe,America,Mexico,"Tamazulapan, Mixe",William Klitz / Cheryl Winkler,F,16.95,-96.58,Genomic_from_cell_lines,FullyPublic,X
+S_Mixtec-1,C,LP6005443-DNA_G11,mixa0099,mixa0099,Mixtec,America,Mexico,San Andres Nuxino,William Klitz / Cheryl Winkler,M,17.0,-97.0,Genomic_from_cell_lines,FullyPublic,X
+S_Mixtec-2,C,LP6005443-DNA_H11,mixa0105,mixa0105,Mixtec,America,Mexico,?,William Klitz / Cheryl Winkler,F,17.0,-97.0,Genomic_from_cell_lines,FullyPublic,X
+S_Mongola-1,C,LP6005441-DNA_E08,HGDP01228,HGDP01228,Mongola,CentralAsiaSiberia,China,?,Howard Cann,M,45.0,111.0,Genomic_from_cell_lines,FullyPublic,X
+S_Mongola-2,C,LP6005441-DNA_F08,HGDP01223,HGDP01223,Mongola,CentralAsiaSiberia,China,?,Howard Cann,F,45.0,111.0,Genomic_from_cell_lines,FullyPublic,X
+S_Mozabite-1,C,LP6005441-DNA_G08,HGDP01253,HGDP01253,Mozabite,Africa,Algeria,?,Howard Cann,M,32.0,3.0,Genomic_from_cell_lines,FullyPublic,X
+S_Mozabite-2,C,LP6005441-DNA_H08,HGDP01274,HGDP01274,Mozabite,Africa,Algeria,?,Howard Cann,F,32.0,3.0,Genomic_from_cell_lines,FullyPublic,X
+S_Naxi-1,C,LP6005443-DNA_E09,HGDP01338,HGDP01338,Naxi,EastAsia,China,?,Howard Cann,M,26.0,100.0,Genomic_from_cell_lines,FullyPublic,X
+S_Naxi-3,C,LP6005441-DNA_B09,HGDP01345,HGDP01345,Naxi,EastAsia,China,?,Howard Cann,F,26.0,100.0,Genomic_from_cell_lines,FullyPublic,X
+S_North_Ossetian-1,C,LP6005443-DNA_E10,NorthOssetia12,NorthOssetia12,North_Ossetian,WestEurasia,Russia,Vladikavkaz in Republic of North OssetiaÐAlania,Mait Metspalu / Elza Khusnutdinova / Rita Khusainova,M,43.017,44.65,Genomic_from_blood,FullyPublic,X
+S_North_Ossetian-2,C,LP6005443-DNA_F10,NorthOssetia5,NorthOssetia5,North_Ossetian,WestEurasia,Russia,Vladikavkaz in Republic of North OssetiaÐAlania,Mait Metspalu / Elza Khusnutdinova / Rita Khusainova,M,43.017,44.65,Genomic_from_blood,FullyPublic,X
+S_Norwegian-1,C,LP6005592-DNA_B01,NOR111,NOR111,Norwegian,WestEurasia,Norway,Bergen,Cristian Capelli / Tor Hervig,U,60.4,5.4,Genomic_from_blood,FullyPublic,X
+S_Orcadian-1,C,LP6005441-DNA_C09,HGDP00798,HGDP00798,Orcadian,WestEurasia,OrkneyIslands,?,Howard Cann,M,59.0,-3.0,Genomic_from_cell_lines,FullyPublic,X
+S_Orcadian-2,C,LP6005441-DNA_D09,HGDP00796,HGDP00796,Orcadian,WestEurasia,OrkneyIslands,?,Howard Cann,F,59.0,-3.0,Genomic_from_cell_lines,FullyPublic,X
+S_Oroqen-1,C,LP6005441-DNA_E09,HGDP01203,HGDP01203,Oroqen,EastAsia,China,?,Howard Cann,M,50.4,126.5,Genomic_from_cell_lines,FullyPublic,X
+S_Oroqen-2,C,LP6005441-DNA_F09,HGDP01211,HGDP01211,Oroqen,EastAsia,China,?,Howard Cann,F,50.4,126.5,Genomic_from_cell_lines,FullyPublic,X
+S_Palestinian-1,C,LP6005592-DNA_B03,HGDP00722,HGDP00722,Palestinian,WestEurasia,Israel(Central),?,Howard Cann,M,32.0,35.0,Genomic_from_cell_lines,FullyPublic,X
+S_Palestinian-2,C,LP6005441-DNA_G09,HGDP00725,HGDP00725,Palestinian,WestEurasia,Israel(Central),?,Howard Cann,M,32.0,35.0,Genomic_from_cell_lines,FullyPublic,X
+S_Palestinian-3,C,LP6005441-DNA_H09,HGDP00737,HGDP00737,Palestinian,WestEurasia,Israel(Central),?,Howard Cann,F,32.0,35.0,Genomic_from_cell_lines,FullyPublic,X
+S_Papuan-10,C,LP6005443-DNA_B08,HGDP00553,HGDP00553,Papuan,Oceania,PapuaNewGuinea,NewGuinea,Howard Cann,M,-4.0,143.0,Genomic_from_cell_lines,FullyPublic,X
+S_Papuan-11,C,LP6005443-DNA_C07,HGDP00555,HGDP00555,Papuan,Oceania,PapuaNewGuinea,NewGuinea,Howard Cann,M,-4.0,143.0,Genomic_from_cell_lines,FullyPublic,X
+S_Papuan-12,C,LP6005443-DNA_G07,HGDP00556,HGDP00556,Papuan,Oceania,PapuaNewGuinea,NewGuinea,Howard Cann,M,-4.0,143.0,Genomic_from_cell_lines,FullyPublic,X
+S_Papuan-13,C,LP6005443-DNA_D08,HGDP00552,HGDP00552,Papuan,Oceania,PapuaNewGuinea,NewGuinea,Howard Cann,F,-4.0,143.0,Genomic_from_cell_lines,FullyPublic,X
+S_Papuan-14,C,LP6005443-DNA_E08,HGDP00554,HGDP00554,Papuan,Oceania,PapuaNewGuinea,NewGuinea,Howard Cann,F,-4.0,143.0,Genomic_from_cell_lines,FullyPublic,X
+S_Papuan-1,C,LP6005441-DNA_B10,HGDP00550,HGDP00550,Papuan,Oceania,PapuaNewGuinea,NewGuinea,Howard Cann,F,-4.0,143.0,Genomic_from_cell_lines,FullyPublic,X
+S_Papuan-2,C,LP6005443-DNA_H07,HGDP00540,HGDP00540,Papuan,Oceania,PapuaNewGuinea,NewGuinea,Howard Cann,M,-4.0,143.0,Genomic_from_cell_lines,FullyPublic,X
+S_Papuan-3,C,LP6005441-DNA_A10,HGDP00541,HGDP00541,Papuan,Oceania,PapuaNewGuinea,NewGuinea,Howard Cann,M,-4.0,143.0,Genomic_from_cell_lines,FullyPublic,X
+S_Papuan-4,C,LP6005443-DNA_E07,HGDP00543,HGDP00543,Papuan,Oceania,PapuaNewGuinea,NewGuinea,Howard Cann,M,-4.0,143.0,Genomic_from_cell_lines,FullyPublic,X
+S_Papuan-5,C,LP6005443-DNA_D07,HGDP00545,HGDP00545,Papuan,Oceania,PapuaNewGuinea,NewGuinea,Howard Cann,M,-4.0,143.0,Genomic_from_cell_lines,FullyPublic,X
+S_Papuan-6,C,LP6005443-DNA_C08,HGDP00547,HGDP00547,Papuan,Oceania,PapuaNewGuinea,NewGuinea,Howard Cann,M,-4.0,143.0,Genomic_from_cell_lines,FullyPublic,X
+S_Papuan-7,C,LP6005443-DNA_F07,HGDP00548,HGDP00548,Papuan,Oceania,PapuaNewGuinea,NewGuinea,Howard Cann,M,-4.0,143.0,Genomic_from_cell_lines,FullyPublic,X
+S_Papuan-8,C,LP6005443-DNA_A08,HGDP00549,HGDP00549,Papuan,Oceania,PapuaNewGuinea,NewGuinea,Howard Cann,M,-4.0,143.0,Genomic_from_cell_lines,FullyPublic,X
+S_Papuan-9,C,LP6005443-DNA_F08,HGDP00551,HGDP00551,Papuan,Oceania,PapuaNewGuinea,NewGuinea,Howard Cann,M,-4.0,143.0,Genomic_from_cell_lines,FullyPublic,X
+S_Pathan-1,C,LP6005441-DNA_C10,HGDP00216,HGDP00216,Pathan,SouthAsia,Pakistan,?,Howard Cann,M,33.5,70.5,Genomic_from_cell_lines,FullyPublic,X
+S_Pathan-2,C,LP6005441-DNA_D10,HGDP00232,HGDP00232,Pathan,SouthAsia,Pakistan,?,Howard Cann,F,33.5,70.5,Genomic_from_cell_lines,FullyPublic,X
+S_Piapoco-1,C,LP6005441-DNA_A04,HGDP00702,HGDP00702,Piapoco,America,Colombia,?,Howard Cann,F,3.0,-68.0,Genomic_from_cell_lines,FullyPublic,X
+S_Piapoco-2,C,LP6005441-DNA_B04,HGDP00706,HGDP00706,Piapoco,America,Colombia,?,Howard Cann,F,3.0,-68.0,Genomic_from_cell_lines,FullyPublic,X
+S_Pima-1,C,LP6005441-DNA_E10,HGDP01047,HGDP01047,Pima,America,Mexico,?,Howard Cann,M,29.0,-108.0,Genomic_from_cell_lines,FullyPublic,X
+S_Pima-2,C,LP6005441-DNA_F10,HGDP01044,HGDP01044,Pima,America,Mexico,?,Howard Cann,F,29.0,-108.0,Genomic_from_cell_lines,FullyPublic,X
+S_Polish-1,C,LP6005592-DNA_E02,ND15865,ND15865,Polish,WestEurasia,Poland,Cell_line_repository_sampling_location_unknown,Coriell,M,52.2,21.0,Genomic_from_cell_lines,FullyPublic,X
+S_Punjabi-1,C,LP6005592-DNA_B04,HG02724,HG02724,Punjabi,SouthAsia,Pakistan,Lahore,1KG,M,31.5,74.3,Genomic_from_cell_lines,FullyPublic,X
+S_Punjabi-2,C,LP6005442-DNA_A12,HG02783,HG02783,Punjabi,SouthAsia,Pakistan,Lahore,1KG,M,31.5,74.3,Genomic_from_cell_lines,FullyPublic,X
+S_Punjabi-3,C,LP6005442-DNA_B12,HG02790,HG02790,Punjabi,SouthAsia,Pakistan,Lahore,1KG,F,31.5,74.3,Genomic_from_cell_lines,FullyPublic,X
+S_Punjabi-4,C,LP6005592-DNA_A04,HG02494,HG02494,Punjabi,SouthAsia,Pakistan,Lahore,1KG,F,31.5,74.3,Genomic_from_cell_lines,FullyPublic,X
+S_Quechua-1,C,LP6005677-DNA_F01,NA11201,NA11201,Quechua,America,Peru,Cell_line_repository_sampling_location_unknown,Coriell,F,-13.5,-72.0,Genomic_from_cell_lines,FullyPublic,X
+S_Quechua-2,C,LP6005677-DNA_E01,NA11200,NA11200,Quechua,America,Peru,Cell_line_repository_sampling_location_unknown,Coriell,M,-13.5,-72.0,Genomic_from_cell_lines,FullyPublic,X
+S_Quechua-3,C,LP6005519-DNA_G02,Peru60,Peru60,Quechua,America,Peru,?,Chris Tyler-Smith / Andres Ruiz-Linares,F,-13.5,-72.0,Genomic_from_blood,FullyPublic,X
+S_Relli-1,C,LP6005519-DNA_A05,R3,R3,Relli,SouthAsia,India,Visakhapatnam,Lynn Jorde / Mike Bamshad / Scott Watkins,M,17.7,83.3,Genomic_from_blood,FullyPublic,X
+S_Relli-2,C,LP6005519-DNA_B05,R6,R6,Relli,SouthAsia,India,Visakhapatnam,Lynn Jorde / Mike Bamshad / Scott Watkins,M,17.7,83.3,Genomic_from_blood,FullyPublic,X
+S_Russian-1,C,LP6005441-DNA_G10,HGDP00887,HGDP00887,Russian,WestEurasia,Russia,Vologda Administrative Region,Howard Cann,M,61.0,40.0,Genomic_from_cell_lines,FullyPublic,X
+S_Russian-2,C,LP6005441-DNA_H10,HGDP00903,HGDP00903,Russian,WestEurasia,Russia,Vologda Administrative Region,Howard Cann,F,61.0,40.0,Genomic_from_cell_lines,FullyPublic,X
+S_Saami-1,C,LP6005592-DNA_C01,Utsa21,Utsa21,Saami,WestEurasia,Finland,Utsjoki,Antti Sajantila,F,69.9,27.0,Genomic_from_saliva,FullyPublic,X
+S_Saami-2,C,LP6005592-DNA_D01,Utsa22,Utsa22,Saami,WestEurasia,Finland,Utsjoki,Antti Sajantila,M,69.9,27.0,Genomic_from_saliva,FullyPublic,X
+S_Saharawi-1,C,LP6005619-DNA_B01,SAH31,SAH31,Saharawi,Africa,Western Sahara (Morocco),Close to the Algerian border,David Comas,M,27.3,-8.9,Genomic_from_blood,FullyPublic,X
+S_Saharawi-2,C,LP6005619-DNA_C01,SAH41,SAH41,Saharawi,Africa,Western Sahara (Morocco),Close to the Algerian border,David Comas,M,27.3,-8.9,Genomic_from_blood,FullyPublic,X
+S_Samaritan-1,C,LP6005592-DNA_D04,Sam02,Sam02,Samaritan,WestEurasia,Israel,Mount Gerizim,Mait Metspalu / Doron Behar,M,32.203,35.27,Genomic_from_blood,FullyPublic,X
+S_Sardinian-1,C,LP6005441-DNA_C11,HGDP01079,HGDP01079,Sardinian,WestEurasia,Italy(Sardinia),?,Howard Cann,M,40.0,9.0,Genomic_from_cell_lines,FullyPublic,X
+S_Sardinian-2,C,LP6005441-DNA_D11,HGDP01078,HGDP01078,Sardinian,WestEurasia,Italy(Sardinia),?,Howard Cann,F,40.0,9.0,Genomic_from_cell_lines,FullyPublic,X
+S_She-1,C,LP6005443-DNA_G01,HGDP01335,HGDP01335,She,EastAsia,China,?,Howard Cann,F,27.0,119.0,Genomic_from_cell_lines,FullyPublic,X
+S_She-2,C,LP6005443-DNA_F01,HGDP01333,HGDP01333,She,EastAsia,China,?,Howard Cann,M,27.0,119.0,Genomic_from_cell_lines,FullyPublic,X
+S_Sindhi-1,C,LP6005441-DNA_G11,HGDP00208,HGDP00208,Sindhi,SouthAsia,Pakistan,?,Howard Cann,M,25.5,69.0,Genomic_from_cell_lines,FullyPublic,X
+S_Sindhi-2,C,LP6005441-DNA_H11,HGDP00195,HGDP00195,Sindhi,SouthAsia,Pakistan,?,Howard Cann,F,25.5,69.0,Genomic_from_cell_lines,FullyPublic,X
+S_Somali-1,C,LP6005442-DNA_D09,Ayodo_81S,Ayodo_81S,Somali,Africa,Kenya,Garissa,Geoge Ayodo,F,5.6,48.3,Genomic_from_blood,FullyPublic,X
+S_Spanish-1,C,LP6005442-DNA_A11,HG01503,HG01503,Spanish,WestEurasia,Spain,Castilla la Mancha,1KG,M,39.9,-4.0,Genomic_from_cell_lines,FullyPublic,X
+S_Spanish-2,C,LP6005442-DNA_B11,HG01504,HG01504,Spanish,WestEurasia,Spain,Castilla la Mancha,1KG,F,39.9,-4.0,Genomic_from_cell_lines,FullyPublic,X
+S_Surui-1,C,LP6005441-DNA_A12,HGDP00846,HGDP00846,Surui,America,Brazil,?,Howard Cann,F,-11.0,-62.0,Genomic_from_cell_lines,FullyPublic,X
+S_Surui-2,C,LP6005441-DNA_B12,HGDP00852,HGDP00852,Surui,America,Brazil,?,Howard Cann,F,-11.0,-62.0,Genomic_from_cell_lines,FullyPublic,X
+S_Tajik-1,C,LP6005519-DNA_C03,tdj409_shugnan,tdj409_shugnan,Tajik,WestEurasia,Tajikistan,Shughnon District,Mait Metspalu / Oleg Balanovsky /Elena Balanovska,M,37.508,71.568,Genomic_from_blood,FullyPublic,X
+S_Tajik-2,C,LP6005519-DNA_D03,tdj430_shugnan,tdj430_shugnan,Tajik,WestEurasia,Tajikistan,Shughnon District,Mait Metspalu / Oleg Balanovsky /Elena Balanovska,M,37.508,71.568,Genomic_from_blood,FullyPublic,X
+S_Thai-1,C,LP6005443-DNA_A07,CHI-007,CHI-007,Thai,EastAsia,Thailand,Cell_line_repository_sampling_location_unknown,ECCAC,M,13.8,100.5,Genomic_from_cell_lines,FullyPublic,X
+S_Thai-2,C,LP6005443-DNA_B07,CHI-034,CHI-034,Thai,EastAsia,Thailand,Cell_line_repository_sampling_location_unknown,ECCAC,F,13.8,100.5,Genomic_from_cell_lines,FullyPublic,X
+S_Tlingit-1,C,LP6005443-DNA_E05,Ale32,Ale32,Tlingit,CentralAsiaSiberia,Russia,"Petropavlovsk-Kamchatski, Commander Islands",Rem Sukernik / Stanislav Dryomov,M,53.0,158.65,Genomic_from_blood,FullyPublic,X
+S_Tlingit-2,C,LP6005443-DNA_D05,Ale14,Ale14,Tlingit,CentralAsiaSiberia,Russia,"Nikolskoye, Commander Islands",Rem Sukernik / Stanislav Dryomov,F,55.18,166.0,Genomic_from_blood,FullyPublic,X
+S_Tu-1,C,LP6005443-DNA_H01,HGDP01350,HGDP01350,Tu,EastAsia,China,?,Howard Cann,M,36.0,101.0,Genomic_from_cell_lines,FullyPublic,X
+S_Tu-2,C,LP6005441-DNA_D12,HGDP01355,HGDP01355,Tu,EastAsia,China,?,Howard Cann,F,36.0,101.0,Genomic_from_cell_lines,FullyPublic,X
+S_Tubalar-1,C,LP6005442-DNA_F12,Tuba19,Tuba19,Tubalar,CentralAsiaSiberia,Russia,"Artybash and Kebezen, Altai-Sayan Upland",Rem Sukernik / Stanislav Dryomov,F,51.13333333,87.0,Genomic_from_blood,FullyPublic,X
+S_Tubalar-2,C,LP6005442-DNA_E12,Tuba9,Tuba9,Tubalar,CentralAsiaSiberia,Russia,"Artybash and Kebezen, Altai-Sayan Upland",Rem Sukernik / Stanislav Dryomov,F,51.13333333,87.0,Genomic_from_blood,FullyPublic,X
+S_Tujia-1,C,LP6005443-DNA_A02,HGDP01095,HGDP01095,Tujia,EastAsia,China,?,Howard Cann,M,29.0,109.0,Genomic_from_cell_lines,FullyPublic,X
+S_Tujia-2,C,LP6005441-DNA_F12,HGDP01098,HGDP01098,Tujia,EastAsia,China,?,Howard Cann,F,29.0,109.0,Genomic_from_cell_lines,FullyPublic,X
+S_Turkish-1,C,LP6005677-DNA_C03,Kayseri23827,Kayseri23827,Turkish,WestEurasia,Turkey,Kayseri,Robert Mahley / Ugur Hodoglugil,M,38.7,35.5,Genomic_from_blood,FullyPublic,X
+S_Turkish-2,C,LP6005677-DNA_A03,Kayseri24424,Kayseri24424,Turkish,WestEurasia,Turkey,Kayseri,Robert Mahley / Ugur Hodoglugil,F,38.7,35.5,Genomic_from_blood,FullyPublic,X
+S_Tuscan-1,C,LP6005441-DNA_H12,HGDP01168,HGDP01168,Tuscan,WestEurasia,Italy(Tuscany),?,Howard Cann,F,43.0,11.0,Genomic_from_cell_lines,FullyPublic,X
+S_Tuscan-2,C,LP6005441-DNA_G12,HGDP01163,HGDP01163,Tuscan,WestEurasia,Italy(Tuscany),?,Howard Cann,M,43.0,11.0,Genomic_from_cell_lines,FullyPublic,X
+S_Ulchi-1,C,LP6005442-DNA_H12,Ul31,Ul31,Ulchi,CentralAsiaSiberia,Russia,"Nizhniy Gavan, Lower Amur",Rem Sukernik / Stanislav Dryomov,F,52.43,140.42,Genomic_from_blood,FullyPublic,X
+S_Ulchi-2,C,LP6005442-DNA_G12,Ul5,Ul5,Ulchi,CentralAsiaSiberia,Russia,"Bogorodskoe, Lower Amur",Rem Sukernik / Stanislav Dryomov,F,52.37,140.45,Genomic_from_blood,FullyPublic,X
+S_Uygur-1,C,LP6005442-DNA_B01,HGDP01306,HGDP01306,Uygur,EastAsia,China,Yili,Howard Cann,F,44.0,81.0,Genomic_from_cell_lines,FullyPublic,X
+S_Uygur-2,C,LP6005443-DNA_B02,HGDP01297,HGDP01297,Uygur,EastAsia,China,Yili,Howard Cann,M,44.0,81.0,Genomic_from_cell_lines,FullyPublic,X
+S_Xibo-1,C,LP6005442-DNA_D01,HGDP01250,HGDP01250,Xibo,EastAsia,China,?,Howard Cann,M,43.5,81.5,Genomic_from_cell_lines,FullyPublic,X
+S_Xibo-2,C,LP6005443-DNA_C02,HGDP01246,HGDP01246,Xibo,EastAsia,China,?,Howard Cann,M,43.5,81.5,Genomic_from_cell_lines,FullyPublic,X
+S_Yadava-1,C,LP6005519-DNA_C04,Y4,Y4,Yadava,SouthAsia,India,Visakhapatnam,Lynn Jorde / Mike Bamshad / Scott Watkins,M,17.7,83.3,Genomic_from_blood,FullyPublic,X
+S_Yadava-2,C,LP6005519-DNA_D04,Y8,Y8,Yadava,SouthAsia,India,Visakhapatnam,Lynn Jorde / Mike Bamshad / Scott Watkins,M,17.7,83.3,Genomic_from_blood,FullyPublic,X
+S_Yakut-1,C,LP6005442-DNA_F01,HGDP00956,HGDP00956,Yakut,CentralAsiaSiberia,Russia,?,Howard Cann,F,63.0,129.5,Genomic_from_cell_lines,FullyPublic,X
+S_Yakut-2,C,LP6005443-DNA_D02,HGDP00951,HGDP00951,Yakut,CentralAsiaSiberia,Russia,?,Howard Cann,M,63.0,129.5,Genomic_from_cell_lines,FullyPublic,X
+S_Yemenite_Jew-1,C,LP6005592-DNA_H01,YemeniteJew4695,YemeniteJew4695,Yemenite_Jew,WestEurasia,Yemen,Cell_line_repository,Tel-Aviv University,F,15.4,44.2,Genomic_from_cell_lines,FullyPublic,X
+S_Yemenite_Jew-2,C,LP6005592-DNA_G01,YemeniteJew5433,YemeniteJew5433,Yemenite_Jew,WestEurasia,Yemen,Cell_line_repository,Tel-Aviv University,M,15.4,44.2,Genomic_from_cell_lines,FullyPublic,X
+S_Yi-1,C,LP6005442-DNA_G01,HGDP01179,HGDP01179,Yi,EastAsia,China,?,Howard Cann,M,28.0,103.0,Genomic_from_cell_lines,FullyPublic,X
+S_Yi-2,C,LP6005442-DNA_H01,HGDP01188,HGDP01188,Yi,EastAsia,China,?,Howard Cann,F,28.0,103.0,Genomic_from_cell_lines,FullyPublic,X
+S_Yoruba-1,C,LP6005442-DNA_B02,HGDP00928,HGDP00928,Yoruba,Africa,Nigeria,?,Howard Cann,F,7.4,3.9,Genomic_from_cell_lines,FullyPublic,X
+S_Yoruba-2,C,LP6005442-DNA_A02,HGDP00932,HGDP00932,Yoruba,Africa,Nigeria,?,Howard Cann,M,7.4,3.9,Genomic_from_cell_lines,FullyPublic,X
+S_Zapotec-1,C,LP6005443-DNA_A12,zapo0098,zapo0098,Zapotec,America,Mexico,San Juan Guelavia,William Klitz / Cheryl Winkler,M,16.5,-97.2,Genomic_from_cell_lines,FullyPublic,X
+S_Zapotec-2,C,LP6005677-DNA_D01,zapo0099,zapo0099,Zapotec,America,Mexico,San Juan Guelavia,William Klitz / Cheryl Winkler,M,16.5,-97.2,Genomic_from_cell_lines,FullyPublic,X

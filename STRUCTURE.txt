@@ -1,0 +1,173 @@
+================================================================================
+CHROMOSOME22-EVOLUTIONARY-CLUSTERING PROJECT STRUCTURE
+================================================================================
+
+chromosome22-evolutionary-clustering/
+│
+├── 📁 data/                                     [RAW & PROCESSED GENOTYPES]
+│   ├── raw/
+│   │   ├── chr.sgdp.pub.22.bcf                942 MB  Raw phased genotypes
+│   │   ├── chr.sgdp.pub.22.bcf.csi            25 KB   Index file
+│   │   └── SGDP_metadata.279public....txt     53 KB   Metadata
+│   │
+│   └── processed/                              [✓ READY FOR EA]
+│       ├── genotypes_filtered.npy             28 MB   Filtered genotypes ✓
+│       ├── genotypes_raw.npy                  291 MB  Raw (archive)
+│       ├── samples_metadata_ordered.csv       53 KB   Sample info ✓
+│       ├── variants_filtered.csv              2.5 MB  Variant positions ✓
+│       └── variants_raw.csv                   33 MB   Raw (archive)
+│
+├── 📁 results/                                 [ANALYSIS OUTPUTS]
+│   ├── distances/
+│   │   ├── genetic_distance.npy              Binary   278×278 matrix ✓
+│   │   ├── genetic_distance.csv              ~5 MB    CSV format
+│   │   ├── geographic_distance.npy           Binary   278×278 matrix ✓
+│   │   └── geographic_distance.csv           ~5 MB    CSV format
+│   │
+│   └── visualizations/
+│       ├── 01_pca.png                        192 KB   Regional clustering
+│       ├── 02_distance_heatmap.png           300 KB   Hierarchical blocks
+│       ├── 03_geographic_scatter.png         195 KB   Global distribution
+│       ├── 04_distance_distributions.png     74 KB    Distance stats
+│       └── 05_genetic_geographic_correlation.png 555 KB Validation r=0.503
+│
+├── 📁 scripts/                                [PROCESSING PIPELINE]
+│   ├── parse_data.py                         Parse BCF → genotypes
+│   ├── compute_distances.py                  ✓ Genetic & geographic distances
+│   └── visualize_data.py                     ✓ Diagnostic plots
+│
+├── 📁 docs/                                  [DOCUMENTATION - START HERE]
+│   ├── EXECUTIVE_SUMMARY.md                 ← STATUS & KEY RESULTS
+│   ├── PROJECT_OVERVIEW.md                  ← QUICK START
+│   ├── PIPELINE_SUMMARY.md                  ← COMPLETE FLOW
+│   ├── METHODS.md                           ← MATH & PROCEDURES
+│   ├── DATA_ANALYSIS_REPORT.md              ← FINDINGS & STATS
+│   ├── FILE_MANIFEST.md                     ← FILE INVENTORY
+│   ├── GUIDELINES.md                        ← PROJECT CONSTRAINTS
+│   └── ASSIGNMENT.md                        ← ORIGINAL ASSIGNMENT
+│
+├── 📁 claude_context/                        [REFERENCE MATERIALS]
+│   ├── general_assignment_instructions.md
+│   ├── README_SGDP_Download.md
+│   ├── claude.md
+│   └── DATA_SUMMARY.md
+│
+├── 📁 venv/                                  [PYTHON ENVIRONMENT]
+│   └── (numpy, pandas, pysam, scipy, sklearn, seaborn, matplotlib, etc.)
+│
+├── 📁 .git/                                  [VERSION CONTROL]
+│   └── (Complete history of changes)
+│
+├── README.md                                 Project description
+├── STRUCTURE.txt                             This file
+├── LICENSE                                   Project license
+└── CLAUDE.md                                 (Optional Claude preferences)
+
+================================================================================
+ESSENTIAL FILES (FOR EVOLUTIONARY ALGORITHM)
+================================================================================
+
+🔴 MUST HAVE:
+  • data/processed/genotypes_filtered.npy        (Genotype input)
+  • results/distances/genetic_distance.npy       (Fitness computation)
+  • results/distances/geographic_distance.npy    (Fitness computation)
+  • data/processed/samples_metadata_ordered.csv  (Sample info)
+
+📚 DOCUMENTATION:
+  • docs/EXECUTIVE_SUMMARY.md   (Read first)
+  • docs/PROJECT_OVERVIEW.md    (Start here)
+  • docs/METHODS.md             (Understanding)
+
+================================================================================
+STATISTICS
+================================================================================
+
+Samples:                    278 individuals
+Variants (after filter):    104,573 SNPs (chr22)
+Geographic regions:         7 continents
+Missing data:               0%
+Genetic-geographic corr:    r = 0.503
+
+Folder size breakdown:
+  Essential:                ~60 MB
+  Archives:                 ~1.2 GB
+  Documentation:            ~100 KB
+  Python venv:              ~200 MB
+  ─────────────────────────────────
+  Total:                    ~1.5 GB
+
+================================================================================
+WHAT'S DONE vs WHAT'S NEXT
+================================================================================
+
+✓ COMPLETE:
+  ✓ Data downloaded & validated
+  ✓ Genotypes parsed from BCF
+  ✓ SNPs filtered (MAF > 0.05, non-monomorphic)
+  ✓ Standardization applied
+  ✓ Distance matrices computed
+  ✓ Validation plots generated
+  ✓ Documentation written
+  ✓ Folder structure organized
+
+→ NEXT (Evolutionary Algorithm):
+  1. Design fitness function
+  2. Implement EA engine
+  3. Run experiments (K=2,3,4,5)
+  4. Analyze results
+
+================================================================================
+HOW TO USE THIS PROJECT
+================================================================================
+
+1. UNDERSTAND THE PIPELINE:
+   Start with:  docs/EXECUTIVE_SUMMARY.md (5 min)
+   Then read:   docs/PROJECT_OVERVIEW.md (10 min)
+   Details:     docs/METHODS.md (30 min)
+
+2. VERIFY DATA QUALITY:
+   View plots:  results/visualizations/*.png
+   Check stats: docs/DATA_ANALYSIS_REPORT.md
+   Inspect:     results/distances/*.csv
+
+3. IMPLEMENT EVOLUTIONARY ALGORITHM:
+   Use inputs:  data/processed/genotypes_filtered.npy
+                results/distances/genetic_distance.npy
+                results/distances/geographic_distance.npy
+                data/processed/samples_metadata_ordered.csv
+   
+   Build:       Custom EA (selection, crossover, mutation)
+   Test:        K=5 initially, then K=2,3,4
+
+4. REPRODUCE ANALYSIS:
+   Run scripts:  python scripts/parse_data.py
+                 python scripts/compute_distances.py
+                 python scripts/visualize_data.py
+
+================================================================================
+QUICK START
+================================================================================
+
+For EA Implementation:
+  import numpy as np
+  import pandas as pd
+  
+  # Load data
+  genotypes = np.load('data/processed/genotypes_filtered.npy')
+  genetic_dist = np.load('results/distances/genetic_distance.npy')
+  geographic_dist = np.load('results/distances/geographic_distance.npy')
+  metadata = pd.read_csv('data/processed/samples_metadata_ordered.csv')
+  
+  # Data shapes:
+  # - genotypes: (104573, 278)
+  # - genetic_dist: (278, 278)
+  # - geographic_dist: (278, 278)
+  # - metadata: (278, columns=[SGDP_ID, Region, Latitude, Longitude, ...])
+
+================================================================================
+STATUS: PRODUCTION READY ✓
+================================================================================
+
+All data preparation complete. System ready for EA implementation.
+Start with: docs/EXECUTIVE_SUMMARY.md
+

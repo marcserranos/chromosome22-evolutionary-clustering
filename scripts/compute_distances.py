@@ -107,6 +107,10 @@ def save_distances(genetic_dist, geographic_dist, samples_df):
     """Save distance matrices and summary."""
     print("\n=== Saving Distance Matrices ===")
 
+    # Normalize to [0, 1]
+    genetic_dist = genetic_dist / np.max(genetic_dist)
+    geographic_dist = geographic_dist / np.max(geographic_dist)
+
     np.save(RESULTS_DIR / "genetic_distance.npy", genetic_dist)
     np.save(RESULTS_DIR / "geographic_distance.npy", geographic_dist)
 

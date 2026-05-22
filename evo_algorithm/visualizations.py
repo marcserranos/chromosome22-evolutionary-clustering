@@ -1,10 +1,12 @@
-"""Plots for the best partition found by the evolutionary algorithm."""
+"""this file has been heavily AI-assisted, to quickly iterate and test assumptions about
+our code for this first version of it. down the road, we will plan more intricate experiments
+and actually code for what we want to visualize. this code gives multiple useful visualizations
+but we haven't yet decided which ones we're aiming for."""
 
 from pathlib import Path
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
-
 from data_loader import load_subject_metadata, align_metadata
 
 

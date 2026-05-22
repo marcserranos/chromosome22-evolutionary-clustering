@@ -1,16 +1,14 @@
-"""Load distance matrices and subject metadata."""
-
 from pathlib import Path
 import pandas as pd
 
-
 def load_distance_csv(path):
+    '''loads distance matrix file'''
     df = pd.read_csv(path, index_col=0)
     subject_names = list(df.columns)
     return df.values.astype(float), subject_names
 
-
 def load_distances(dist_dir=None):
+    '''loads distance matrix as usable data'''
     if dist_dir is None:
         dist_dir = Path(__file__).resolve().parent.parent / "results" / "distances"
     dist_dir = Path(dist_dir)
@@ -25,6 +23,7 @@ def load_distances(dist_dir=None):
 
 
 def load_subject_metadata(metadata_path=None):
+    '''loads metadata'''
     if metadata_path is None:
         metadata_path = (
             Path(__file__).resolve().parent.parent
@@ -36,7 +35,7 @@ def load_subject_metadata(metadata_path=None):
 
 
 def align_metadata(subject_names, metadata_df):
-    """One row per subject, same order as distance matrix labels."""
+    """one row per subject, same order as distance matrix labels"""
     meta = metadata_df.set_index("SGDP_ID")
     rows = meta.loc[subject_names]
     return rows.reset_index()

@@ -14,8 +14,8 @@ def main():
     min_group_size = max(1, num_subjects // (k_groups * 10)) # can be changed
 
     # class initialization
-    evaluator = FitnessEvaluator(genetic_matrix=genetic,geographic_matrix=geographic,k_groups=k_groups,alpha=0,beta=0,min_group_size=min_group_size,gamma=100.0)
-    ea = EvolutionaryAlgorithm(num_subjects=num_subjects,k_groups=k_groups,population_size=50,generations=10000,crossover_rate=0.9,mutation_rate=0.05,elitism_count=2,evaluator=evaluator)
+    evaluator = FitnessEvaluator(genetic_matrix=genetic,geographic_matrix=geographic,k_groups=k_groups,alpha=1,beta=1,min_group_size=min_group_size,gamma=1)
+    ea = EvolutionaryAlgorithm(num_subjects=num_subjects,k_groups=k_groups,population_size=50,generations=5000,crossover_rate=0.9,mutation_rate=0.05,elitism_count=2,evaluator=evaluator)
 
     # runs the evolutionary algorithm
     best = ea.run()

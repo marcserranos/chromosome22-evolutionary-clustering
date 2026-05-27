@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Globe, { type GlobeMethods } from "react-globe.gl";
 import type { SampleMetaRow } from "../data/types";
 
@@ -77,6 +77,11 @@ function spreadOverlappingLocations<T extends GeoPoint>(pts: T[]): T[] {
   return any ? out : pts;
 }
 
+function smoothstep01(t: number) {
+  const x = clamp(t, 0, 1);
+  return x * x * (3 - 2 * x);
+}
+
 export function GlobeView({
   metadata,
   points,
@@ -88,6 +93,7 @@ export function GlobeView({
 }: Props) {
   const globeRef = useRef<GlobeMethods | undefined>(undefined);
   const spinAnimRef = useRef<number | null>(null);
+  const [altitudeMult, setAltitudeMult] = useState(1);
 
   const fallbackPoints = useMemo(() => {
     const raw = metadata
@@ -151,8 +157,21 @@ export function GlobeView({
       const speed = base + (peak - base) * shape;
       controls.autoRotateSpeed = speed;
 
+      // Pin length pulse:
+      // - ramp to 6x over the first 0.5s
+      // - then decay back to 1x over the remaining time
+      const rampS = 0.5 / 5; // 0.1
+      if (clamped <= rampS) {
+        const r01 = smoothstep01(clamped / rampS);
+        setAltitudeMult(1 + 5 * r01);
+      } else {
+        const d01 = smoothstep01((clamped - rampS) / (1 - rampS));
+        setAltitudeMult(6 - 5 * d01);
+      }
+
       if (clamped >= 1) {
         controls.autoRotateSpeed = base;
+        setAltitudeMult(1);
         spinAnimRef.current = null;
         return;
       }
@@ -167,6 +186,7 @@ export function GlobeView({
         spinAnimRef.current = null;
       }
       controls.autoRotateSpeed = base;
+      setAltitudeMult(1);
     };
   }, [rotationSpeed, spinPulseToken]);
 
@@ -185,8 +205,9 @@ export function GlobeView({
         pointAltitude={(p) => {
           const gp = p as { cluster: number };
           const base = 0.025;
-          if (selectedCluster == null) return base;
-          return gp.cluster === selectedCluster ? base * 6 : base;
+          const highlighted = selectedCluster != null && gp.cluster === selectedCluster;
+          const a = highlighted ? base * 6 : base;
+          return a * altitudeMult;
         }}
         pointRadius={0.28}
         pointColor="color"

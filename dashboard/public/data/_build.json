@@ -1,5 +1,5 @@
 {
-  "stamp": "2026-05-27T13:27:50.621Z",
+  "stamp": "2026-05-27T14:46:09.892Z",
   "copied": [
     {
       "source": "../results/distances/genetic_distance.csv",
@@ -16,6 +16,10 @@
     {
       "source": "../results/runs/16_genetic_only_video/lineage.csv",
       "dest": "public/data/runs/16_genetic_only_video/lineage.csv"
+    },
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_kexp_gon/gen_geo_correlation.png",
+      "dest": "public/data/visualizations/gen_geo_correlation.png"
     }
   ]
 }

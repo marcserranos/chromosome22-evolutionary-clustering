@@ -16,23 +16,25 @@ type Props = {
   id: PanelId;
   expanded: boolean;
   onClose: () => void;
+  experimentKey?: string | null;
   onTransitionEnd?: (e: TransitionEvent) => void;
 };
 
-function PanelBody({ id }: { id: PanelId }) {
+function PanelBody({ id, experimentKey }: { id: PanelId; experimentKey?: string | null }) {
   const title = PANEL_LABELS[id];
+  const prefix = experimentKey ? `/data/visualizations/${experimentKey}` : "/data/visualizations";
   const expectedPath =
     id === 4
-      ? "/data/visualizations/genetic_pca.png"
+      ? `${prefix}/genetic_pca.png`
       : id === 5
-        ? "/data/visualizations/heatmap.png"
+        ? `${prefix}/heatmap.png`
         : id === 6
-          ? "/data/visualizations/fitness_evolution.png"
+          ? `${prefix}/fitness_evolution.png`
           : id === 7
             ? "/data/visualizations/gen_geo_correlation.png"
             : id === 8
-              ? "/data/visualizations/bridge_groups.png"
-              : "/data/visualizations/1000g.png";
+              ? `${prefix}/bridge_groups.png`
+              : `${prefix}/1000g.png`;
 
   return (
     <MatplotlibImagePanel
@@ -45,7 +47,7 @@ function PanelBody({ id }: { id: PanelId }) {
   );
 }
 
-export function ResultPanel({ id, expanded, onClose, onTransitionEnd }: Props) {
+export function ResultPanel({ id, expanded, onClose, experimentKey, onTransitionEnd }: Props) {
   return (
     <div
       className={`resultPanel ${expanded ? "resultPanel--expanded" : ""}`}
@@ -58,7 +60,7 @@ export function ResultPanel({ id, expanded, onClose, onTransitionEnd }: Props) {
         </button>
       </div>
       <div className="resultPanelBody">
-        <PanelBody id={id} />
+        <PanelBody id={id} experimentKey={experimentKey} />
       </div>
     </div>
   );

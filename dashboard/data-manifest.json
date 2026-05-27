@@ -20,6 +20,10 @@
     {
       "source": "../results/runs/16_genetic_only_video/lineage.csv",
       "dest": "runs/16_genetic_only_video/lineage.csv"
+    },
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_kexp_gon/gen_geo_correlation.png",
+      "dest": "visualizations/gen_geo_correlation.png"
     }
   ]
 }

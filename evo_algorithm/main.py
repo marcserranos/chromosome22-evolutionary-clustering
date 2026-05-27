@@ -19,7 +19,7 @@ def get_run_name():
     return run_name
 
 
-def create_plot_data(run_dir, genetic_matrix, ea_history, lineage, subject_names):
+def create_plot_data(run_dir, genetic_matrix, ea_history, lineage, subject_names, chromosome, k_groups):
     """Create plot_data folder with raw data for custom visualizations"""
     plot_data_dir = Path(run_dir) / "plot_data"
     plot_data_dir.mkdir(exist_ok=True)
@@ -69,6 +69,22 @@ def create_plot_data(run_dir, genetic_matrix, ea_history, lineage, subject_names
             ea_history['worst_fitness']
         ):
             writer.writerow([gen, best, mean, worst])
+
+    # 5. Medoid distances
+    medoid_path = plot_data_dir / "medoid_distances.csv"
+    with open(medoid_path, 'w', newline='') as f:
+        writer = csv.writer(f)
+        writer.writerow(['subject_index', 'subject_name', 'cluster', 'distance_to_medoid'])
+        chromosome = np.asarray(chromosome)
+        medoids = {}
+        for c in range(k_groups):
+            mask = chromosome == c
+            indices = np.where(mask)[0]
+            medoids[c] = indices[np.argmin(genetic_matrix[np.ix_(indices, indices)].sum(axis=1))]
+        for i, name in enumerate(subject_names):
+            clust = chromosome[i]
+            dist = float(genetic_matrix[i, medoids[clust]])
+            writer.writerow([i, name, clust, dist])
 
     print(f"  Plot data saved to: plot_data/")
     return plot_data_dir
@@ -238,7 +254,7 @@ def main():
 
     # create plot data for custom visualizations
     print("\nPlot data:")
-    create_plot_data(run_dir, genetic, ea.history, lineage, subject_names)
+    create_plot_data(run_dir, genetic, ea.history, lineage, subject_names, best.chromosome, k_groups)
 
     # shows cluster distribution
     for cluster in range(k_groups):

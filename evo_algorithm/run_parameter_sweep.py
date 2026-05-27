@@ -17,7 +17,7 @@ from visualizations import Visualizations
 from run_manager import RunManager
 
 
-def create_plot_data(run_dir, genetic_matrix, ea_history, lineage, subject_names):
+def create_plot_data(run_dir, genetic_matrix, ea_history, lineage, subject_names, chromosome, k_groups):
     """Create plot_data folder with raw data for custom visualizations"""
     from sklearn.decomposition import PCA
 
@@ -64,6 +64,21 @@ def create_plot_data(run_dir, genetic_matrix, ea_history, lineage, subject_names
 
     heatmap_path = plot_data_dir / "genetic_distance_matrix.csv"
     np.savetxt(heatmap_path, genetic_matrix, delimiter=',')
+
+    medoid_path = plot_data_dir / "medoid_distances.csv"
+    with open(medoid_path, 'w', newline='') as f:
+        writer = csv.writer(f)
+        writer.writerow(['subject_index', 'subject_name', 'cluster', 'distance_to_medoid'])
+        chromosome = np.asarray(chromosome)
+        medoids = {}
+        for c in range(k_groups):
+            mask = chromosome == c
+            indices = np.where(mask)[0]
+            medoids[c] = indices[np.argmin(genetic_matrix[np.ix_(indices, indices)].sum(axis=1))]
+        for i, name in enumerate(subject_names):
+            clust = chromosome[i]
+            dist = float(genetic_matrix[i, medoids[clust]])
+            writer.writerow([i, name, clust, dist])
 
     print(f"  Plot data saved to: plot_data/")
 
@@ -174,7 +189,7 @@ if __name__ == "__main__":
             print("\nPlot data:")
             lineage = ea.get_lineage(best)
             lineage = ea.sample_lineage(lineage, num_samples=300)
-            create_plot_data(run_dir, genetic, ea.history, lineage, subject_names)
+            create_plot_data(run_dir, genetic, ea.history, lineage, subject_names, best.chromosome, k_groups)
 
             # Create visualizations (normal output)
             Visualizations(

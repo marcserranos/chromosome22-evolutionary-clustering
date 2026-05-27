@@ -66,12 +66,77 @@ class Visualizations:
 
       self.colors = plt.cm.tab10(np.linspace(0, 1, max(k_groups, 1)))
 
+  def compute_medoid_distances(self):
+      distances = {}
+      medoids = {}
+      for c in range(self.k_groups):
+          mask = self.chromosome == c
+          indices = np.where(mask)[0]
+          medoids[c] = indices[np.argmin(self.genetic_matrix[np.ix_(indices, indices)].sum(axis=1))]
+          for idx in indices:
+              distances[idx] = self.genetic_matrix[idx, medoids[c]]
+      return distances, medoids
+
+  def plot_medoid_distances_mds(self):
+      distances, medoids = self.compute_medoid_distances()
+      dist_values = np.array([distances[i] for i in range(self.n)])
+      coords = mds_2d(self.genetic_matrix)
+      medoid_coords = coords[list(medoids.values())]
+
+      fig, ax = plt.subplots(figsize=(10, 8))
+      non_medoid = dist_values[dist_values > 0]
+      vmin, vmax = np.min(non_medoid), np.max(non_medoid)
+      scatter = ax.scatter(coords[:, 0], coords[:, 1], c=dist_values, cmap="RdYlGn_r",
+                          s=60, alpha=0.8, edgecolors="black", linewidths=0.4, vmin=vmin, vmax=vmax)
+      ax.scatter(medoid_coords[:, 0], medoid_coords[:, 1], marker='*', s=500,
+                color='black', edgecolors='white', linewidths=1, label='Medoids', zorder=5)
+      ax.set_xlabel("MDS 1")
+      ax.set_ylabel("MDS 2")
+      ax.set_title("Distance to medoid (red=far, green=close)")
+      cbar = plt.colorbar(scatter, ax=ax, label="Genetic distance to medoid")
+      ax.legend(loc="best")
+      ax.grid(True, alpha=0.3)
+      self._save(fig, "02b_medoid_distances_mds.png")
+
+  def plot_medoid_distances_geographic(self):
+      distances, medoids = self.compute_medoid_distances()
+      dist_values = np.array([distances[i] for i in range(self.n)])
+      lat = self.meta["Latitude"].astype(float).values
+      lon = self.meta["Longitude"].astype(float).values
+
+      fig, ax = plt.subplots(figsize=(16, 9))
+      ax.set_xlim(-180, 180)
+      ax.set_ylim(-60, 85)
+      ax.set_facecolor("#e6f2ff")
+
+      if HAS_GEOPANDAS:
+          try:
+              world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
+              world.plot(ax=ax, color="#d3d3d3", edgecolor="#333333", linewidth=0.5, alpha=0.7)
+          except:
+              ax.grid(True, alpha=0.2)
+      else:
+          ax.grid(True, alpha=0.2)
+
+      non_medoid = dist_values[dist_values > 0]
+      vmin, vmax = np.min(non_medoid), np.max(non_medoid)
+      scatter = ax.scatter(lon, lat, c=dist_values, cmap="RdYlGn_r", s=55, alpha=0.85, edgecolors="black", linewidths=0.4, vmin=vmin, vmax=vmax)
+      for c in medoids.values():
+          ax.scatter(lon[c], lat[c], marker='*', s=800, color='black', edgecolors='white', linewidths=1, zorder=5)
+
+      ax.set_title("Distance to medoid (world map, red=far, green=close)", fontsize=14, fontweight="bold")
+      cbar = plt.colorbar(scatter, ax=ax, label="Genetic distance to medoid")
+      ax.grid(True, alpha=0.1)
+      self._save(fig, "02c_medoid_distances_geographic.png")
+
   def plot_all(self):
       print(f"\nSaving plots to {self.output_dir}")
       if self.fitness_history:
           self.plot_fitness_convergence()
       self.plot_world_map()
       self.plot_mds()
+      self.plot_medoid_distances_mds()
+      self.plot_medoid_distances_geographic()
       self.plot_cluster_heatmap()
       self.plot_cluster_sizes()
       self.plot_within_between_distances()

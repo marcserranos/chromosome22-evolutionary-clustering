@@ -22,8 +22,11 @@ class FitnessEvaluator:
         self.gamma = gamma # weight for geographic cost, initialized at 1
         self.offset = offset # bias to shift fitness to positive range, initialized at 1.0
         self.cluster_balance_penalty = cluster_balance_penalty # penalty coefficient for uneven cluster sizes
-        self.min_group_size = min_group_size # minim size of cluster
         self.num_subjects = genetic_matrix.shape[0]
+        if min_group_size is None:
+            self.min_group_size = max(1, self.num_subjects // (k_groups * 10))
+        else:
+            self.min_group_size = min_group_size # minim size of cluster
 
         # numpy matrix index handling
         i, j = np.triu_indices(self.num_subjects, k=1) 

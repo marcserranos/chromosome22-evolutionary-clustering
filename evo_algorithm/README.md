@@ -105,3 +105,35 @@ Plots are saved under `results/visualizations/ea/`:
 8. Histograms — geographic distance within each cluster.
 
 Needs `DATA/processed/samples_metadata_ordered.csv` for lat/lon. Optional: `python -m pip install cartopy`.
+
+---
+
+## Consistency Analysis (Multi-Run Stability)
+
+Run the EA multiple times to assess clustering stability and identify frontier subjects.
+
+Edit `run_consistency.py` (top section):
+```python
+NUM_RUNS = 5                      # Number of iterations (5, 50, 100, ...)
+CLUSTER_BALANCE_PENALTY = 0.0001  # Tune this parameter
+K_GROUPS = 5
+GENERATIONS = 6000
+ALPHA = 1.0
+BETA = 1.0
+GAMMA = 1.0
+OFFSET = 1.0
+# ... other EA parameters
+```
+
+Then run:
+```bash
+python run_consistency.py
+```
+
+Output saved to `results/consistency/`:
+- `01_subject_stability_heatmap.png` — Subject stability across runs (solid color = stable, mixed = frontier)
+- `02_ari_consistency_matrix.png` — Run-to-run similarity (Adjusted Rand Index)
+- `03_stability_distribution.png` — Histogram of consistency
+- `04_stability_map.png` — Geographic visualization (green = stable, red = frontier)
+- `consistency_analysis_results.json` — All metrics and per-subject stability scores
+- `subject_stability_report.txt` — Detailed per-subject report

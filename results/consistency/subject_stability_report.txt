@@ -1,0 +1,1671 @@
+SUBJECT STABILITY REPORT
+================================================================================
+
+Subject 2: B_Crete-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 3: B_Crete-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 4: B_Dai-4
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 6: B_French-3
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 7: B_Han-3
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 8: B_Ju_hoan_North-4
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 4
+  Unique clusters: 1
+  Assignments: [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
+
+Subject 11: B_Mbuti-4
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 4
+  Unique clusters: 1
+  Assignments: [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
+
+Subject 14: B_Sardinian-3
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 15: B_Yoruba-3
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 4
+  Unique clusters: 1
+  Assignments: [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
+
+Subject 16: S_Abkhasian-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 17: S_Abkhasian-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 19: S_Adygei-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 23: S_Altaian-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 24: S_Ami-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 25: S_Ami-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 26: S_Armenian-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 27: S_Armenian-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 28: S_Atayal-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 29: S_Balochi-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 30: S_Balochi-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 35: S_BantuTswana-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 4
+  Unique clusters: 1
+  Assignments: [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
+
+Subject 37: S_Basque-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 38: S_Basque-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 43: S_Bergamo-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 45: S_Biaka-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 4
+  Unique clusters: 1
+  Assignments: [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
+
+Subject 50: S_Brahmin-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 51: S_Brahui-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 53: S_Bulgarian-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 54: S_Bulgarian-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 55: S_Burmese-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 56: S_Burmese-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 57: S_Burusho-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 59: S_Cambodian-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 60: S_Cambodian-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 62: S_Chechen-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 64: S_Czech-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 65: S_Dai-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 66: S_Dai-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 67: S_Dai-3
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 68: S_Daur-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 71: S_Druze-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 72: S_Druze-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 73: S_Dusun-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 74: S_Dusun-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 75: S_English-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 76: S_English-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 82: S_Eskimo_Sireniki-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 84: S_Estonian-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 85: S_Estonian-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 86: S_Even-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 87: S_Even-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 88: S_Even-3
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 89: S_Finnish-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 90: S_Finnish-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 91: S_Finnish-3
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 92: S_French-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 93: S_French-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 96: S_Georgian-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 97: S_Georgian-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 98: S_Greek-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 99: S_Greek-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 100: S_Han-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 101: S_Han-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 102: S_Hawaiian-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 103: S_Hazara-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 105: S_Hezhen-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 106: S_Hezhen-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 107: S_Hungarian-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 108: S_Hungarian-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 109: S_Icelandic-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 110: S_Icelandic-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 111: S_Igorot-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 112: S_Igorot-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 114: S_Iranian-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 115: S_Iraqi_Jew-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 116: S_Iraqi_Jew-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 117: S_Irula-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 120: S_Japanese-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 121: S_Japanese-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 122: S_Japanese-3
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 123: S_Jordanian-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 126: S_Ju_hoan_North-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 4
+  Unique clusters: 1
+  Assignments: [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
+
+Subject 127: S_Ju_hoan_North-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 4
+  Unique clusters: 1
+  Assignments: [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
+
+Subject 128: S_Ju_hoan_North-3
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 4
+  Unique clusters: 1
+  Assignments: [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
+
+Subject 129: S_Kalash-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 130: S_Kalash-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 132: S_Kapu-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 135: S_Khomani_San-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 4
+  Unique clusters: 1
+  Assignments: [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
+
+Subject 136: S_Khomani_San-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 4
+  Unique clusters: 1
+  Assignments: [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
+
+Subject 138: S_Kinh-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 139: S_Kinh-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 140: S_Korean-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 141: S_Korean-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 142: S_Kusunda-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 144: S_Kyrgyz-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 145: S_Kyrgyz-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 146: S_Lahu-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 147: S_Lahu-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 148: S_Lezgin-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 149: S_Lezgin-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 156: S_Makrani-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 157: S_Makrani-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 169: S_Mbuti-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 4
+  Unique clusters: 1
+  Assignments: [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
+
+Subject 171: S_Mbuti-3
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 4
+  Unique clusters: 1
+  Assignments: [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
+
+Subject 174: S_Miao-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 175: S_Miao-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 180: S_Mongola-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 181: S_Mongola-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 184: S_Naxi-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 185: S_Naxi-3
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 186: S_North_Ossetian-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 187: S_North_Ossetian-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 188: S_Norwegian-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 189: S_Orcadian-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 190: S_Orcadian-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 191: S_Oroqen-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 192: S_Oroqen-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 193: S_Palestinian-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 194: S_Palestinian-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 195: S_Palestinian-3
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 210: S_Pathan-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 211: S_Pathan-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 216: S_Polish-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 220: S_Punjabi-4
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 226: S_Russian-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 227: S_Russian-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 231: S_Saharawi-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 234: S_Sardinian-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 235: S_She-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 236: S_She-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 237: S_Sindhi-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 238: S_Sindhi-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 240: S_Spanish-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 241: S_Spanish-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 245: S_Tajik-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 246: S_Thai-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 247: S_Thai-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 249: S_Tlingit-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 250: S_Tu-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 251: S_Tu-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 254: S_Tujia-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 255: S_Tujia-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 256: S_Turkish-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 257: S_Turkish-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 258: S_Tuscan-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 259: S_Tuscan-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 260: S_Ulchi-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 261: S_Ulchi-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 263: S_Uygur-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 264: S_Xibo-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 265: S_Xibo-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 267: S_Yadava-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 268: S_Yakut-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 269: S_Yakut-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 270: S_Yemenite_Jew-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 271: S_Yemenite_Jew-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 3
+  Unique clusters: 1
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 272: S_Yi-1
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 273: S_Yi-2
+  Consistency: 1.0000 (20/20)
+  Primary cluster: 0
+  Unique clusters: 1
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+Subject 0: B_Australian-3
+  Consistency: 0.9500 (19/20)
+  Primary cluster: 1
+  Unique clusters: 2
+  Assignments: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1]
+
+Subject 1: B_Australian-4
+  Consistency: 0.9500 (19/20)
+  Primary cluster: 1
+  Unique clusters: 2
+  Assignments: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1]
+
+Subject 13: B_Papuan-15
+  Consistency: 0.9500 (19/20)
+  Primary cluster: 1
+  Unique clusters: 2
+  Assignments: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1]
+
+Subject 18: S_Adygei-1
+  Consistency: 0.9500 (19/20)
+  Primary cluster: 3
+  Unique clusters: 2
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 3, 3]
+
+Subject 20: S_Albanian-1
+  Consistency: 0.9500 (19/20)
+  Primary cluster: 3
+  Unique clusters: 2
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 21: S_Aleut-1
+  Consistency: 0.9500 (19/20)
+  Primary cluster: 0
+  Unique clusters: 2
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0]
+
+Subject 34: S_BantuKenya-2
+  Consistency: 0.9500 (19/20)
+  Primary cluster: 4
+  Unique clusters: 2
+  Assignments: [4, 2, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
+
+Subject 36: S_BantuTswana-2
+  Consistency: 0.9500 (19/20)
+  Primary cluster: 4
+  Unique clusters: 2
+  Assignments: [4, 4, 4, 4, 2, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
+
+Subject 42: S_Bengali-2
+  Consistency: 0.9500 (19/20)
+  Primary cluster: 3
+  Unique clusters: 2
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 1, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 44: S_Bergamo-2
+  Consistency: 0.9500 (19/20)
+  Primary cluster: 3
+  Unique clusters: 2
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 3, 3, 3, 3]
+
+Subject 46: S_Biaka-2
+  Consistency: 0.9500 (19/20)
+  Primary cluster: 4
+  Unique clusters: 2
+  Assignments: [4, 4, 4, 4, 4, 4, 2, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
+
+Subject 47: S_Bougainville-1
+  Consistency: 0.9500 (19/20)
+  Primary cluster: 1
+  Unique clusters: 2
+  Assignments: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1]
+
+Subject 48: S_Bougainville-2
+  Consistency: 0.9500 (19/20)
+  Primary cluster: 1
+  Unique clusters: 2
+  Assignments: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1]
+
+Subject 52: S_Brahui-2
+  Consistency: 0.9500 (19/20)
+  Primary cluster: 3
+  Unique clusters: 2
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 63: S_Chukchi-1
+  Consistency: 0.9500 (19/20)
+  Primary cluster: 3
+  Unique clusters: 2
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 0, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 69: S_Dinka-1
+  Consistency: 0.9500 (19/20)
+  Primary cluster: 4
+  Unique clusters: 2
+  Assignments: [4, 4, 4, 4, 4, 2, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
+
+Subject 79: S_Eskimo_Chaplin-1
+  Consistency: 0.9500 (19/20)
+  Primary cluster: 0
+  Unique clusters: 2
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0]
+
+Subject 80: S_Eskimo_Naukan-1
+  Consistency: 0.9500 (19/20)
+  Primary cluster: 0
+  Unique clusters: 2
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0]
+
+Subject 81: S_Eskimo_Naukan-2
+  Consistency: 0.9500 (19/20)
+  Primary cluster: 0
+  Unique clusters: 2
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0]
+
+Subject 83: S_Eskimo_Sireniki-2
+  Consistency: 0.9500 (19/20)
+  Primary cluster: 0
+  Unique clusters: 2
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0]
+
+Subject 119: S_Itelman-1
+  Consistency: 0.9500 (19/20)
+  Primary cluster: 0
+  Unique clusters: 2
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0]
+
+Subject 150: S_Luhya-1
+  Consistency: 0.9500 (19/20)
+  Primary cluster: 4
+  Unique clusters: 2
+  Assignments: [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 2, 4, 4, 4, 4, 4, 4, 4]
+
+Subject 163: S_Mansi-2
+  Consistency: 0.9500 (19/20)
+  Primary cluster: 0
+  Unique clusters: 2
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0]
+
+Subject 170: S_Mbuti-2
+  Consistency: 0.9500 (19/20)
+  Primary cluster: 4
+  Unique clusters: 2
+  Assignments: [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1, 4, 4, 4, 4, 4, 4]
+
+Subject 196: S_Papuan-10
+  Consistency: 0.9500 (19/20)
+  Primary cluster: 1
+  Unique clusters: 2
+  Assignments: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1]
+
+Subject 197: S_Papuan-11
+  Consistency: 0.9500 (19/20)
+  Primary cluster: 1
+  Unique clusters: 2
+  Assignments: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1]
+
+Subject 198: S_Papuan-12
+  Consistency: 0.9500 (19/20)
+  Primary cluster: 1
+  Unique clusters: 2
+  Assignments: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1]
+
+Subject 199: S_Papuan-13
+  Consistency: 0.9500 (19/20)
+  Primary cluster: 1
+  Unique clusters: 2
+  Assignments: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1]
+
+Subject 200: S_Papuan-14
+  Consistency: 0.9500 (19/20)
+  Primary cluster: 1
+  Unique clusters: 2
+  Assignments: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1]
+
+Subject 201: S_Papuan-1
+  Consistency: 0.9500 (19/20)
+  Primary cluster: 1
+  Unique clusters: 2
+  Assignments: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1]
+
+Subject 202: S_Papuan-2
+  Consistency: 0.9500 (19/20)
+  Primary cluster: 1
+  Unique clusters: 2
+  Assignments: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1]
+
+Subject 203: S_Papuan-3
+  Consistency: 0.9500 (19/20)
+  Primary cluster: 1
+  Unique clusters: 2
+  Assignments: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1]
+
+Subject 204: S_Papuan-4
+  Consistency: 0.9500 (19/20)
+  Primary cluster: 1
+  Unique clusters: 2
+  Assignments: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1]
+
+Subject 205: S_Papuan-5
+  Consistency: 0.9500 (19/20)
+  Primary cluster: 1
+  Unique clusters: 2
+  Assignments: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1]
+
+Subject 206: S_Papuan-6
+  Consistency: 0.9500 (19/20)
+  Primary cluster: 1
+  Unique clusters: 2
+  Assignments: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1]
+
+Subject 207: S_Papuan-7
+  Consistency: 0.9500 (19/20)
+  Primary cluster: 1
+  Unique clusters: 2
+  Assignments: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1]
+
+Subject 208: S_Papuan-8
+  Consistency: 0.9500 (19/20)
+  Primary cluster: 1
+  Unique clusters: 2
+  Assignments: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1]
+
+Subject 209: S_Papuan-9
+  Consistency: 0.9500 (19/20)
+  Primary cluster: 1
+  Unique clusters: 2
+  Assignments: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1]
+
+Subject 233: S_Sardinian-1
+  Consistency: 0.9500 (19/20)
+  Primary cluster: 3
+  Unique clusters: 2
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 252: S_Tubalar-1
+  Consistency: 0.9500 (19/20)
+  Primary cluster: 0
+  Unique clusters: 2
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0]
+
+Subject 253: S_Tubalar-2
+  Consistency: 0.9500 (19/20)
+  Primary cluster: 0
+  Unique clusters: 2
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0]
+
+Subject 262: S_Uygur-1
+  Consistency: 0.9500 (19/20)
+  Primary cluster: 0
+  Unique clusters: 2
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0]
+
+Subject 266: S_Yadava-1
+  Consistency: 0.9500 (19/20)
+  Primary cluster: 3
+  Unique clusters: 2
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 1, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 22: S_Aleut-2
+  Consistency: 0.9000 (18/20)
+  Primary cluster: 0
+  Unique clusters: 2
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 2, 0, 0, 0, 0]
+
+Subject 32: S_BantuHerero-2
+  Consistency: 0.9000 (18/20)
+  Primary cluster: 4
+  Unique clusters: 3
+  Assignments: [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 2, 1, 4, 4, 4, 4, 4, 4]
+
+Subject 58: S_Burusho-2
+  Consistency: 0.9000 (18/20)
+  Primary cluster: 3
+  Unique clusters: 2
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 2, 3, 3, 3, 2, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 77: S_Esan-1
+  Consistency: 0.9000 (18/20)
+  Primary cluster: 4
+  Unique clusters: 2
+  Assignments: [4, 2, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 2]
+
+Subject 94: S_Gambian-1
+  Consistency: 0.9000 (18/20)
+  Primary cluster: 4
+  Unique clusters: 2
+  Assignments: [4, 4, 4, 4, 4, 4, 2, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 2]
+
+Subject 95: S_Gambian-2
+  Consistency: 0.9000 (18/20)
+  Primary cluster: 4
+  Unique clusters: 2
+  Assignments: [4, 2, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 2]
+
+Subject 164: S_Maori-1
+  Consistency: 0.9000 (18/20)
+  Primary cluster: 0
+  Unique clusters: 2
+  Assignments: [3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0]
+
+Subject 172: S_Mende-1
+  Consistency: 0.9000 (18/20)
+  Primary cluster: 4
+  Unique clusters: 2
+  Assignments: [4, 2, 4, 4, 4, 4, 2, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
+
+Subject 173: S_Mende-2
+  Consistency: 0.9000 (18/20)
+  Primary cluster: 4
+  Unique clusters: 2
+  Assignments: [4, 4, 4, 4, 2, 4, 2, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
+
+Subject 275: S_Yoruba-2
+  Consistency: 0.9000 (18/20)
+  Primary cluster: 4
+  Unique clusters: 2
+  Assignments: [4, 4, 4, 4, 4, 4, 2, 4, 4, 4, 4, 4, 2, 4, 4, 4, 4, 4, 4, 4]
+
+Subject 31: S_BantuHerero-1
+  Consistency: 0.8500 (17/20)
+  Primary cluster: 4
+  Unique clusters: 3
+  Assignments: [4, 4, 4, 4, 2, 4, 2, 4, 4, 4, 4, 4, 4, 1, 4, 4, 4, 4, 4, 4]
+
+Subject 39: S_BedouinB-1
+  Consistency: 0.8500 (17/20)
+  Primary cluster: 2
+  Unique clusters: 2
+  Assignments: [1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 1, 2, 2, 2]
+
+Subject 49: S_Brahmin-1
+  Consistency: 0.8500 (17/20)
+  Primary cluster: 3
+  Unique clusters: 3
+  Assignments: [3, 3, 3, 1, 3, 3, 3, 2, 3, 3, 3, 3, 3, 3, 1, 3, 3, 3, 3, 3]
+
+Subject 70: S_Dinka-2
+  Consistency: 0.8500 (17/20)
+  Primary cluster: 4
+  Unique clusters: 3
+  Assignments: [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 2, 1, 4, 4, 4, 2, 4, 4]
+
+Subject 78: S_Esan-2
+  Consistency: 0.8500 (17/20)
+  Primary cluster: 4
+  Unique clusters: 2
+  Assignments: [2, 2, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 2]
+
+Subject 113: S_Iranian-1
+  Consistency: 0.8500 (17/20)
+  Primary cluster: 3
+  Unique clusters: 2
+  Assignments: [3, 2, 2, 3, 3, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 118: S_Irula-2
+  Consistency: 0.8500 (17/20)
+  Primary cluster: 3
+  Unique clusters: 3
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 3, 2, 3, 3, 2, 3, 3, 3, 1, 3, 3, 3, 3]
+
+Subject 125: S_Jordanian-3
+  Consistency: 0.8500 (17/20)
+  Primary cluster: 3
+  Unique clusters: 2
+  Assignments: [3, 2, 3, 3, 3, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 3, 3]
+
+Subject 137: S_Khonda_Dora-1
+  Consistency: 0.8500 (17/20)
+  Primary cluster: 0
+  Unique clusters: 2
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0]
+
+Subject 151: S_Luhya-2
+  Consistency: 0.8500 (17/20)
+  Primary cluster: 4
+  Unique clusters: 2
+  Assignments: [4, 2, 4, 4, 2, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 2]
+
+Subject 152: S_Luo-1
+  Consistency: 0.8500 (17/20)
+  Primary cluster: 4
+  Unique clusters: 2
+  Assignments: [4, 4, 4, 4, 2, 4, 2, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 2]
+
+Subject 153: S_Luo-2
+  Consistency: 0.8500 (17/20)
+  Primary cluster: 4
+  Unique clusters: 2
+  Assignments: [4, 2, 4, 4, 2, 4, 2, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
+
+Subject 161: S_Mandenka-2
+  Consistency: 0.8500 (17/20)
+  Primary cluster: 4
+  Unique clusters: 3
+  Assignments: [4, 4, 4, 4, 2, 4, 4, 4, 4, 4, 4, 4, 4, 1, 4, 4, 4, 4, 4, 2]
+
+Subject 218: S_Punjabi-2
+  Consistency: 0.8500 (17/20)
+  Primary cluster: 3
+  Unique clusters: 3
+  Assignments: [3, 3, 3, 3, 3, 3, 3, 2, 3, 3, 1, 2, 3, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 239: S_Somali-1
+  Consistency: 0.8500 (17/20)
+  Primary cluster: 2
+  Unique clusters: 3
+  Assignments: [1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 4]
+
+Subject 243: S_Surui-2
+  Consistency: 0.8500 (17/20)
+  Primary cluster: 2
+  Unique clusters: 2
+  Assignments: [2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1]
+
+Subject 5: B_Dinka-3
+  Consistency: 0.8000 (16/20)
+  Primary cluster: 4
+  Unique clusters: 3
+  Assignments: [4, 4, 4, 4, 2, 2, 4, 4, 4, 4, 4, 4, 2, 1, 4, 4, 4, 4, 4, 4]
+
+Subject 9: B_Karitiana-3
+  Consistency: 0.8000 (16/20)
+  Primary cluster: 2
+  Unique clusters: 3
+  Assignments: [2, 0, 2, 2, 0, 2, 1, 2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2]
+
+Subject 10: B_Mandenka-3
+  Consistency: 0.8000 (16/20)
+  Primary cluster: 4
+  Unique clusters: 2
+  Assignments: [4, 2, 4, 4, 2, 4, 2, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 2]
+
+Subject 33: S_BantuKenya-1
+  Consistency: 0.8000 (16/20)
+  Primary cluster: 4
+  Unique clusters: 2
+  Assignments: [4, 2, 4, 4, 4, 4, 2, 4, 4, 4, 4, 4, 2, 4, 4, 4, 4, 4, 4, 2]
+
+Subject 131: S_Kapu-1
+  Consistency: 0.8000 (16/20)
+  Primary cluster: 3
+  Unique clusters: 3
+  Assignments: [3, 3, 1, 3, 3, 1, 3, 3, 3, 3, 3, 2, 1, 3, 3, 3, 3, 3, 3, 3]
+
+Subject 133: S_Karitiana-1
+  Consistency: 0.8000 (16/20)
+  Primary cluster: 2
+  Unique clusters: 2
+  Assignments: [2, 1, 2, 2, 1, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1]
+
+Subject 159: S_Mala-3
+  Consistency: 0.8000 (16/20)
+  Primary cluster: 0
+  Unique clusters: 3
+  Assignments: [2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 1, 0, 1, 0, 0, 0, 0, 0, 0]
+
+Subject 176: S_Mixe-2
+  Consistency: 0.8000 (16/20)
+  Primary cluster: 2
+  Unique clusters: 3
+  Assignments: [2, 0, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 0]
+
+Subject 212: S_Piapoco-1
+  Consistency: 0.8000 (16/20)
+  Primary cluster: 2
+  Unique clusters: 3
+  Assignments: [2, 0, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 0]
+
+Subject 242: S_Surui-1
+  Consistency: 0.8000 (16/20)
+  Primary cluster: 2
+  Unique clusters: 2
+  Assignments: [2, 1, 2, 2, 1, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2]
+
+Subject 274: S_Yoruba-1
+  Consistency: 0.8000 (16/20)
+  Primary cluster: 4
+  Unique clusters: 3
+  Assignments: [4, 2, 4, 4, 2, 4, 4, 4, 4, 4, 4, 4, 2, 1, 4, 4, 4, 4, 4, 4]
+
+Subject 134: S_Karitiana-2
+  Consistency: 0.7500 (15/20)
+  Primary cluster: 2
+  Unique clusters: 2
+  Assignments: [2, 1, 2, 2, 1, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 1]
+
+Subject 160: S_Mandenka-1
+  Consistency: 0.7500 (15/20)
+  Primary cluster: 4
+  Unique clusters: 3
+  Assignments: [4, 4, 4, 4, 2, 4, 4, 4, 4, 4, 4, 4, 2, 1, 4, 4, 4, 2, 4, 2]
+
+Subject 183: S_Mozabite-2
+  Consistency: 0.7500 (15/20)
+  Primary cluster: 2
+  Unique clusters: 3
+  Assignments: [3, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 1, 3, 2, 3, 2, 2, 2]
+
+Subject 221: S_Quechua-1
+  Consistency: 0.7500 (15/20)
+  Primary cluster: 0
+  Unique clusters: 2
+  Assignments: [0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 2, 2, 0, 2, 0, 2, 0]
+
+Subject 248: S_Tlingit-1
+  Consistency: 0.7500 (15/20)
+  Primary cluster: 2
+  Unique clusters: 3
+  Assignments: [2, 3, 1, 2, 2, 2, 3, 2, 1, 2, 2, 2, 2, 3, 2, 2, 2, 2, 2, 2]
+
+Subject 12: B_Mixe-1
+  Consistency: 0.7000 (14/20)
+  Primary cluster: 0
+  Unique clusters: 2
+  Assignments: [0, 0, 0, 2, 0, 0, 0, 0, 0, 2, 0, 0, 0, 2, 2, 0, 2, 0, 2, 0]
+
+Subject 41: S_Bengali-1
+  Consistency: 0.7000 (14/20)
+  Primary cluster: 0
+  Unique clusters: 3
+  Assignments: [1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 2, 0, 0, 0, 0, 1, 0, 0, 0, 0]
+
+Subject 167: S_Mayan-1
+  Consistency: 0.7000 (14/20)
+  Primary cluster: 2
+  Unique clusters: 3
+  Assignments: [2, 0, 2, 2, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 0]
+
+Subject 177: S_Mixe-3
+  Consistency: 0.7000 (14/20)
+  Primary cluster: 0
+  Unique clusters: 2
+  Assignments: [0, 0, 0, 2, 0, 0, 0, 0, 0, 2, 0, 0, 0, 2, 2, 0, 2, 0, 2, 0]
+
+Subject 178: S_Mixtec-1
+  Consistency: 0.7000 (14/20)
+  Primary cluster: 2
+  Unique clusters: 3
+  Assignments: [2, 0, 2, 2, 0, 0, 2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 1, 2, 0]
+
+Subject 214: S_Pima-1
+  Consistency: 0.7000 (14/20)
+  Primary cluster: 0
+  Unique clusters: 2
+  Assignments: [0, 0, 0, 2, 0, 0, 0, 0, 0, 2, 0, 0, 0, 2, 2, 0, 2, 0, 2, 0]
+
+Subject 215: S_Pima-2
+  Consistency: 0.7000 (14/20)
+  Primary cluster: 2
+  Unique clusters: 2
+  Assignments: [2, 1, 2, 2, 1, 2, 1, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 1]
+
+Subject 217: S_Punjabi-1
+  Consistency: 0.7000 (14/20)
+  Primary cluster: 3
+  Unique clusters: 3
+  Assignments: [3, 3, 2, 3, 3, 3, 3, 1, 3, 3, 1, 1, 2, 3, 3, 3, 3, 3, 3, 2]
+
+Subject 222: S_Quechua-2
+  Consistency: 0.7000 (14/20)
+  Primary cluster: 0
+  Unique clusters: 2
+  Assignments: [0, 0, 0, 2, 0, 0, 0, 0, 0, 2, 0, 0, 0, 2, 2, 0, 2, 0, 2, 0]
+
+Subject 223: S_Quechua-3
+  Consistency: 0.7000 (14/20)
+  Primary cluster: 0
+  Unique clusters: 2
+  Assignments: [0, 0, 0, 2, 0, 0, 0, 0, 0, 2, 0, 0, 0, 2, 2, 0, 2, 0, 2, 0]
+
+Subject 224: S_Relli-1
+  Consistency: 0.7000 (14/20)
+  Primary cluster: 1
+  Unique clusters: 2
+  Assignments: [1, 1, 1, 1, 2, 1, 1, 2, 2, 1, 2, 1, 1, 1, 1, 1, 1, 2, 1, 2]
+
+Subject 225: S_Relli-2
+  Consistency: 0.7000 (14/20)
+  Primary cluster: 1
+  Unique clusters: 2
+  Assignments: [2, 1, 1, 1, 2, 1, 2, 1, 2, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1]
+
+Subject 230: S_Saharawi-1
+  Consistency: 0.7000 (14/20)
+  Primary cluster: 3
+  Unique clusters: 2
+  Assignments: [2, 2, 3, 3, 3, 3, 2, 3, 2, 3, 3, 2, 3, 3, 3, 3, 3, 2, 3, 3]
+
+Subject 277: S_Zapotec-2
+  Consistency: 0.7000 (14/20)
+  Primary cluster: 0
+  Unique clusters: 2
+  Assignments: [0, 0, 0, 2, 0, 0, 0, 0, 0, 2, 0, 0, 0, 2, 2, 0, 2, 0, 2, 0]
+
+Subject 154: S_Madiga-1
+  Consistency: 0.6500 (13/20)
+  Primary cluster: 2
+  Unique clusters: 2
+  Assignments: [2, 2, 2, 1, 1, 1, 2, 1, 2, 2, 2, 1, 2, 1, 2, 2, 2, 2, 1, 2]
+
+Subject 168: S_Mayan-2
+  Consistency: 0.6500 (13/20)
+  Primary cluster: 0
+  Unique clusters: 2
+  Assignments: [0, 0, 2, 2, 0, 0, 0, 0, 0, 2, 0, 0, 0, 2, 2, 0, 2, 0, 2, 0]
+
+Subject 179: S_Mixtec-2
+  Consistency: 0.6000 (12/20)
+  Primary cluster: 0
+  Unique clusters: 2
+  Assignments: [0, 0, 2, 2, 0, 0, 0, 2, 0, 2, 0, 0, 0, 2, 2, 0, 2, 0, 2, 0]
+
+Subject 232: S_Samaritan-1
+  Consistency: 0.6000 (12/20)
+  Primary cluster: 3
+  Unique clusters: 3
+  Assignments: [2, 2, 3, 3, 3, 2, 3, 3, 2, 3, 1, 2, 3, 1, 3, 3, 3, 2, 3, 3]
+
+Subject 244: S_Tajik-1
+  Consistency: 0.6000 (12/20)
+  Primary cluster: 3
+  Unique clusters: 3
+  Assignments: [3, 3, 3, 3, 3, 2, 1, 1, 2, 3, 2, 3, 3, 3, 3, 2, 3, 2, 3, 2]
+
+Subject 276: S_Zapotec-1
+  Consistency: 0.6000 (12/20)
+  Primary cluster: 2
+  Unique clusters: 2
+  Assignments: [2, 0, 2, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 2, 2, 2, 0, 2, 0]
+
+Subject 124: S_Jordanian-2
+  Consistency: 0.5500 (11/20)
+  Primary cluster: 2
+  Unique clusters: 2
+  Assignments: [2, 2, 1, 2, 1, 2, 1, 2, 2, 1, 2, 2, 2, 1, 1, 2, 1, 2, 1, 1]
+
+Subject 143: S_Kusunda-2
+  Consistency: 0.5500 (11/20)
+  Primary cluster: 1
+  Unique clusters: 2
+  Assignments: [2, 2, 2, 1, 2, 2, 1, 1, 2, 1, 2, 1, 1, 1, 1, 1, 1, 2, 1, 2]
+
+Subject 155: S_Madiga-2
+  Consistency: 0.5500 (11/20)
+  Primary cluster: 1
+  Unique clusters: 4
+  Assignments: [2, 3, 1, 1, 1, 2, 3, 1, 1, 1, 2, 1, 1, 1, 1, 1, 0, 3, 0, 3]
+
+Subject 158: S_Mala-2
+  Consistency: 0.5500 (11/20)
+  Primary cluster: 1
+  Unique clusters: 2
+  Assignments: [2, 2, 2, 1, 2, 1, 1, 1, 2, 1, 2, 2, 1, 1, 1, 1, 1, 2, 1, 2]
+
+Subject 165: S_Masai-1
+  Consistency: 0.5500 (11/20)
+  Primary cluster: 4
+  Unique clusters: 3
+  Assignments: [1, 2, 4, 4, 4, 2, 4, 4, 2, 4, 4, 2, 2, 1, 4, 4, 4, 2, 4, 2]
+
+Subject 166: S_Masai-2
+  Consistency: 0.5500 (11/20)
+  Primary cluster: 2
+  Unique clusters: 3
+  Assignments: [4, 2, 2, 4, 2, 2, 2, 4, 2, 4, 2, 2, 2, 1, 4, 4, 4, 2, 4, 2]
+
+Subject 182: S_Mozabite-1
+  Consistency: 0.5500 (11/20)
+  Primary cluster: 2
+  Unique clusters: 3
+  Assignments: [2, 2, 3, 3, 2, 2, 2, 2, 2, 3, 2, 2, 3, 1, 3, 3, 3, 2, 3, 2]
+
+Subject 213: S_Piapoco-2
+  Consistency: 0.5500 (11/20)
+  Primary cluster: 0
+  Unique clusters: 2
+  Assignments: [2, 0, 2, 2, 0, 0, 0, 0, 0, 2, 0, 0, 0, 2, 2, 2, 2, 0, 2, 0]
+
+Subject 61: S_Chane-1
+  Consistency: 0.5000 (10/20)
+  Primary cluster: 0
+  Unique clusters: 2
+  Assignments: [2, 0, 2, 2, 0, 0, 0, 0, 2, 2, 0, 0, 0, 2, 2, 2, 2, 0, 2, 0]
+
+Subject 104: S_Hazara-2
+  Consistency: 0.5000 (10/20)
+  Primary cluster: 1
+  Unique clusters: 2
+  Assignments: [2, 1, 1, 2, 1, 1, 2, 2, 1, 2, 2, 2, 1, 1, 2, 1, 2, 2, 1, 1]
+
+Subject 219: S_Punjabi-3
+  Consistency: 0.5000 (10/20)
+  Primary cluster: 1
+  Unique clusters: 2
+  Assignments: [1, 2, 2, 1, 2, 2, 2, 2, 2, 1, 2, 1, 1, 1, 1, 2, 1, 2, 1, 1]
+
+Subject 229: S_Saami-2
+  Consistency: 0.5000 (10/20)
+  Primary cluster: 2
+  Unique clusters: 3
+  Assignments: [1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 3]
+
+Subject 40: S_BedouinB-2
+  Consistency: 0.4500 (9/20)
+  Primary cluster: 2
+  Unique clusters: 3
+  Assignments: [1, 2, 3, 3, 2, 2, 2, 2, 2, 3, 2, 3, 3, 1, 3, 2, 3, 3, 3, 2]
+
+Subject 162: S_Mansi-1
+  Consistency: 0.4500 (9/20)
+  Primary cluster: 3
+  Unique clusters: 4
+  Assignments: [3, 3, 3, 0, 3, 3, 3, 0, 1, 0, 2, 3, 0, 3, 0, 2, 0, 3, 0, 2]
+
+Subject 228: S_Saami-1
+  Consistency: 0.4500 (9/20)
+  Primary cluster: 3
+  Unique clusters: 3
+  Assignments: [2, 3, 3, 3, 3, 1, 3, 2, 3, 1, 1, 3, 2, 1, 3, 2, 1, 2, 3, 2]
+

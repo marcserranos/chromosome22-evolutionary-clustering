@@ -1,0 +1,18 @@
+{
+  "run_name": "42_progress_test_run_00",
+  "timestamp": "2026-05-27T21:14:43.076417",
+  "parameters": {
+    "k_groups": 5,
+    "population_size": 50,
+    "generations": 100,
+    "crossover_rate": 0.9,
+    "mutation_rate": 0.005,
+    "elitism_count": 2,
+    "alpha": 1.0,
+    "beta": 1.0,
+    "gamma": 1.0,
+    "offset": 1.0,
+    "cluster_balance_penalty": 0.0001,
+    "min_group_size": null
+  }
+}

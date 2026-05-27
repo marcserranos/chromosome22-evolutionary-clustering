@@ -11,7 +11,6 @@ from ea import EvolutionaryAlgorithm
 from visualizations import Visualizations
 from run_manager import RunManager
 
-
 def get_run_name():
     """Prompt user for run name."""
     run_name = input("Enter run name: ").strip()
@@ -171,7 +170,7 @@ def main():
     metadata_df = align_metadata(subject_names, metadata_df)
 
     num_subjects = len(subject_names)
-    k_groups = 5 # define K number (main parameter)
+    k_groups = 6 # define K number (main parameter)
     min_group_size = max(1, num_subjects // (k_groups * 10)) # can be changed
 
     # Prepare parameters for metadata

@@ -185,6 +185,8 @@ def main():
         "alpha": 1,
         "beta": 1,
         "gamma": 1,
+        "offset": 1.0,
+        "cluster_balance_penalty": 0.0001,
         "min_group_size": min_group_size
     }
 
@@ -200,6 +202,8 @@ def main():
         alpha=parameters["alpha"],
         beta=parameters["beta"],
         gamma=parameters["gamma"],
+        offset=parameters["offset"],
+        cluster_balance_penalty=parameters["cluster_balance_penalty"],
         min_group_size=parameters["min_group_size"]
     )
     ea = EvolutionaryAlgorithm(

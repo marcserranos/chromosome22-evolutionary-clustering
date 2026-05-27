@@ -1,0 +1,19 @@
+{
+  "run_name": "21_k5_penalty_2",
+  "timestamp": "2026-05-27T16:50:26.783713",
+  "parameters": {
+    "k_groups": 5,
+    "population_size": 50,
+    "generations": 6000,
+    "crossover_rate": 0.9,
+    "mutation_rate": 0.005,
+    "elitism_count": 2,
+    "alpha": 1,
+    "beta": 1,
+    "gamma": 1,
+    "offset": 1.0,
+    "cluster_balance_penalty": 0.005,
+    "min_group_size": 5
+  },
+  "fitness_function": "fitness = offset + alpha * separation - beta * variance + gamma * geographic_distance - lambda * var(cluster_sizes)"
+}

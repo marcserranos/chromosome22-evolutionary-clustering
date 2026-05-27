@@ -1,5 +1,5 @@
 import random
-from individual import Individual
+from handovers.evo_algorithm_handover.individual import Individual
 
 class Population:
     """a set of candidate partitions (Individuals) evolved in one experiment"""

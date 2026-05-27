@@ -1,6 +1,6 @@
 {
   "run_name": "test_only_geo_cost_negative",
-  "timestamp": "2026-05-27T11:30:11.233126",
+  "timestamp": "2026-05-27T11:32:19.682666",
   "parameters": {
     "k_groups": 4,
     "population_size": 50,

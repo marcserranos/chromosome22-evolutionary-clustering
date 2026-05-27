@@ -9,7 +9,7 @@ class RunManager:
         self.run_dir = None
         self.metadata = {}
 
-    def setup_run(self, run_name, parameters):
+    def setup_run(self, run_name, parameters, fitness_function=None):
         """Create run directory and initialize metadata."""
         self.run_dir = self.runs_dir / run_name
         self.run_dir.mkdir(parents=True, exist_ok=True)
@@ -19,6 +19,9 @@ class RunManager:
             "timestamp": datetime.now().isoformat(),
             "parameters": parameters
         }
+
+        if fitness_function:
+            self.metadata["fitness_function"] = fitness_function
 
         self._save_metadata()
         return self.run_dir

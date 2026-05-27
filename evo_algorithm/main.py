@@ -24,16 +24,16 @@ def main():
 
     genetic, geographic, subject_names = load_distances() # loads data
     num_subjects = len(subject_names)
-    k_groups = 4 # define K number (main parameter)
+    k_groups = 7 # define K number (main parameter)
     min_group_size = max(1, num_subjects // (k_groups * 10)) # can be changed
 
     # Prepare parameters for metadata
     parameters = {
         "k_groups": k_groups,
         "population_size": 50,
-        "generations": 5000,
+        "generations": 10000,
         "crossover_rate": 0.9,
-        "mutation_rate": 0.05,
+        "mutation_rate": 0.01,
         "elitism_count": 2,
         "alpha": 1,
         "beta": 1,
@@ -45,9 +45,32 @@ def main():
     run_dir = run_manager.setup_run(run_name, parameters)
     print(f"\nRun directory: {run_dir}\n")
 
-    # class initialization
-    evaluator = FitnessEvaluator(genetic_matrix=genetic,geographic_matrix=geographic,k_groups=k_groups,alpha=1,beta=1,min_group_size=min_group_size,gamma=1)
-    ea = EvolutionaryAlgorithm(num_subjects=num_subjects,k_groups=k_groups,population_size=50,generations=5000,crossover_rate=0.9,mutation_rate=0.05,elitism_count=2,evaluator=evaluator)
+    # class initialization using parameters dict
+    evaluator = FitnessEvaluator(
+        genetic_matrix=genetic,
+        geographic_matrix=geographic,
+        k_groups=parameters["k_groups"],
+        alpha=parameters["alpha"],
+        beta=parameters["beta"],
+        gamma=parameters["gamma"],
+        min_group_size=parameters["min_group_size"]
+    )
+    ea = EvolutionaryAlgorithm(
+        num_subjects=num_subjects,
+        k_groups=parameters["k_groups"],
+        population_size=parameters["population_size"],
+        generations=parameters["generations"],
+        crossover_rate=parameters["crossover_rate"],
+        mutation_rate=parameters["mutation_rate"],
+        elitism_count=parameters["elitism_count"],
+        evaluator=evaluator
+    )
+
+    # Extract fitness function from evaluator and save to metadata
+    fitness_function = evaluator.get_fitness_formula()
+    run_manager.metadata["fitness_function"] = fitness_function
+    run_manager._save_metadata()
+    print(f"Fitness function: {fitness_function}\n")
 
     # runs the evolutionary algorithm
     best = ea.run()

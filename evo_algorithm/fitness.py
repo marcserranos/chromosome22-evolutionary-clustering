@@ -42,8 +42,10 @@ class FitnessEvaluator:
         same = chr[self.pair_i] == chr[self.pair_j]
         if np.any(~same):
             separation = float(self.genetic_pairs[~same].mean())
+            geo_separation = float(self.geographic_pairs[~same].mean())
         else:
             separation = 0.0
+            geo_separation = 0.0
         if np.any(same):
             variance = float(self.genetic_pairs[same].mean())
             geo_cost = float(self.geographic_pairs[same].mean())
@@ -51,8 +53,8 @@ class FitnessEvaluator:
             variance = 0.0
             geo_cost = 0.0
 
-        # fitness score computation
-        individual.fitness = -geo_cost
+        # fitness score computation: maximize between-cluster distance, minimize within-cluster distance
+        individual.fitness = geo_separation - geo_cost
         #individual.fitness = self.offset + (self.alpha * separation - self.beta * variance - self.gamma * geo_cost)
 
         return individual.fitness
@@ -61,3 +63,7 @@ class FitnessEvaluator:
         '''checks whether group sizes are inside permitted thresholds'''
         counts = np.bincount(chr, minlength=self.k_groups) # counts cluster sizes
         return bool(np.all(counts >= self.min_group_size)) # checks whether all clusters are big enough
+
+    def get_fitness_formula(self):
+        '''returns the fitness formula being used'''
+        return "fitness = geo_separation - geo_cost"

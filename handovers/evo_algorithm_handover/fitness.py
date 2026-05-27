@@ -1,5 +1,5 @@
 import numpy as np
-from individual import Individual
+from handovers.evo_algorithm_handover.individual import Individual
 
 
 class FitnessEvaluator:

@@ -1,0 +1,17 @@
+{
+  "stamp": "2026-05-27T09:13:34.235Z",
+  "copied": [
+    {
+      "source": "../results/distances/genetic_distance.csv",
+      "dest": "public/data/distances/genetic_distance.csv"
+    },
+    {
+      "source": "../results/distances/geographic_distance.csv",
+      "dest": "public/data/distances/geographic_distance.csv"
+    },
+    {
+      "source": "../DATA/processed/samples_metadata_ordered.csv",
+      "dest": "public/data/metadata/samples_metadata_ordered.csv"
+    }
+  ]
+}

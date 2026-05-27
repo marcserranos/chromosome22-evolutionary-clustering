@@ -5,7 +5,15 @@ import GlobeView from "../components/GlobeView";
 import { ResultPanel, type PanelId } from "../components/ResultPanel";
 import { usePanelTransition } from "../hooks/usePanelTransition";
 
-const PANEL_IDS: PanelId[] = [4, 5, 6, 7, 8];
+const PANEL_IDS: PanelId[] = [4, 5, 6, 7, 8, 9];
+const PANEL_BUTTON_LABELS: Record<PanelId, string> = {
+  4: "Genetic PCA",
+  5: "Heatmap",
+  6: "Fitness evolution",
+  7: "Gen/Geo correlation",
+  8: "Bridge groups",
+  9: "1000G"
+};
 
 type LoadState =
   | { status: "idle" | "loading" }
@@ -72,6 +80,7 @@ export default function GlobePage() {
   const [kChoice, setKChoice] = useState<KChoice>(4);
   const [geoCostEnabled, setGeoCostEnabled] = useState(true);
   const [simSeed, setSimSeed] = useState(1);
+  const [spinPulse, setSpinPulse] = useState(0);
   const [clusteredPoints, setClusteredPoints] = useState<ClusteredPoint[] | null>(null);
   const [selectedCluster, setSelectedCluster] = useState<number | null>(null);
   const { displayedPanel, panelExpanded, isPanelOpen, openPanel, closePanel } = usePanelTransition();
@@ -122,6 +131,7 @@ export default function GlobePage() {
       .filter((p): p is ClusteredPoint => !!p);
 
     setSimSeed(seed);
+    setSpinPulse((v) => v + 1);
     setSelectedCluster(null);
     setClusteredPoints(points);
   };
@@ -219,7 +229,7 @@ export default function GlobePage() {
                     : undefined
                 }
               >
-                {id}
+                {PANEL_BUTTON_LABELS[id]}
               </button>
             );
           })}
@@ -251,6 +261,7 @@ export default function GlobePage() {
                   k={kEffective}
                   selectedCluster={selectedCluster}
                   rotationSpeed={0.55}
+                  spinPulseToken={spinPulse}
                   tiltLat={55}
                 />
 

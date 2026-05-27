@@ -52,7 +52,9 @@ class FitnessEvaluator:
             geo_cost = 0.0
 
         # fitness score computation
-        individual.fitness = self.offset + (self.alpha * separation - self.beta * variance - self.gamma * geo_cost)
+        individual.fitness = -geo_cost
+        #individual.fitness = self.offset + (self.alpha * separation - self.beta * variance - self.gamma * geo_cost)
+
         return individual.fitness
 
     def validate_constraints(self, chr):

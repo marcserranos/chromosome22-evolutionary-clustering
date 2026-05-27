@@ -95,6 +95,7 @@ export default function GlobePage() {
   const [lineage, setLineage] = useState<LineageData | null>(null);
   const animRef = useRef<number | null>(null);
   const lastGenRef = useRef<number>(-1);
+  const [activeExperimentKey, setActiveExperimentKey] = useState<string | null>(null);
 
   useEffect(() => {
     let cancelled = false;
@@ -159,6 +160,7 @@ export default function GlobePage() {
     setSelectedCluster(null);
 
     const k = kEffective;
+    setActiveExperimentKey(kChoice === "explored" && geoCostEnabled ? "exp_kexp_gon" : null);
 
     const startAnimation = (data: LineageData) => {
       const gens = data.generations;
@@ -388,7 +390,12 @@ export default function GlobePage() {
               aria-hidden={displayedPanel == null}
             >
               {displayedPanel != null && (
-                <ResultPanel id={displayedPanel} expanded={panelExpanded} onClose={closePanel} />
+                <ResultPanel
+                  id={displayedPanel}
+                  expanded={panelExpanded}
+                  onClose={closePanel}
+                  experimentKey={activeExperimentKey}
+                />
               )}
             </aside>
           </>

@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 export type MatplotlibImagePanelProps = {
   /** Display name for the panel */
   title: string;
@@ -8,6 +10,12 @@ export type MatplotlibImagePanelProps = {
 };
 
 export function MatplotlibImagePanel({ title, expectedPath, hint }: MatplotlibImagePanelProps) {
+  const [status, setStatus] = useState<"idle" | "loaded" | "missing">("idle");
+
+  useEffect(() => {
+    setStatus("idle");
+  }, [expectedPath]);
+
   return (
     <div className="mplPanel">
       <div className="mplMetaRow">
@@ -22,11 +30,25 @@ export function MatplotlibImagePanel({ title, expectedPath, hint }: MatplotlibIm
       </div>
 
       <div className="mplImageFrame" role="img" aria-label={`${title} figure`}>
-        <div className="mplEmptyState">
-          <div className="mplEmptyTitle">{title}</div>
-          <div className="mplEmptyBody">Figure slot ready (matplotlib PNG).</div>
-          {hint && <div className="mplEmptyHint">{hint}</div>}
-        </div>
+        {expectedPath && (
+          <img
+            src={`${expectedPath}?v=${Date.now()}`}
+            alt={title}
+            className="mplImage"
+            onLoad={() => setStatus("loaded")}
+            onError={() => setStatus("missing")}
+          />
+        )}
+
+        {(status !== "loaded" || !expectedPath) && (
+          <div className="mplEmptyState">
+            <div className="mplEmptyTitle">{title}</div>
+            <div className="mplEmptyBody">
+              {status === "missing" ? "PNG not found yet." : "Figure slot ready (matplotlib PNG)."}
+            </div>
+            {hint && <div className="mplEmptyHint">{hint}</div>}
+          </div>
+        )}
       </div>
     </div>
   );

@@ -50,23 +50,24 @@ class EvolutionaryAlgorithm:
             # ELITISM: auto-saves as many indivduals as required in input
             next_pop.extend(self.population.members[: self.elitism_count]) 
 
-            # SELECTION: selects two parents via weighted roulette 
+            # SELECTION: selects two parents via weighted roulette
             while len(next_pop) < self.population_size:
                 parent1 = self.population.roulette_select()
                 parent2 = self.population.roulette_select()
 
-            # CROSSOVER: with a defined chance, selected parents have children 
-                if random.random() < self.crossover_rate:
+            # CROSSOVER: with self-adaptive crossover rate from parent, selected parents have children
+                # Use parent1's crossover rate for child1, parent2's for child2
+                if random.random() < parent1.crossover_rate:
                     c1, c2 = self.crossover(parent1, parent2)
                 else:
-                    c1 = parent1.chromosome.copy() # if no crossover, children are deep copies of paretns
+                    c1 = parent1.chromosome.copy()
                     c2 = parent2.chromosome.copy()
-                child1 = Individual(self.num_subjects, self.k_groups, c1) # actual generation of object Individual
-                child2 = Individual(self.num_subjects, self.k_groups, c2)
+                child1 = Individual(self.num_subjects, self.k_groups, c1, parent1.mutation_rate, parent1.crossover_rate)
+                child2 = Individual(self.num_subjects, self.k_groups, c2, parent2.mutation_rate, parent2.crossover_rate)
 
-            # MUTATION: children mutate with a fixed probability 
-                child1.mutate(self.mutation_rate) 
-                child2.mutate(self.mutation_rate)
+            # MUTATION & ADAPTATION: children mutate chromosome and adapt rates
+                child1.mutate(adaptive=True)
+                child2.mutate(adaptive=True)
                 self.evaluator.evaluate(child1) # new fitness evaluation
                 self.evaluator.evaluate(child2)
 

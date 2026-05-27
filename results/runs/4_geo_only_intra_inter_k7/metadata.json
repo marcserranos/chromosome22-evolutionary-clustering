@@ -1,0 +1,17 @@
+{
+  "run_name": "4_geo_only_intra_inter_k7",
+  "timestamp": "2026-05-27T11:51:38.900599",
+  "parameters": {
+    "k_groups": 7,
+    "population_size": 50,
+    "generations": 5000,
+    "crossover_rate": 0.9,
+    "mutation_rate": 0.05,
+    "elitism_count": 2,
+    "alpha": 1,
+    "beta": 1,
+    "gamma": 1,
+    "min_group_size": 3
+  },
+  "fitness_function": "fitness = geo_separation - geo_cost (maximize between-cluster distance, minimize within-cluster distance)"
+}

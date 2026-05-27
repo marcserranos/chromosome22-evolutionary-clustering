@@ -121,17 +121,17 @@ class Visualizations:
       if HAS_CARTOPY:
           ax = fig.add_subplot(1, 1, 1, projection=ccrs.PlateCarree())
           ax.set_global()
-          ax.add_feature(cfeature.OCEAN, facecolor="#d4e6f1")
-          ax.add_feature(cfeature.LAND, facecolor="#e8e8e8")
-          ax.coastlines(linewidth=0.4, color="#555555")
-          ax.gridlines(draw_labels=True, linewidth=0.3, color="gray", alpha=0.5)
+          ax.add_feature(cfeature.OCEAN, facecolor="#e6f2ff", alpha=0.5)
+          ax.add_feature(cfeature.LAND, facecolor="#d3d3d3", alpha=0.5)
+          ax.add_feature(cfeature.COASTLINE, linewidth=0.8, color="#333333")
+          ax.gridlines(draw_labels=True, linewidth=0.3, color="gray", alpha=0.3)
           transform = ccrs.PlateCarree()
       else:
           ax = fig.add_subplot(1, 1, 1)
           ax.set_xlim(-180, 180)
           ax.set_ylim(-60, 85)
-          ax.set_facecolor("#d4e6f1")
-          ax.grid(True, alpha=0.3)
+          ax.set_facecolor("#e6f2ff")
+          ax.grid(True, alpha=0.2)
           transform = None
 
       for c in range(self.k_groups):

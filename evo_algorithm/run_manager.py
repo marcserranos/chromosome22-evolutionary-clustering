@@ -9,13 +9,39 @@ class RunManager:
         self.run_dir = None
         self.metadata = {}
 
+    def _get_next_run_id(self):
+        """Get the next run ID by finding the highest existing number prefix."""
+        if not self.runs_dir.exists():
+            return 1
+
+        existing_runs = [d.name for d in self.runs_dir.iterdir() if d.is_dir()]
+        max_id = 0
+
+        for run_name in existing_runs:
+            if run_name[0].isdigit():
+                # Extract leading number
+                num_str = ""
+                for char in run_name:
+                    if char.isdigit():
+                        num_str += char
+                    else:
+                        break
+                if num_str:
+                    max_id = max(max_id, int(num_str))
+
+        return max_id + 1
+
     def setup_run(self, run_name, parameters, fitness_function=None):
-        """Create run directory and initialize metadata."""
-        self.run_dir = self.runs_dir / run_name
+        """Create run directory and initialize metadata with auto-incrementing ID."""
+        # Add auto-incrementing ID prefix
+        run_id = self._get_next_run_id()
+        run_name_with_id = f"{run_id}_{run_name}"
+
+        self.run_dir = self.runs_dir / run_name_with_id
         self.run_dir.mkdir(parents=True, exist_ok=True)
 
         self.metadata = {
-            "run_name": run_name,
+            "run_name": run_name_with_id,
             "timestamp": datetime.now().isoformat(),
             "parameters": parameters
         }

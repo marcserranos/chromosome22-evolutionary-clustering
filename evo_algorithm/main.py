@@ -31,9 +31,9 @@ def main():
     parameters = {
         "k_groups": k_groups,
         "population_size": 50,
-        "generations": 10000,
+        "generations": 6000,
         "crossover_rate": 0.9,
-        "mutation_rate": 0.01,
+        "mutation_rate": 0.005,
         "elitism_count": 2,
         "alpha": 1,
         "beta": 1,

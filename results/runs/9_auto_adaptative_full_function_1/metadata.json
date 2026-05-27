@@ -1,0 +1,17 @@
+{
+  "run_name": "9_auto_adaptative_full_function_1",
+  "timestamp": "2026-05-27T12:37:14.045292",
+  "parameters": {
+    "k_groups": 7,
+    "population_size": 50,
+    "generations": 10000,
+    "crossover_rate": 0.9,
+    "mutation_rate": 0.005,
+    "elitism_count": 2,
+    "alpha": 1,
+    "beta": 1,
+    "gamma": 1,
+    "min_group_size": 3
+  },
+  "fitness_function": "fitness = offset + alpha * separation - beta * variance - gamma * geo_cost"
+}

@@ -6,9 +6,10 @@ class FitnessEvaluator:
     """
     scores an Individual (candidate partition) using input distance matrices
     matrix rows/columns index subjects (one subject per index).
-
-    fitness = offset + alpha * separation - beta * variance - gamma * geographic_cost
     """
+
+    # Single source of truth for fitness formula
+    FITNESS_FORMULA = "fitness = offset + alpha * separation - beta * variance"
 
     PENALTY = -100000000 # massive penalty given to erase invalid individals with ease
 
@@ -38,24 +39,18 @@ class FitnessEvaluator:
             individual.fitness = self.PENALTY
             return individual.fitness
 
-        # mirarse aixo amb carinyo tot lo de baix i entendre profundament
         same = chr[self.pair_i] == chr[self.pair_j]
         if np.any(~same):
             separation = float(self.genetic_pairs[~same].mean())
-            geo_separation = float(self.geographic_pairs[~same].mean())
         else:
             separation = 0.0
-            geo_separation = 0.0
         if np.any(same):
             variance = float(self.genetic_pairs[same].mean())
-            geo_cost = float(self.geographic_pairs[same].mean())
         else:
             variance = 0.0
-            geo_cost = 0.0
 
-        # fitness score computation: maximize between-cluster distance, minimize within-cluster distance
-        individual.fitness = geo_separation - geo_cost
-        #individual.fitness = self.offset + (self.alpha * separation - self.beta * variance - self.gamma * geo_cost)
+        # fitness score computation (see FITNESS_FORMULA for ground truth)
+        individual.fitness = self.offset + (self.alpha * separation - self.beta * variance)
 
         return individual.fitness
 
@@ -65,5 +60,5 @@ class FitnessEvaluator:
         return bool(np.all(counts >= self.min_group_size)) # checks whether all clusters are big enough
 
     def get_fitness_formula(self):
-        '''returns the fitness formula being used'''
-        return "fitness = geo_separation - geo_cost"
+        '''returns the fitness formula being used (single source of truth from FITNESS_FORMULA)'''
+        return self.FITNESS_FORMULA

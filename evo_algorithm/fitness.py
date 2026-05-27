@@ -9,7 +9,7 @@ class FitnessEvaluator:
     """
 
     # Single source of truth for fitness formula
-    FITNESS_FORMULA = "fitness = offset + alpha * separation - beta * variance"
+    FITNESS_FORMULA = "fitness = alpha * separation - beta * variance"
 
     PENALTY = -100000000 # massive penalty given to erase invalid individals with ease
 

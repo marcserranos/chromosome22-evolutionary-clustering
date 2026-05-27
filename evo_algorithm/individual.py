@@ -5,7 +5,7 @@ class Individual:
     """
     this class represents one possible partition of all subjects into K groups
     """
-    def __init__(self, num_subjects: int, k_groups: int, chromosome = None, mutation_rate = None, crossover_rate = None):
+    def __init__(self, num_subjects: int, k_groups: int, chromosome = None, mutation_rate = None, crossover_rate = None, id=None, parent_id=None):
         self.num_subjects = num_subjects
         self.k_groups = k_groups
 
@@ -18,6 +18,10 @@ class Individual:
         # self-adaptive parameters
         self.mutation_rate = mutation_rate if mutation_rate is not None else 0.05
         self.crossover_rate = crossover_rate if crossover_rate is not None else 0.9
+
+        # lineage tracking
+        self.id = id
+        self.parent_id = parent_id
 
         self.fitness = None # starts uninitialized
 

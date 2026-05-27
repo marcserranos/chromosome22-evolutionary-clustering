@@ -14,13 +14,16 @@ class EvolutionaryAlgorithm:
         self.k_groups = k_groups
         self.population_size = population_size # number of individuals per generation
         self.generations = generations # fixed gen number
-        self.crossover_rate = crossover_rate 
+        self.crossover_rate = crossover_rate
         self.mutation_rate = mutation_rate
         self.elitism_count = elitism_count # number of auto-saved individuals
         self.evaluator = evaluator # from class FitnessEvaluator
-        self.population = Population(population_size, num_subjects, k_groups) 
+        self.population = Population(population_size, num_subjects, k_groups)
         # lists for data preservation and later visualization
         self.history = {"generation":[],"best_fitness":[],"mean_fitness":[],"worst_fitness":[]}
+        # lineage tracking
+        self.id_counter = 0
+        self.individual_store = {}
 
     def _record_fitness(self, generation):
         '''saves historic data on fitness in every generation'''
@@ -36,6 +39,10 @@ class EvolutionaryAlgorithm:
         # STARTING CASE
         # evaluates fitness for every individual
         for member in self.population.members:
+            self.id_counter += 1
+            member.id = self.id_counter
+            member.parent_id = None
+            self.individual_store[member.id] = member
             self.evaluator.evaluate(member)
 
         # saves history and prints for following
@@ -62,8 +69,14 @@ class EvolutionaryAlgorithm:
                 else:
                     c1 = parent1.chromosome.copy()
                     c2 = parent2.chromosome.copy()
-                child1 = Individual(self.num_subjects, self.k_groups, c1, parent1.mutation_rate, parent1.crossover_rate)
-                child2 = Individual(self.num_subjects, self.k_groups, c2, parent2.mutation_rate, parent2.crossover_rate)
+
+                self.id_counter += 1
+                child1 = Individual(self.num_subjects, self.k_groups, c1, parent1.mutation_rate, parent1.crossover_rate, id=self.id_counter, parent_id=parent1.id)
+                self.individual_store[child1.id] = child1
+
+                self.id_counter += 1
+                child2 = Individual(self.num_subjects, self.k_groups, c2, parent2.mutation_rate, parent2.crossover_rate, id=self.id_counter, parent_id=parent2.id)
+                self.individual_store[child2.id] = child2
 
             # MUTATION & ADAPTATION: children mutate chromosome and adapt rates
                 child1.mutate(adaptive=True)
@@ -83,6 +96,26 @@ class EvolutionaryAlgorithm:
                 print(f"Generation {gen}: best fitness = {self.population.best().fitness:.4f}")
 
         return self.population.best()
+
+    def get_lineage(self, individual):
+        """Walk backwards from individual to root, returning list [root, ..., individual]"""
+        lineage = []
+        current = individual
+        while current is not None:
+            lineage.append(current)
+            if current.parent_id is None:
+                break
+            current = self.individual_store.get(current.parent_id)
+        return lineage[::-1]
+
+    def sample_lineage(self, lineage, num_samples=300):
+        """Sample lineage evenly to get approximately num_samples points"""
+        if len(lineage) <= num_samples:
+            return lineage
+        step = len(lineage) / num_samples
+        sampled = [lineage[int(i * step)] for i in range(num_samples)]
+        sampled[-1] = lineage[-1]  # ensure we always include the final individual
+        return sampled
 
     def crossover(self, parent1, parent2):
         '''generates chromosomes for children from two parents by choosing a random cutoff point

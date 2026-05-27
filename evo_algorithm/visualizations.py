@@ -24,12 +24,10 @@ def mds_2d(distance_matrix):
     return vecs[:, :2] * np.sqrt(vals)
 
 try:
-    import cartopy.crs as ccrs
-    import cartopy.feature as cfeature
-
-    HAS_CARTOPY = True
+    import geopandas as gpd
+    HAS_GEOPANDAS = True
 except ImportError:
-    HAS_CARTOPY = False
+    HAS_GEOPANDAS = False
 
 
 class Visualizations:
@@ -117,33 +115,30 @@ class Visualizations:
       lat = self.meta["Latitude"].astype(float).values
       lon = self.meta["Longitude"].astype(float).values
 
-      fig = plt.figure(figsize=(16, 9))
-      if HAS_CARTOPY:
-          ax = fig.add_subplot(1, 1, 1, projection=ccrs.PlateCarree())
-          ax.set_global()
-          ax.add_feature(cfeature.OCEAN, facecolor="#e6f2ff", alpha=0.5)
-          ax.add_feature(cfeature.LAND, facecolor="#d3d3d3", alpha=0.5)
-          ax.add_feature(cfeature.COASTLINE, linewidth=0.8, color="#333333")
-          ax.gridlines(draw_labels=True, linewidth=0.3, color="gray", alpha=0.3)
-          transform = ccrs.PlateCarree()
-      else:
-          ax = fig.add_subplot(1, 1, 1)
-          ax.set_xlim(-180, 180)
-          ax.set_ylim(-60, 85)
-          ax.set_facecolor("#e6f2ff")
-          ax.grid(True, alpha=0.2)
-          transform = None
+      fig, ax = plt.subplots(figsize=(16, 9))
+      ax.set_xlim(-180, 180)
+      ax.set_ylim(-60, 85)
+      ax.set_facecolor("#e6f2ff")
 
+      # Add world map using geopandas (no SSL issues, no downloads needed)
+      if HAS_GEOPANDAS:
+          try:
+              world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
+              world.plot(ax=ax, color="#d3d3d3", edgecolor="#333333", linewidth=0.5, alpha=0.7)
+          except Exception:
+              ax.grid(True, alpha=0.2)
+      else:
+          ax.grid(True, alpha=0.2)
+
+      # Plot cluster points
       for c in range(self.k_groups):
           mask = self.chromosome == c
-          kw = dict(s=55, alpha=0.85, color=self.colors[c], edgecolors="black", linewidths=0.4)
-          if transform:
-              ax.scatter(lon[mask], lat[mask], transform=transform, label=f"Cluster {c}", **kw)
-          else:
-              ax.scatter(lon[mask], lat[mask], label=f"Cluster {c}", **kw)
+          ax.scatter(lon[mask], lat[mask], s=55, alpha=0.85, color=self.colors[c],
+                    edgecolors="black", linewidths=0.4, label=f"Cluster {c}")
 
       ax.legend(loc="lower left", fontsize=9, framealpha=0.95)
       ax.set_title("Subjects by EA cluster (world map)", fontsize=14, fontweight="bold")
+      ax.grid(True, alpha=0.1)
       self._save(fig, "01_world_map_clusters.png")
 
   def plot_mds(self):

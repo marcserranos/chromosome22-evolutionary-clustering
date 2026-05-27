@@ -1,0 +1,17 @@
+{
+  "run_name": "12_genetic_only_3_(with_map)",
+  "timestamp": "2026-05-27T13:03:53.326183",
+  "parameters": {
+    "k_groups": 7,
+    "population_size": 50,
+    "generations": 6000,
+    "crossover_rate": 0.9,
+    "mutation_rate": 0.005,
+    "elitism_count": 2,
+    "alpha": 1,
+    "beta": 1,
+    "gamma": 1,
+    "min_group_size": 3
+  },
+  "fitness_function": "fitness = offset + alpha * separation - beta * variance"
+}

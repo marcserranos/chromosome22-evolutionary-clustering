@@ -1,4 +1,9 @@
 from collections import Counter
+from pathlib import Path
+import csv
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.animation import FuncAnimation
 from data_loader import load_distances
 from fitness import FitnessEvaluator
 from ea import EvolutionaryAlgorithm
@@ -14,6 +19,88 @@ def get_run_name():
     return run_name
 
 
+def save_lineage_csv(lineage, run_dir):
+    """Save lineage to CSV: generation, fitness, chromosome"""
+    csv_path = Path(run_dir) / "lineage.csv"
+    with open(csv_path, 'w', newline='') as f:
+        writer = csv.writer(f)
+        writer.writerow(['generation', 'fitness', 'chromosome'])
+        for gen, individual in enumerate(lineage):
+            chromosome_str = ','.join(map(str, individual.chromosome))
+            writer.writerow([gen, individual.fitness, chromosome_str])
+    print(f"  Lineage saved: {csv_path.name}")
+    return csv_path
+
+
+def create_world_map_animation(lineage, k_groups, subject_names, metadata_df, run_dir):
+    """Create animation of world map with cluster evolution"""
+    try:
+        import geopandas as gpd
+        HAS_GEOPANDAS = True
+    except ImportError:
+        HAS_GEOPANDAS = False
+        print(f"  World map animation skipped (geopandas not available)")
+        return
+
+    lat = metadata_df["Latitude"].astype(float).values
+    lon = metadata_df["Longitude"].astype(float).values
+    colors = plt.cm.tab10(np.linspace(0, 1, k_groups))
+
+    fig, ax = plt.subplots(figsize=(16, 9))
+    ax.set_xlim(-180, 180)
+    ax.set_ylim(-60, 85)
+    ax.set_facecolor("#e6f2ff")
+
+    if HAS_GEOPANDAS:
+        try:
+            world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
+            world.plot(ax=ax, color="#d3d3d3", edgecolor="#333333", linewidth=0.5, alpha=0.7)
+        except Exception:
+            ax.grid(True, alpha=0.2)
+    else:
+        ax.grid(True, alpha=0.2)
+
+    def animate(frame):
+        ax.clear()
+        if HAS_GEOPANDAS:
+            try:
+                world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
+                world.plot(ax=ax, color="#d3d3d3", edgecolor="#333333", linewidth=0.5, alpha=0.7)
+            except Exception:
+                ax.grid(True, alpha=0.2)
+        else:
+            ax.grid(True, alpha=0.2)
+
+        ax.set_xlim(-180, 180)
+        ax.set_ylim(-60, 85)
+        ax.set_facecolor("#e6f2ff")
+
+        individual = lineage[frame]
+        chromosome = individual.chromosome
+        for c in range(k_groups):
+            mask = np.array(chromosome) == c
+            ax.scatter(lon[mask], lat[mask], s=55, alpha=0.85, color=colors[c],
+                      edgecolors="black", linewidths=0.4, label=f"Cluster {c}")
+
+        ax.legend(loc="lower left", fontsize=8, framealpha=0.95)
+        ax.set_title(f"Lineage evolution - Generation {frame} (fitness: {individual.fitness:.4f})",
+                    fontsize=14, fontweight="bold")
+        ax.grid(True, alpha=0.1)
+
+    anim = FuncAnimation(fig, animate, frames=len(lineage), repeat=True)
+    for ext in ['mp4', 'gif']:
+        try:
+            output_path = Path(run_dir) / f"lineage_world_map_animation.{ext}"
+            anim.save(str(output_path), fps=60, dpi=100)
+            print(f"  World map animation saved: {output_path.name}")
+            plt.close(fig)
+            return
+        except Exception:
+            continue
+    plt.close(fig)
+    print(f"  World map animation skipped (ffmpeg not available)")
+
+
 def main():
     '''runs experiments as desired, rifht now it's short in options, will be further
     improved for modularity and experiment variability'''
@@ -23,6 +110,10 @@ def main():
     run_manager = RunManager()
 
     genetic, geographic, subject_names = load_distances() # loads data
+    from data_loader import load_subject_metadata, align_metadata
+    metadata_df = load_subject_metadata()
+    metadata_df = align_metadata(subject_names, metadata_df)
+
     num_subjects = len(subject_names)
     k_groups = 7 # define K number (main parameter)
     min_group_size = max(1, num_subjects // (k_groups * 10)) # can be changed
@@ -78,6 +169,13 @@ def main():
     print("\nDone.")
     print(f"Best fitness: {best.fitness:.4f}")
     print(f"Cluster sizes: {dict(sorted(counts.items()))}")
+
+    # save lineage of best individual
+    print("\nLineage tracking:")
+    lineage = ea.get_lineage(best)
+    lineage = ea.sample_lineage(lineage, num_samples=300)
+    save_lineage_csv(lineage, run_dir)
+    create_world_map_animation(lineage, k_groups, subject_names, metadata_df, run_dir)
 
     # shows cluster distribution
     for cluster in range(k_groups):

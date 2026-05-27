@@ -4,6 +4,7 @@ import csv
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
+from sklearn.decomposition import PCA
 from data_loader import load_distances
 from fitness import FitnessEvaluator
 from ea import EvolutionaryAlgorithm
@@ -17,6 +18,61 @@ def get_run_name():
     if not run_name:
         raise ValueError("Run name cannot be empty")
     return run_name
+
+
+def create_plot_data(run_dir, genetic_matrix, ea_history, lineage, subject_names):
+    """Create plot_data folder with raw data for custom visualizations"""
+    plot_data_dir = Path(run_dir) / "plot_data"
+    plot_data_dir.mkdir(exist_ok=True)
+
+    # 1. Lineage data (historic best fitness)
+    lineage_path = plot_data_dir / "lineage.csv"
+    with open(lineage_path, 'w', newline='') as f:
+        writer = csv.writer(f)
+        writer.writerow(['generation', 'fitness', 'chromosome'])
+        for gen, individual in enumerate(lineage):
+            chromosome_str = ','.join(map(str, individual.chromosome))
+            writer.writerow([gen, individual.fitness, chromosome_str])
+
+    # 2. Genetic PCA
+    pca = PCA(n_components=3)
+    pca_coords = pca.fit_transform(genetic_matrix)
+    pca_path = plot_data_dir / "genetic_pca.csv"
+    with open(pca_path, 'w', newline='') as f:
+        writer = csv.writer(f)
+        writer.writerow(['subject_index', 'subject_name', 'pc1', 'pc2', 'pc3'])
+        for i, (coords, name) in enumerate(zip(pca_coords, subject_names)):
+            writer.writerow([i, name, coords[0], coords[1], coords[2]])
+
+    # Save PCA variance explained
+    pca_var_path = plot_data_dir / "genetic_pca_variance.csv"
+    with open(pca_var_path, 'w', newline='') as f:
+        writer = csv.writer(f)
+        writer.writerow(['component', 'variance_explained', 'cumulative_variance'])
+        cumvar = 0
+        for i, var in enumerate(pca.explained_variance_ratio_):
+            cumvar += var
+            writer.writerow([i+1, var, cumvar])
+
+    # 3. Genetic distance heatmap (matrix)
+    heatmap_path = plot_data_dir / "genetic_distance_matrix.csv"
+    np.savetxt(heatmap_path, genetic_matrix, delimiter=',')
+
+    # 4. Fitness evolution
+    fitness_path = plot_data_dir / "fitness_evolution.csv"
+    with open(fitness_path, 'w', newline='') as f:
+        writer = csv.writer(f)
+        writer.writerow(['generation', 'best_fitness', 'mean_fitness', 'worst_fitness'])
+        for gen, best, mean, worst in zip(
+            ea_history['generation'],
+            ea_history['best_fitness'],
+            ea_history['mean_fitness'],
+            ea_history['worst_fitness']
+        ):
+            writer.writerow([gen, best, mean, worst])
+
+    print(f"  Plot data saved to: plot_data/")
+    return plot_data_dir
 
 
 def save_lineage_csv(lineage, run_dir):
@@ -115,7 +171,7 @@ def main():
     metadata_df = align_metadata(subject_names, metadata_df)
 
     num_subjects = len(subject_names)
-    k_groups = 7 # define K number (main parameter)
+    k_groups = 5 # define K number (main parameter)
     min_group_size = max(1, num_subjects // (k_groups * 10)) # can be changed
 
     # Prepare parameters for metadata
@@ -176,6 +232,10 @@ def main():
     lineage = ea.sample_lineage(lineage, num_samples=300)
     save_lineage_csv(lineage, run_dir)
     create_world_map_animation(lineage, k_groups, subject_names, metadata_df, run_dir)
+
+    # create plot data for custom visualizations
+    print("\nPlot data:")
+    create_plot_data(run_dir, genetic, ea.history, lineage, subject_names)
 
     # shows cluster distribution
     for cluster in range(k_groups):

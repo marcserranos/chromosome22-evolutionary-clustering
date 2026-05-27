@@ -9,7 +9,7 @@ class FitnessEvaluator:
     """
 
     # Single source of truth for fitness formula
-    FITNESS_FORMULA = "fitness = alpha * separation - beta * variance"
+    FITNESS_FORMULA = "fitness = alpha * separation - beta * variance + gamma * geographic_cost"
 
     PENALTY = -100000000 # massive penalty given to erase invalid individals with ease
 
@@ -50,7 +50,7 @@ class FitnessEvaluator:
             variance = 0.0
 
         # fitness score computation (see FITNESS_FORMULA for ground truth)
-        individual.fitness = self.offset + (self.alpha * separation - self.beta * variance)
+        individual.fitness = self.offset + (self.alpha * separation - self.beta * variance + self.gamma * geographic_cost)
 
         return individual.fitness
 

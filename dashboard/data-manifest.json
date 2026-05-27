@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "files": [
+    {
+      "source": "../results/distances/genetic_distance.csv",
+      "dest": "distances/genetic_distance.csv"
+    },
+    {
+      "source": "../results/distances/geographic_distance.csv",
+      "dest": "distances/geographic_distance.csv"
+    },
+    {
+      "source": "../DATA/processed/samples_metadata_ordered.csv",
+      "dest": "metadata/samples_metadata_ordered.csv"
+    },
+    {
+      "source": "../results/ea/best_chromosome.csv",
+      "dest": "ea/best_chromosome.csv"
+    }
+  ]
+}
+

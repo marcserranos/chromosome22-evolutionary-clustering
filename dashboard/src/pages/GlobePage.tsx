@@ -1,11 +1,20 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { loadMetadata } from "../data/loadMetadata";
 import type { SampleMetaRow } from "../data/types";
 import GlobeView from "../components/GlobeView";
 import { ResultPanel, type PanelId } from "../components/ResultPanel";
 import { usePanelTransition } from "../hooks/usePanelTransition";
+import { loadLineage, type LineageData } from "../data/loadLineage";
 
-const PANEL_IDS: PanelId[] = [4, 5, 6, 7, 8];
+const PANEL_IDS: PanelId[] = [4, 5, 6, 7, 8, 9];
+const PANEL_BUTTON_LABELS: Record<PanelId, string> = {
+  4: "Genetic PCA",
+  5: "Heatmap",
+  6: "Fitness evolution",
+  7: "Gen/Geo correlation",
+  8: "Bridge groups",
+  9: "1000G"
+};
 
 type LoadState =
   | { status: "idle" | "loading" }
@@ -40,6 +49,13 @@ function colorForCluster(clusterIndex: number): string {
   return CLUSTER_COLORS[clusterIndex] ?? CLUSTER_COLORS[0];
 }
 
+function colorForAssignment(clusterIndex: number, k: number): string {
+  // Ignore clusters 6 and 7 (represented as 5 and 6 with 0..K-1 indexing)
+  if (clusterIndex === 5 || clusterIndex === 6) return "rgba(255,255,255,0.9)";
+  if (clusterIndex < 0 || clusterIndex >= k) return "rgba(255,255,255,0.85)";
+  return colorForCluster(clusterIndex);
+}
+
 function randomCluster(seed: number, k: number) {
   // deterministic-ish pseudo-random per (seed, index) to keep it stable per run
   const x = Math.sin(seed * 12.9898 + 78.233) * 43758.5453;
@@ -72,9 +88,13 @@ export default function GlobePage() {
   const [kChoice, setKChoice] = useState<KChoice>(4);
   const [geoCostEnabled, setGeoCostEnabled] = useState(true);
   const [simSeed, setSimSeed] = useState(1);
+  const [spinPulse, setSpinPulse] = useState(0);
   const [clusteredPoints, setClusteredPoints] = useState<ClusteredPoint[] | null>(null);
   const [selectedCluster, setSelectedCluster] = useState<number | null>(null);
   const { displayedPanel, panelExpanded, isPanelOpen, openPanel, closePanel } = usePanelTransition();
+  const [lineage, setLineage] = useState<LineageData | null>(null);
+  const animRef = useRef<number | null>(null);
+  const lastGenRef = useRef<number>(-1);
 
   useEffect(() => {
     let cancelled = false;
@@ -97,33 +117,111 @@ export default function GlobePage() {
   const kEffective = kChoice === "explored" ? 5 : kChoice;
   const activeTint = tintForCluster(selectedCluster);
 
+  const basePoints = useMemo(() => {
+    if (state.status !== "ready") return null;
+    return state.metadata
+      .map((row, idx) => {
+        const lat = typeof row.Latitude === "number" ? row.Latitude : Number(row.Latitude);
+        const lon = typeof row.Longitude === "number" ? row.Longitude : Number(row.Longitude);
+        if (!Number.isFinite(lat) || !Number.isFinite(lon)) return null;
+        const id = String(row.SGDP_ID ?? idx);
+        return { lat, lng: lon, id };
+      })
+      .filter((p): p is NonNullable<typeof p> => !!p);
+  }, [state]);
+
   // If K changes, require re-simulation before showing cluster UI.
   useEffect(() => {
     setClusteredPoints(null);
     setSelectedCluster(null);
   }, [kEffective]);
 
+  const stopAnimation = () => {
+    if (animRef.current != null) {
+      window.cancelAnimationFrame(animRef.current);
+      animRef.current = null;
+    }
+    lastGenRef.current = -1;
+  };
+
+  useEffect(() => {
+    return () => stopAnimation();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const runSimulation = () => {
     if (state.status !== "ready") return;
+    if (!basePoints) return;
+
+    // Kick the 5-second spin pulse, and animate generations during that window.
+    setSpinPulse((v) => v + 1);
+    stopAnimation();
+    setSelectedCluster(null);
 
     const k = kEffective;
-    const seed = simSeed + 1;
 
-    const points: ClusteredPoint[] = state.metadata
-      .map((row, idx) => {
-        const lat = typeof row.Latitude === "number" ? row.Latitude : Number(row.Latitude);
-        const lon = typeof row.Longitude === "number" ? row.Longitude : Number(row.Longitude);
-        if (!Number.isFinite(lat) || !Number.isFinite(lon)) return null;
+    const startAnimation = (data: LineageData) => {
+      const gens = data.generations;
+      const durationMs = 5000;
+      const gensPerSecond = 60;
+      const maxGen = Math.min(299, gens.length - 1);
+      const start = performance.now();
 
-        const cluster = clamp(randomCluster(seed * 1000 + idx, k), 0, k - 1);
-        const id = String(row.SGDP_ID ?? idx);
-        return { lat, lng: lon, id, cluster, color: colorForCluster(cluster) };
+      const renderGen = (gi: number) => {
+        const chromo = gens[gi];
+        const pts: ClusteredPoint[] = basePoints.map((p, i) => {
+          const assigned = chromo?.[i] ?? 0;
+          const cluster = Number.isFinite(assigned) ? assigned : 0;
+          return {
+            ...p,
+            cluster,
+            color: colorForAssignment(cluster, k)
+          };
+        });
+        setClusteredPoints(pts);
+      };
+
+      const tick = (now: number) => {
+        const elapsed = now - start;
+        const gi = Math.min(maxGen, Math.floor((elapsed / 1000) * gensPerSecond));
+        if (gi !== lastGenRef.current) {
+          lastGenRef.current = gi;
+          renderGen(gi);
+        }
+
+        if (elapsed >= durationMs) {
+          lastGenRef.current = maxGen;
+          renderGen(maxGen);
+          animRef.current = null;
+          return;
+        }
+
+        animRef.current = window.requestAnimationFrame(tick);
+      };
+
+      animRef.current = window.requestAnimationFrame(tick);
+    };
+
+    if (lineage) {
+      startAnimation(lineage);
+      return;
+    }
+
+    loadLineage()
+      .then((data) => {
+        setLineage(data);
+        startAnimation(data);
       })
-      .filter((p): p is ClusteredPoint => !!p);
-
-    setSimSeed(seed);
-    setSelectedCluster(null);
-    setClusteredPoints(points);
+      .catch(() => {
+        // Fallback: keep old deterministic simulation behavior if lineage can't be loaded.
+        const seed = simSeed + 1;
+        const points: ClusteredPoint[] = basePoints.map((p, idx) => {
+          const cluster = clamp(randomCluster(seed * 1000 + idx, k), 0, k - 1);
+          return { ...p, cluster, color: colorForCluster(cluster) };
+        });
+        setSimSeed(seed);
+        setClusteredPoints(points);
+      });
   };
 
   return (
@@ -219,7 +317,7 @@ export default function GlobePage() {
                     : undefined
                 }
               >
-                {id}
+                {PANEL_BUTTON_LABELS[id]}
               </button>
             );
           })}
@@ -251,6 +349,7 @@ export default function GlobePage() {
                   k={kEffective}
                   selectedCluster={selectedCluster}
                   rotationSpeed={0.55}
+                  spinPulseToken={spinPulse}
                   tiltLat={55}
                 />
 

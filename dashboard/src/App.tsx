@@ -1,10 +1,13 @@
 import GlobePage from "./pages/GlobePage";
+import StarfieldBackground from "./components/StarfieldBackground";
 
 export default function App() {
   return (
-    <div className="app">
-      <GlobePage />
-    </div>
+    <StarfieldBackground>
+      <div className="app">
+        <GlobePage />
+      </div>
+    </StarfieldBackground>
   );
 }
 

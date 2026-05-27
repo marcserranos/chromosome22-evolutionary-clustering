@@ -16,6 +16,10 @@
     {
       "source": "../results/ea/best_chromosome.csv",
       "dest": "ea/best_chromosome.csv"
+    },
+    {
+      "source": "../results/runs/16_genetic_only_video/lineage.csv",
+      "dest": "runs/16_genetic_only_video/lineage.csv"
     }
   ]
 }

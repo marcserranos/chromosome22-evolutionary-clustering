@@ -1,5 +1,5 @@
 {
-  "stamp": "2026-05-27T09:13:34.235Z",
+  "stamp": "2026-05-27T13:27:50.621Z",
   "copied": [
     {
       "source": "../results/distances/genetic_distance.csv",
@@ -12,6 +12,10 @@
     {
       "source": "../DATA/processed/samples_metadata_ordered.csv",
       "dest": "public/data/metadata/samples_metadata_ordered.csv"
+    },
+    {
+      "source": "../results/runs/16_genetic_only_video/lineage.csv",
+      "dest": "public/data/runs/16_genetic_only_video/lineage.csv"
     }
   ]
 }

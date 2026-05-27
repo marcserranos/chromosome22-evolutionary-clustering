@@ -1,8 +1,8 @@
 from collections import Counter
-from data_loader import load_distances
-from fitness import FitnessEvaluator
-from ea import EvolutionaryAlgorithm
-from visualizations import Visualizations
+from handovers.evo_algorithm_handover.data_loader import load_distances
+from handovers.evo_algorithm_handover.fitness import FitnessEvaluator
+from handovers.evo_algorithm_handover.ea import EvolutionaryAlgorithm
+from handovers.evo_algorithm_handover.visualizations import Visualizations
 
 def main():
     '''runs experiments as desired, rifht now it's short in options, will be further

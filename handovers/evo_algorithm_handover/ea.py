@@ -1,6 +1,6 @@
 import random
-from individual import Individual
-from population import Population
+from handovers.evo_algorithm_handover.individual import Individual
+from handovers.evo_algorithm_handover.population import Population
 
 
 class EvolutionaryAlgorithm:

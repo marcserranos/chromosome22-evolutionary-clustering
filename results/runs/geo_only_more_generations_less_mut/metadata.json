@@ -1,0 +1,17 @@
+{
+  "run_name": "geo_only_more_generations_less_mut",
+  "timestamp": "2026-05-27T12:03:10.605110",
+  "parameters": {
+    "k_groups": 7,
+    "population_size": 50,
+    "generations": 10000,
+    "crossover_rate": 0.9,
+    "mutation_rate": 0.01,
+    "elitism_count": 2,
+    "alpha": 1,
+    "beta": 1,
+    "gamma": 1,
+    "min_group_size": 3
+  },
+  "fitness_function": "fitness = geo_separation - geo_cost (maximize between-cluster distance, minimize within-cluster distance)"
+}

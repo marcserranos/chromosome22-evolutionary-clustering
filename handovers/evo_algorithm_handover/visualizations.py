@@ -7,7 +7,7 @@ from pathlib import Path
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
-from data_loader import load_subject_metadata, align_metadata
+from handovers.evo_algorithm_handover.data_loader import load_subject_metadata, align_metadata
 
 
 def mds_2d(distance_matrix):

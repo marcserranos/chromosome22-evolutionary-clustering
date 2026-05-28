@@ -119,8 +119,9 @@ def _load_repo_metadata_latlon() -> List[Tuple[float, float]]:
 def make_medoid_distance_world_map(input_dir: Path, output_path: Path) -> None:
     """
     World map: each subject plotted at (lon,lat), colored by cluster.
-    Point opacity encodes distance-to-medoid (closer = more opaque).
-    Also marks each cluster's medoid as a star.
+    Medoid (cluster center) is marked with a star and has no point.
+    Color scheme: samples closer than cluster mean keep full cluster color.
+    Samples farther than mean fade to white (gradient based on percentile rank).
     """
 
     # Local inputs
@@ -205,32 +206,47 @@ def make_medoid_distance_world_map(input_dir: Path, output_path: Path) -> None:
     # Spread overlapping locations for visibility
     lats, lons = _spread_overlapping_locations(lats, lons, subj_ids)
 
-    d_arr = np.asarray(ds, dtype=float)
-    d_max = float(np.nanmax(d_arr))
-    if not np.isfinite(d_max):
-        raise ValueError("Invalid medoid distances (max is not finite).")
-
-    # Per-cluster scaling:
-    # Use hard percentile buckets (user requested) to make the trend clearly visible.
-    cluster_min: dict[int, float] = {}
-    cluster_vals: dict[int, List[float]] = {}
-    for cid, d in zip(cids, ds):
+    # Determine medoid per cluster: argmin distance within cluster
+    medoid_by_cluster: dict[int, int] = {}
+    for i in range(n):
+        if i not in distances:
+            continue
+        cid = int(chromo[i])
+        d = float(distances[i])
         if not np.isfinite(d):
             continue
-        c = int(cid)
-        cluster_vals.setdefault(c, []).append(float(d))
-        prev = cluster_min.get(c)
-        if prev is None or d < prev:
-            cluster_min[c] = float(d)
+        prev = medoid_by_cluster.get(cid)
+        if prev is None or d < float(distances.get(prev, float("inf"))):
+            medoid_by_cluster[cid] = i
 
-    # Pre-sort per cluster for rank lookup
-    cluster_sorted: dict[int, np.ndarray] = {}
-    for c, vals in cluster_vals.items():
-        arr = np.asarray(vals, dtype=float)
-        arr = arr[np.isfinite(arr)]
-        if arr.size == 0:
+    # Calculate per-cluster statistics (EXCLUDING medoid)
+    # This is used to split samples into "core" (top 20%) and "outliers" (80% with gradient)
+    cluster_p20_distance: dict[int, float] = {}
+    cluster_max_distance: dict[int, float] = {}
+    cluster_distances_excluding_medoid: dict[int, List[float]] = {}
+
+    for i in range(n):
+        if i not in distances:
             continue
-        cluster_sorted[c] = np.sort(arr)
+        cid = int(chromo[i])
+        medoid_idx = medoid_by_cluster.get(cid)
+
+        # Skip the medoid itself
+        if i == medoid_idx:
+            continue
+
+        d = float(distances[i])
+        if not np.isfinite(d):
+            continue
+
+        cluster_distances_excluding_medoid.setdefault(cid, []).append(d)
+
+    # Compute 20th percentile and max for each cluster (excluding medoid)
+    for cid, dists in cluster_distances_excluding_medoid.items():
+        if dists:
+            dists_arr = np.asarray(dists, dtype=float)
+            cluster_p20_distance[cid] = float(np.percentile(dists_arr, 20))
+            cluster_max_distance[cid] = float(np.max(dists_arr))
 
     def _blend(hex_color: str, t: float, target_hex: str = "#f2f2f2") -> str:
         """
@@ -253,19 +269,6 @@ def make_medoid_distance_world_map(input_dir: Path, output_path: Path) -> None:
         gg = int(round(g + (tg - g) * t))
         bb = int(round(b + (tb - b) * t))
         return f"#{rr:02x}{gg:02x}{bb:02x}"
-
-    # Determine medoid per cluster: argmin distance within cluster
-    medoid_by_cluster: dict[int, int] = {}
-    for i in range(n):
-        if i not in distances:
-            continue
-        cid = int(chromo[i])
-        d = float(distances[i])
-        if not np.isfinite(d):
-            continue
-        prev = medoid_by_cluster.get(cid)
-        if prev is None or d < float(distances.get(prev, float("inf"))):
-            medoid_by_cluster[cid] = i
 
     apply_dashboard_style()
     # Override some rcParams to keep map-looking axes clean.
@@ -292,34 +295,34 @@ def make_medoid_distance_world_map(input_dir: Path, output_path: Path) -> None:
     base_alpha = 0.92
     for i in range(len(lons)):
         cid = int(cids[i])
+        subj_idx = int(subj_ids[i])
         base = cluster_color(cid)
         d = float(ds[i])
-        sorted_ds = cluster_sorted.get(cid)
-        if sorted_ds is None or sorted_ds.size <= 1 or not np.isfinite(d):
-            t = 0.0
+
+        # Skip the medoid itself (it gets marked with a star instead)
+        if subj_idx == medoid_by_cluster.get(cid):
+            continue
+
+        p20_d = cluster_p20_distance.get(cid, float("inf"))
+        max_d = cluster_max_distance.get(cid, float("inf"))
+
+        if not np.isfinite(d):
+            col = base
+        elif d <= p20_d:
+            # Top 20% (closest): keep full cluster color
+            col = base
         else:
-            # Percentile rank within cluster using right-side insertion (stable for ties)
-            pos = int(np.searchsorted(sorted_ds, d, side="right"))
-            p = pos / float(sorted_ds.size)  # in (0,1]
-
-            # Hard buckets (closest -> farthest):
-            # - 30% closest: 0% whitened
-            # - next 20%: 10% whitened
-            # - next 20%: 30% whitened
-            # - next 20%: 50% whitened
-            # - 10% farthest: 80% whitened
-            if p <= 0.30:
-                t = 0.0
-            elif p <= 0.50:
-                t = 0.10
-            elif p <= 0.70:
-                t = 0.30
-            elif p <= 0.90:
-                t = 0.50
+            # Bottom 80% (farther): linear gradient to white
+            # p20_d = 0% white, max_d = 100% white
+            if max_d > p20_d:
+                whitening = (d - p20_d) / (max_d - p20_d)
+                whitening = float(np.clip(whitening, 0.0, 1.0))
             else:
-                t = 0.80
+                whitening = 0.0
 
-        col = _blend(base, float(t), target_hex="#ffffff")
+            # Blend from cluster color towards white
+            col = _blend(base, whitening, target_hex="#ffffff")
+
         ax.scatter(
             [lons[i]],
             [lats[i]],

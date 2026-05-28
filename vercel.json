@@ -1,0 +1,9 @@
+{
+  "monorepo": true,
+  "projects": [
+    {
+      "path": "dashboard",
+      "name": "chromosome22-dashboard"
+    }
+  ]
+}

@@ -7,6 +7,7 @@ from typing import List, Tuple
 
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib as mpl
 
 # Allow running both:
 # - python -m dashboard_plot_maker.generate_dashboard_plots
@@ -92,6 +93,268 @@ def _load_matrix_csv(path: Path) -> np.ndarray:
                 vals = [float(x) for x in row[1:] if str(x).strip() != ""]
                 rows.append(vals)
         return np.asarray(rows, dtype=float)
+
+
+def _load_repo_metadata_latlon() -> List[Tuple[float, float]]:
+    """
+    Load (lat, lon) for each subject index in the dashboard's canonical order.
+    Source: DATA/processed/samples_metadata_ordered.csv
+    """
+
+    repo_root = Path(__file__).resolve().parents[1]
+    meta_csv = repo_root / "DATA" / "processed" / "samples_metadata_ordered.csv"
+    if not meta_csv.exists():
+        raise FileNotFoundError(f"Missing metadata CSV: {meta_csv}")
+
+    out: List[Tuple[float, float]] = []
+    with meta_csv.open("r", newline="", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            lat = float(row.get("Latitude", "nan"))
+            lon = float(row.get("Longitude", "nan"))
+            out.append((lat, lon))
+    return out
+
+
+def make_medoid_distance_world_map(input_dir: Path, output_path: Path) -> None:
+    """
+    World map: each subject plotted at (lon,lat), colored by cluster.
+    Point opacity encodes distance-to-medoid (closer = more opaque).
+    Also marks each cluster's medoid as a star.
+    """
+
+    # Local inputs
+    lineage_csv = input_dir / "lineage.csv"
+    medoid_csv = input_dir / "medoid_distances.csv"
+
+    chromo = _read_last_chromosome(lineage_csv)
+    latlons = _load_repo_metadata_latlon()
+
+    # Parse medoid distances
+    distances: dict[int, float] = {}
+    with medoid_csv.open("r", newline="", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            idx = int(row["subject_index"])
+            d = float(row["distance_to_medoid"])
+            distances[idx] = d
+
+    def _spread_overlapping_locations(lats_in: List[float], lons_in: List[float], ids_in: List[int]) -> Tuple[List[float], List[float]]:
+        """
+        Spread points that share the exact same (lat,lon) so they become visible.
+        Deterministic layout: small rings around the original coordinate.
+        """
+
+        # key -> indices into input arrays
+        groups: dict[Tuple[float, float], List[int]] = {}
+        for i, (la, lo) in enumerate(zip(lats_in, lons_in)):
+            groups.setdefault((la, lo), []).append(i)
+
+        out_lats = lats_in[:]
+        out_lons = lons_in[:]
+
+        for (base_lat, base_lon), idxs in groups.items():
+            if len(idxs) <= 1:
+                continue
+
+            # Stable ordering using subject_index to avoid "shuffling" between renders
+            idxs_sorted = sorted(idxs, key=lambda ii: ids_in[ii])
+
+            # Degrees. Increased so stacked points are very clearly distinguishable.
+            base_r = 4.0
+            lon_scale = max(0.35, float(np.cos(np.deg2rad(base_lat))))
+
+            for j, ii in enumerate(idxs_sorted):
+                ring = j // 8
+                slot = j % 8
+                angle = (slot / 8.0) * np.pi * 2.0
+                r = base_r * (1.0 + ring * 1.1)
+                dlat = float(np.sin(angle) * r)
+                dlon = float((np.cos(angle) * r) / lon_scale)
+
+                out_lats[ii] = float(np.clip(base_lat + dlat, -89.9, 89.9))
+                out_lons[ii] = float(((base_lon + dlon + 540.0) % 360.0) - 180.0)
+
+        return out_lats, out_lons
+
+    # Build per-subject arrays aligned by subject_index
+    lats: List[float] = []
+    lons: List[float] = []
+    cids: List[int] = []
+    ds: List[float] = []
+    subj_ids: List[int] = []
+
+    n = min(len(chromo), len(latlons))
+    for i in range(n):
+        lat, lon = latlons[i]
+        if not (np.isfinite(lat) and np.isfinite(lon)):
+            continue
+        d = distances.get(i, float("nan"))
+        if not np.isfinite(d):
+            continue
+        cid = int(chromo[i])
+        lats.append(float(lat))
+        lons.append(float(lon))
+        cids.append(cid)
+        ds.append(float(d))
+        subj_ids.append(i)
+
+    if not ds:
+        raise ValueError(f"No valid medoid distance rows to plot for: {input_dir}")
+
+    # Spread overlapping locations for visibility
+    lats, lons = _spread_overlapping_locations(lats, lons, subj_ids)
+
+    d_arr = np.asarray(ds, dtype=float)
+    d_max = float(np.nanmax(d_arr))
+    if not np.isfinite(d_max):
+        raise ValueError("Invalid medoid distances (max is not finite).")
+
+    # Per-cluster scaling:
+    # Use hard percentile buckets (user requested) to make the trend clearly visible.
+    cluster_min: dict[int, float] = {}
+    cluster_vals: dict[int, List[float]] = {}
+    for cid, d in zip(cids, ds):
+        if not np.isfinite(d):
+            continue
+        c = int(cid)
+        cluster_vals.setdefault(c, []).append(float(d))
+        prev = cluster_min.get(c)
+        if prev is None or d < prev:
+            cluster_min[c] = float(d)
+
+    # Pre-sort per cluster for rank lookup
+    cluster_sorted: dict[int, np.ndarray] = {}
+    for c, vals in cluster_vals.items():
+        arr = np.asarray(vals, dtype=float)
+        arr = arr[np.isfinite(arr)]
+        if arr.size == 0:
+            continue
+        cluster_sorted[c] = np.sort(arr)
+
+    def _blend(hex_color: str, t: float, target_hex: str = "#f2f2f2") -> str:
+        """
+        Blend base color towards a light target by t in [0,1].
+        t=0 => base color, t=1 => target.
+        """
+
+        hc = hex_color.lstrip("#")
+        tc = target_hex.lstrip("#")
+        if len(hc) != 6 or len(tc) != 6:
+            return "#f2f2f2"
+        r = int(hc[0:2], 16)
+        g = int(hc[2:4], 16)
+        b = int(hc[4:6], 16)
+        tr = int(tc[0:2], 16)
+        tg = int(tc[2:4], 16)
+        tb = int(tc[4:6], 16)
+        t = float(np.clip(t, 0.0, 1.0))
+        rr = int(round(r + (tr - r) * t))
+        gg = int(round(g + (tg - g) * t))
+        bb = int(round(b + (tb - b) * t))
+        return f"#{rr:02x}{gg:02x}{bb:02x}"
+
+    # Determine medoid per cluster: argmin distance within cluster
+    medoid_by_cluster: dict[int, int] = {}
+    for i in range(n):
+        if i not in distances:
+            continue
+        cid = int(chromo[i])
+        d = float(distances[i])
+        if not np.isfinite(d):
+            continue
+        prev = medoid_by_cluster.get(cid)
+        if prev is None or d < float(distances.get(prev, float("inf"))):
+            medoid_by_cluster[cid] = i
+
+    apply_dashboard_style()
+    # Override some rcParams to keep map-looking axes clean.
+    mpl.rcParams["axes.grid"] = False
+
+    try:
+        import cartopy.crs as ccrs
+        import cartopy.feature as cfeature
+    except Exception as e:
+        raise RuntimeError("Cartopy is required for the world map plot.") from e
+
+    fig = plt.figure(figsize=(12, 6.2))
+    ax = plt.axes(projection=ccrs.PlateCarree())
+    ax.set_global()
+
+    # Background map
+    # Higher-contrast base map: lighter water, darker land
+    ax.add_feature(cfeature.OCEAN, facecolor="#334155", alpha=0.96, zorder=0)
+    ax.add_feature(cfeature.LAND, facecolor="#0b1020", alpha=0.99, zorder=0)
+    ax.add_feature(cfeature.BORDERS, linewidth=0.35, edgecolor="#2e2e2e", alpha=0.75, zorder=1)
+    ax.add_feature(cfeature.COASTLINE, linewidth=0.45, edgecolor="#2e2e2e", alpha=0.9, zorder=1)
+
+    # Points
+    base_alpha = 0.92
+    for i in range(len(lons)):
+        cid = int(cids[i])
+        base = cluster_color(cid)
+        d = float(ds[i])
+        sorted_ds = cluster_sorted.get(cid)
+        if sorted_ds is None or sorted_ds.size <= 1 or not np.isfinite(d):
+            t = 0.0
+        else:
+            # Percentile rank within cluster using right-side insertion (stable for ties)
+            pos = int(np.searchsorted(sorted_ds, d, side="right"))
+            p = pos / float(sorted_ds.size)  # in (0,1]
+
+            # Hard buckets (closest -> farthest):
+            # - 30% closest: 0% whitened
+            # - next 20%: 10% whitened
+            # - next 20%: 30% whitened
+            # - next 20%: 50% whitened
+            # - 10% farthest: 80% whitened
+            if p <= 0.30:
+                t = 0.0
+            elif p <= 0.50:
+                t = 0.10
+            elif p <= 0.70:
+                t = 0.30
+            elif p <= 0.90:
+                t = 0.50
+            else:
+                t = 0.80
+
+        col = _blend(base, float(t), target_hex="#ffffff")
+        ax.scatter(
+            [lons[i]],
+            [lats[i]],
+            s=22,
+            c=col,
+            alpha=base_alpha,
+            transform=ccrs.PlateCarree(),
+            edgecolors="#ffffff",
+            linewidths=0.35,
+            zorder=3,
+        )
+
+    # Medoid markers (stars)
+    for cid, midx in sorted(medoid_by_cluster.items()):
+        if not (0 <= midx < len(latlons)):
+            continue
+        lat, lon = latlons[midx]
+        if not (np.isfinite(lat) and np.isfinite(lon)):
+            continue
+        ax.scatter(
+            [lon],
+            [lat],
+            s=120,
+            marker="*",
+            c=cluster_color(int(cid)),
+            transform=ccrs.PlateCarree(),
+            edgecolors="#000000",
+            linewidths=0.9,
+            zorder=4,
+        )
+
+    ax.set_title("Distance-to-medoid (world map, colored by cluster)")
+    fig.tight_layout()
+    fig.savefig(output_path, dpi=220, bbox_inches="tight")
+    plt.close(fig)
 
 
 def make_genetic_pca(input_dir: Path, output_path: Path) -> None:
@@ -226,10 +489,11 @@ def make_genetic_geo_correlation(input_dir: Path, output_path: Path) -> None:
     # Prefer a geo matrix inside plot_data; otherwise use the repo-wide static one.
     geo_matrix_csv = input_dir / "geographic_distance_matrix.csv"
     if not geo_matrix_csv.exists():
-        # Typical relative layout:
-        # results/runs/<run>/plot_data  -> repo/results
-        repo_results_dir = input_dir.parents[2]  # .../results
-        geo_matrix_csv = repo_results_dir / "distances" / "geographic_distance.csv"
+        # Use the repo-wide static one. This supports both:
+        # - results/runs/<run>/plot_data
+        # - dashboard_plot_maker/visualizations/<exp>/plot_data
+        repo_root = Path(__file__).resolve().parents[1]
+        geo_matrix_csv = repo_root / "results" / "distances" / "geographic_distance.csv"
 
     chromo = _read_last_chromosome(lineage_csv)
     chromo_arr = np.asarray(chromo, dtype=int)
@@ -300,6 +564,7 @@ def main() -> None:
     make_genetic_distance_heatmap(input_dir, output_dir / "heatmap.png")
     make_fitness_evolution(input_dir, output_dir / "fitness_evolution.png")
     make_genetic_geo_correlation(input_dir, output_dir / "gen_geo_correlation.png")
+    make_medoid_distance_world_map(input_dir, output_dir / "bridge_groups.png")
 
     print(f"Plots written to: {output_dir}")
 

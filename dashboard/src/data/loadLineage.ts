@@ -21,7 +21,8 @@ function parseChromosome(s: string): number[] {
   return out;
 }
 
-export async function loadLineage(path = "/data/runs/16_genetic_only_video/lineage.csv"): Promise<LineageData> {
+export async function loadLineage(experimentKey?: string | null): Promise<LineageData> {
+  const path = experimentKey ? `/data/visualizations/${experimentKey}/lineage.csv` : "/data/runs/16_genetic_only_video/lineage.csv";
   const rows = (await fetchCsvRows(path, { dynamicTyping: true })) as unknown as LineageRow[];
 
   const generations: number[][] = [];

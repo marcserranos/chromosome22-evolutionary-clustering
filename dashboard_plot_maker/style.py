@@ -27,11 +27,7 @@ GRID_ALPHA = 0.10
 def cluster_color(cluster_id: int) -> str:
     """
     Cluster colors consistent with globe pins.
-    We treat clusters 6 & 7 as "white" (they show up as 5 and 6 under 0..K-1 indexing).
     """
-
-    if cluster_id in (5, 6):
-        return "#ffffff"
     return CLUSTER_COLORS.get(cluster_id, "#ffffff")
 
 

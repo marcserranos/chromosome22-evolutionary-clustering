@@ -31,10 +31,55 @@ function PanelBody({ id, experimentKey }: { id: PanelId; experimentKey?: string 
         : id === 6
           ? `${prefix}/fitness_evolution.png`
           : id === 7
-            ? "/data/visualizations/gen_geo_correlation.png"
+            ? `${prefix}/gen_geo_correlation.png`
             : id === 8
               ? `${prefix}/bridge_groups.png`
               : `${prefix}/1000g.png`;
+
+  if (id === 9) {
+    return (
+      <div style={{ color: "rgba(255,255,255,0.92)", fontSize: 13, lineHeight: 1.38 }}>
+        <div style={{ fontWeight: 650, fontSize: 15, marginBottom: 10 }}>1000 Genomes superpopulations</div>
+
+        <div style={{ color: "rgba(255,255,255,0.78)" }}>
+          <div style={{ marginBottom: 10 }}>
+            <div style={{ fontWeight: 650 }}>
+              AFR — African
+            </div>
+            <div>Examples: Yoruba (Nigeria), Luhya (Kenya), Gambian, Mende (Sierra Leone)</div>
+          </div>
+
+          <div style={{ marginBottom: 10 }}>
+            <div style={{ fontWeight: 650 }}>
+              AMR — Admixed American
+            </div>
+            <div>Examples: Mexican ancestry (Los Angeles), Puerto Rican, Colombian, Peruvian</div>
+          </div>
+
+          <div style={{ marginBottom: 10 }}>
+            <div style={{ fontWeight: 650 }}>
+              EAS — East Asian
+            </div>
+            <div>Examples: Han Chinese (Beijing / Southern China), Japanese, Kinh (Vietnam), Dai (China)</div>
+          </div>
+
+          <div style={{ marginBottom: 10 }}>
+            <div style={{ fontWeight: 650 }}>
+              EUR — European
+            </div>
+            <div>Examples: British (England & Scotland), Finnish, Iberian (Spain), Toscani (Italy)</div>
+          </div>
+
+          <div>
+            <div style={{ fontWeight: 650 }}>
+              SAS — South Asian
+            </div>
+            <div>Examples: Punjabi (Lahore), Gujarati (Houston), Bengali (Bangladesh), Sri Lankan Tamil</div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <MatplotlibImagePanel

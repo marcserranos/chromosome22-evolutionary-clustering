@@ -180,6 +180,9 @@ def main():
     run_name = get_run_name()
     run_manager = RunManager()
 
+    # Set random seed for reproducibility
+    np.random.seed(42)
+
     genetic, geographic, subject_names = load_distances() # loads data
     from data_loader import load_subject_metadata, align_metadata
     metadata_df = load_subject_metadata()

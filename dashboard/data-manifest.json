@@ -18,12 +18,253 @@
       "dest": "ea/best_chromosome.csv"
     },
     {
-      "source": "../results/runs/16_genetic_only_video/lineage.csv",
-      "dest": "runs/16_genetic_only_video/lineage.csv"
+      "source": "../dashboard_plot_maker/visualizations/exp_k2_goff/genetic_pca.png",
+      "dest": "visualizations/exp_k2_goff/genetic_pca.png"
     },
     {
-      "source": "../dashboard_plot_maker/visualizations/exp_kexp_gon/gen_geo_correlation.png",
-      "dest": "visualizations/gen_geo_correlation.png"
+      "source": "../dashboard_plot_maker/visualizations/exp_k2_goff/heatmap.png",
+      "dest": "visualizations/exp_k2_goff/heatmap.png"
+    },
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k2_goff/fitness_evolution.png",
+      "dest": "visualizations/exp_k2_goff/fitness_evolution.png"
+    },
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k2_goff/gen_geo_correlation.png",
+      "dest": "visualizations/exp_k2_goff/gen_geo_correlation.png"
+    },
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k2_goff/plot_data/lineage.csv",
+      "dest": "visualizations/exp_k2_goff/lineage.csv"
+    },
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k2_goff/bridge_groups.png",
+      "dest": "visualizations/exp_k2_goff/bridge_groups.png"
+    },
+
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k2_gon/genetic_pca.png",
+      "dest": "visualizations/exp_k2_gon/genetic_pca.png"
+    },
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k2_gon/heatmap.png",
+      "dest": "visualizations/exp_k2_gon/heatmap.png"
+    },
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k2_gon/fitness_evolution.png",
+      "dest": "visualizations/exp_k2_gon/fitness_evolution.png"
+    },
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k2_gon/gen_geo_correlation.png",
+      "dest": "visualizations/exp_k2_gon/gen_geo_correlation.png"
+    },
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k2_gon/plot_data/lineage.csv",
+      "dest": "visualizations/exp_k2_gon/lineage.csv"
+    },
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k2_gon/bridge_groups.png",
+      "dest": "visualizations/exp_k2_gon/bridge_groups.png"
+    },
+
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k3_goff/genetic_pca.png",
+      "dest": "visualizations/exp_k3_goff/genetic_pca.png"
+    },
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k3_goff/heatmap.png",
+      "dest": "visualizations/exp_k3_goff/heatmap.png"
+    },
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k3_goff/fitness_evolution.png",
+      "dest": "visualizations/exp_k3_goff/fitness_evolution.png"
+    },
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k3_goff/gen_geo_correlation.png",
+      "dest": "visualizations/exp_k3_goff/gen_geo_correlation.png"
+    },
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k3_goff/plot_data/lineage.csv",
+      "dest": "visualizations/exp_k3_goff/lineage.csv"
+    },
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k3_goff/bridge_groups.png",
+      "dest": "visualizations/exp_k3_goff/bridge_groups.png"
+    },
+
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k3_gon/genetic_pca.png",
+      "dest": "visualizations/exp_k3_gon/genetic_pca.png"
+    },
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k3_gon/heatmap.png",
+      "dest": "visualizations/exp_k3_gon/heatmap.png"
+    },
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k3_gon/fitness_evolution.png",
+      "dest": "visualizations/exp_k3_gon/fitness_evolution.png"
+    },
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k3_gon/gen_geo_correlation.png",
+      "dest": "visualizations/exp_k3_gon/gen_geo_correlation.png"
+    },
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k3_gon/plot_data/lineage.csv",
+      "dest": "visualizations/exp_k3_gon/lineage.csv"
+    },
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k3_gon/bridge_groups.png",
+      "dest": "visualizations/exp_k3_gon/bridge_groups.png"
+    },
+
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k4_goff/genetic_pca.png",
+      "dest": "visualizations/exp_k4_goff/genetic_pca.png"
+    },
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k4_goff/heatmap.png",
+      "dest": "visualizations/exp_k4_goff/heatmap.png"
+    },
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k4_goff/fitness_evolution.png",
+      "dest": "visualizations/exp_k4_goff/fitness_evolution.png"
+    },
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k4_goff/gen_geo_correlation.png",
+      "dest": "visualizations/exp_k4_goff/gen_geo_correlation.png"
+    },
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k4_goff/plot_data/lineage.csv",
+      "dest": "visualizations/exp_k4_goff/lineage.csv"
+    },
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k4_goff/bridge_groups.png",
+      "dest": "visualizations/exp_k4_goff/bridge_groups.png"
+    },
+
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k4_gon/genetic_pca.png",
+      "dest": "visualizations/exp_k4_gon/genetic_pca.png"
+    },
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k4_gon/heatmap.png",
+      "dest": "visualizations/exp_k4_gon/heatmap.png"
+    },
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k4_gon/fitness_evolution.png",
+      "dest": "visualizations/exp_k4_gon/fitness_evolution.png"
+    },
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k4_gon/gen_geo_correlation.png",
+      "dest": "visualizations/exp_k4_gon/gen_geo_correlation.png"
+    },
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k4_gon/plot_data/lineage.csv",
+      "dest": "visualizations/exp_k4_gon/lineage.csv"
+    },
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k4_gon/bridge_groups.png",
+      "dest": "visualizations/exp_k4_gon/bridge_groups.png"
+    },
+
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k5_goff/genetic_pca.png",
+      "dest": "visualizations/exp_k5_goff/genetic_pca.png"
+    },
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k5_goff/heatmap.png",
+      "dest": "visualizations/exp_k5_goff/heatmap.png"
+    },
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k5_goff/fitness_evolution.png",
+      "dest": "visualizations/exp_k5_goff/fitness_evolution.png"
+    },
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k5_goff/gen_geo_correlation.png",
+      "dest": "visualizations/exp_k5_goff/gen_geo_correlation.png"
+    },
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k5_goff/plot_data/lineage.csv",
+      "dest": "visualizations/exp_k5_goff/lineage.csv"
+    },
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k5_goff/bridge_groups.png",
+      "dest": "visualizations/exp_k5_goff/bridge_groups.png"
+    },
+
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k5_gon/genetic_pca.png",
+      "dest": "visualizations/exp_k5_gon/genetic_pca.png"
+    },
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k5_gon/heatmap.png",
+      "dest": "visualizations/exp_k5_gon/heatmap.png"
+    },
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k5_gon/fitness_evolution.png",
+      "dest": "visualizations/exp_k5_gon/fitness_evolution.png"
+    },
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k5_gon/gen_geo_correlation.png",
+      "dest": "visualizations/exp_k5_gon/gen_geo_correlation.png"
+    },
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k5_gon/plot_data/lineage.csv",
+      "dest": "visualizations/exp_k5_gon/lineage.csv"
+    },
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k5_gon/bridge_groups.png",
+      "dest": "visualizations/exp_k5_gon/bridge_groups.png"
+    },
+
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k6_goff/genetic_pca.png",
+      "dest": "visualizations/exp_k6_goff/genetic_pca.png"
+    },
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k6_goff/heatmap.png",
+      "dest": "visualizations/exp_k6_goff/heatmap.png"
+    },
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k6_goff/fitness_evolution.png",
+      "dest": "visualizations/exp_k6_goff/fitness_evolution.png"
+    },
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k6_goff/gen_geo_correlation.png",
+      "dest": "visualizations/exp_k6_goff/gen_geo_correlation.png"
+    },
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k6_goff/plot_data/lineage.csv",
+      "dest": "visualizations/exp_k6_goff/lineage.csv"
+    },
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k6_goff/bridge_groups.png",
+      "dest": "visualizations/exp_k6_goff/bridge_groups.png"
+    },
+
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k6_gon/genetic_pca.png",
+      "dest": "visualizations/exp_k6_gon/genetic_pca.png"
+    },
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k6_gon/heatmap.png",
+      "dest": "visualizations/exp_k6_gon/heatmap.png"
+    },
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k6_gon/fitness_evolution.png",
+      "dest": "visualizations/exp_k6_gon/fitness_evolution.png"
+    },
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k6_gon/gen_geo_correlation.png",
+      "dest": "visualizations/exp_k6_gon/gen_geo_correlation.png"
+    },
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k6_gon/plot_data/lineage.csv",
+      "dest": "visualizations/exp_k6_gon/lineage.csv"
+    },
+    {
+      "source": "../dashboard_plot_maker/visualizations/exp_k6_gon/bridge_groups.png",
+      "dest": "visualizations/exp_k6_gon/bridge_groups.png"
     }
   ]
 }

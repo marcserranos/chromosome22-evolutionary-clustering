@@ -21,7 +21,7 @@ type LoadState =
   | { status: "error"; error: string }
   | { status: "ready"; metadata: SampleMetaRow[] };
 
-type KChoice = 2 | 3 | 4 | 5 | "explored";
+type KChoice = 2 | 3 | 4 | 5 | 6;
 
 type ClusteredPoint = {
   lat: number;
@@ -50,8 +50,6 @@ function colorForCluster(clusterIndex: number): string {
 }
 
 function colorForAssignment(clusterIndex: number, k: number): string {
-  // Ignore clusters 6 and 7 (represented as 5 and 6 with 0..K-1 indexing)
-  if (clusterIndex === 5 || clusterIndex === 6) return "rgba(255,255,255,0.9)";
   if (clusterIndex < 0 || clusterIndex >= k) return "rgba(255,255,255,0.85)";
   return colorForCluster(clusterIndex);
 }
@@ -93,6 +91,8 @@ export default function GlobePage() {
   const [selectedCluster, setSelectedCluster] = useState<number | null>(null);
   const { displayedPanel, panelExpanded, isPanelOpen, openPanel, closePanel } = usePanelTransition();
   const [lineage, setLineage] = useState<LineageData | null>(null);
+  const [lineageKey, setLineageKey] = useState<string | null>(null);
+  const [hasSimulated, setHasSimulated] = useState(false);
   const animRef = useRef<number | null>(null);
   const lastGenRef = useRef<number>(-1);
   const [activeExperimentKey, setActiveExperimentKey] = useState<string | null>(null);
@@ -115,7 +115,7 @@ export default function GlobePage() {
     };
   }, []);
 
-  const kEffective = kChoice === "explored" ? 5 : kChoice;
+  const kEffective = kChoice;
   const activeTint = tintForCluster(selectedCluster);
 
   const basePoints = useMemo(() => {
@@ -131,11 +131,11 @@ export default function GlobePage() {
       .filter((p): p is NonNullable<typeof p> => !!p);
   }, [state]);
 
-  // If K changes, require re-simulation before showing cluster UI.
+  // If K or cost mode changes, require re-simulation before showing cluster UI.
   useEffect(() => {
     setClusteredPoints(null);
     setSelectedCluster(null);
-  }, [kEffective]);
+  }, [kEffective, geoCostEnabled]);
 
   const stopAnimation = () => {
     if (animRef.current != null) {
@@ -154,13 +154,20 @@ export default function GlobePage() {
     if (state.status !== "ready") return;
     if (!basePoints) return;
 
+    setHasSimulated(true);
+
     // Kick the 5-second spin pulse, and animate generations during that window.
     setSpinPulse((v) => v + 1);
     stopAnimation();
     setSelectedCluster(null);
 
     const k = kEffective;
-    setActiveExperimentKey(kChoice === "explored" && geoCostEnabled ? "exp_kexp_gon" : null);
+    const expKey = `exp_k${kChoice}_${geoCostEnabled ? "gon" : "goff"}`;
+    setActiveExperimentKey(expKey);
+    if (lineageKey !== expKey) {
+      setLineage(null);
+      setLineageKey(expKey);
+    }
 
     const startAnimation = (data: LineageData) => {
       const gens = data.generations;
@@ -209,7 +216,7 @@ export default function GlobePage() {
       return;
     }
 
-    loadLineage()
+    loadLineage(expKey)
       .then((data) => {
         setLineage(data);
         startAnimation(data);
@@ -259,12 +266,12 @@ export default function GlobePage() {
               }
               onChange={(e) => {
                 const v = Number(e.target.value);
-                const next: KChoice = v === 0 ? 2 : v === 1 ? 3 : v === 2 ? 4 : v === 3 ? 5 : "explored";
+                const next: KChoice = v === 0 ? 2 : v === 1 ? 3 : v === 2 ? 4 : v === 3 ? 5 : 6;
                 setKChoice(next);
               }}
             />
             <div className="controlValue">
-              {kChoice === "explored" ? "Explored" : kChoice}
+              {kChoice}
             </div>
           </div>
 
@@ -309,8 +316,15 @@ export default function GlobePage() {
                 type="button"
                 className={`headerBox headerBoxPanel ${isActive ? "headerBoxPanel--active" : ""}`}
                 onClick={() => openPanel(id)}
+                disabled={!hasSimulated}
+                aria-disabled={!hasSimulated}
                 style={
-                  isActive
+                  !hasSimulated
+                    ? {
+                        opacity: 0.5,
+                        cursor: "not-allowed"
+                      }
+                    : isActive
                     ? {
                         backgroundColor: activeTint.bg,
                         borderColor: activeTint.border,
